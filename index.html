@@ -68,11 +68,11 @@
     font:600 11px 'Noto Sans JP';padding:6px 9px;cursor:pointer;transition:.15s
   }
   .lang button.on{background:var(--gold);color:#0a0a0a}
-  .nav-cta{
-    background:var(--gold);color:#0a0a0a;font-weight:700;font-size:13px;
-    padding:9px 16px;border-radius:2px;transition:.18s;white-space:nowrap
+  .nav-links a.nav-cta{
+    background:var(--gold);color:#0a0a0a;font-weight:800;font-size:13px;
+    padding:9px 18px;border-radius:2px;transition:.18s;white-space:nowrap
   }
-  .nav-cta:hover{background:var(--gold-bright);transform:translateY(-1px)}
+  .nav-links a.nav-cta:hover{background:var(--gold-bright);color:#0a0a0a;transform:translateY(-1px)}
   @media(max-width:860px){.nav-links a.nlink{display:none}}
 
   /* ===== HERO ===== */
@@ -259,6 +259,33 @@
 
   [data-i18n-group]{display:none}
   [data-i18n-group].active{display:block}
+  /* added sections & fixes */
+  .slot .r{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:.08em;color:var(--gold);margin-bottom:3px}
+  .sched-note{font-size:12px;color:var(--ink-dim);opacity:.85;margin-top:14px}
+  .coach-bio{font-size:15px;color:var(--ink-dim);line-height:1.75;margin-bottom:16px}
+  .coach-card .coach-x{display:inline-flex;align-items:center;margin-top:14px;padding:8px 18px;border:1px solid var(--line);border-radius:2px;font-family:'Bebas Neue',sans-serif;letter-spacing:.06em;font-size:15px;color:var(--ink);transition:.18s}
+  .coach-card .coach-x:hover{border-color:var(--gold);color:var(--gold)}
+  .flinks{margin:16px 0 6px}
+  .flink{display:inline-flex;align-items:center;padding:9px 18px;border:1px solid var(--line);border-radius:2px;font-size:14px;color:var(--ink);transition:.18s}
+  .flink:hover{border-color:var(--gold);color:var(--gold)}
+  .price-notes{list-style:none;display:grid;gap:8px;margin:22px 0 0;padding:18px 20px;border:1px dashed var(--line);border-radius:4px;background:var(--bg-2)}
+  .price-notes li{font-size:13px;color:var(--ink-dim);line-height:1.6;padding-left:18px;position:relative}
+  .price-notes li::before{content:"\2022";position:absolute;left:4px;color:var(--gold)}
+  .fy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .fy-cell{display:flex;gap:12px;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:4px;background:var(--bg-2)}
+  .fy-cell .fy-ic{color:var(--gold);font-size:18px;line-height:1.4}
+  .fy-cell p{font-size:15px;color:var(--ink-dim);line-height:1.6}
+  .out-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .out-cell{padding:24px;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:4px;background:var(--bg-2)}
+  .out-cell h3{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:17px;margin-bottom:8px;color:var(--ink)}
+  .out-cell p{font-size:14px;color:var(--ink-dim);line-height:1.65}
+  .faq-list{display:grid;gap:10px;max-width:860px}
+  .faq-item{border:1px solid var(--line);border-radius:4px;background:var(--bg-2);overflow:hidden}
+  .faq-item summary{cursor:pointer;list-style:none;padding:18px 48px 18px 22px;font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:15px;color:var(--ink);position:relative}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:22px;line-height:1}
+  .faq-item[open] summary::after{content:"\2212"}
+  .faq-item p{padding:0 22px 20px;font-size:14px;color:var(--ink-dim);line-height:1.7}
 </style>
 </head>
 <body>
@@ -274,7 +301,6 @@
       <a class="nlink" href="#pricing" data-t="nav_price">料金</a>
       <div class="lang">
         <button data-lang="ja" class="on">JP</button>
-        <button data-lang="en">EN</button>
         <button data-lang="ko">KR</button>
       </div>
       <a class="nav-cta" href="https://forms.gle/YRD3qhVRpwExWyVr9" target="_blank" rel="noopener" data-t="nav_apply">受講申請</a>
@@ -329,7 +355,7 @@
       <p data-t="str_p">プロチーム出身のコーチ・選手陣が直接運営する、実践型の教育プログラム。</p>
     </div>
     <div class="grid-5">
-      <div class="cell"><div class="ico">🎯</div><h3 data-t="str1_h">リプレイ分析</h3><p data-t="str1_p">プロ視点であなたのプレイを1フレーム単位で診断。弱点と改善策を明確に提示します。</p></div>
+      <div class="cell"><div class="ico">🎯</div><h3 data-t="str1_h">リプレイ分析</h3><p data-t="str1_p">プロ視点であなたのプレイを細かく分析し、弱点と改善策を明確に提示します。</p></div>
       <div class="cell"><div class="ico">⚡</div><h3 data-t="str2_h">ライブコーチング</h3><p data-t="str2_p">実戦中のリアルタイムフィードバック。判断の瞬間に指導が入ることで意思決定が変わります。</p></div>
       <div class="cell"><div class="ico">🛡️</div><h3 data-t="str3_h">ロール別指導</h3><p data-t="str3_p">TANK / DPS / SUPPORT、各ロール専門のコーチングで適性に合わせて成長を加速。</p></div>
       <div class="cell"><div class="ico">🌐</div><h3 data-t="str4_h">3言語対応</h3><p data-t="str4_p">日本語・韓国語・英語に対応。言語の壁なく海外連携スキルも同時に習得できます。</p></div>
@@ -338,11 +364,28 @@
   </div>
 </section>
 
+<!-- FOR YOU -->
+<section class="block" id="foryou">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">02 / FOR YOU</div>
+      <h2 data-t="fy_h">こんな方におすすめ</h2>
+    </div>
+    <div class="fy-grid">
+      <div class="fy-cell"><span class="fy-ic">▹</span><p data-t="fy_1">今のランク帯で伸び悩みを感じているプレイヤー</p></div>
+      <div class="fy-cell"><span class="fy-ic">▹</span><p data-t="fy_2">自分のクセや弱点を客観的に把握したい方</p></div>
+      <div class="fy-cell"><span class="fy-ic">▹</span><p data-t="fy_3">独学に限界を感じ、効率的に上達したい方</p></div>
+      <div class="fy-cell"><span class="fy-ic">▹</span><p data-t="fy_4">チーム／スクリム環境で連携を高めたい方</p></div>
+      <div class="fy-cell"><span class="fy-ic">▹</span><p data-t="fy_5">上位・海外シーンを本気で目指したい方</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- COACH -->
 <section class="block" id="coach">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">02 / COACH</div>
+      <div class="sec-num">03 / COACH</div>
       <h2 data-t="coach_h">コーチ紹介</h2>
     </div>
     <div class="coach">
@@ -350,8 +393,10 @@
         <img src="img/coach-gyomin.png" alt="Gyomin">
         <div class="tag" data-t="coach_tag">HEAD COACH</div>
         <h3>GYOMIN</h3>
+        <a class="coach-x" href="https://x.com/justgyomin" target="_blank" rel="noopener">𝕏&nbsp;&nbsp;Gyomin</a>
       </div>
       <div>
+        <p class="coach-bio" data-t="coach_bio">強豪チームがひしめく日本・Pacificシーンで、優勝・準優勝を経験した実績を持つコーチが、実戦視点で一人ひとりの課題に向き合います。</p>
         <p class="coach-quote" data-t="coach_quote">「VARRELが本大会以外を総なめにする中、栄冠を掴んだ唯一の指導者。」</p>
         <ul class="ach-list">
           <li><b>2026</b><span>Saudi eLeague Woman <span class="ach-win">優勝</span></span></li>
@@ -371,7 +416,7 @@
 <section class="block" id="curriculum">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">03 / CURRICULUM</div>
+      <div class="sec-num">04 / CURRICULUM</div>
       <h2 data-t="curri_h">個人カリキュラム（3ヶ月コース例）</h2>
     </div>
     <div class="curri">
@@ -422,7 +467,7 @@
 <section class="block" id="roles">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">04 / ROLE CLASS</div>
+      <div class="sec-num">05 / ROLE CLASS</div>
       <h2 data-t="role_h">ロール別カリキュラム</h2>
       <p data-t="role_p">ロールに特化した講座型クラス。定員10名、同程度のティア・ロール構成で開講します。</p>
     </div>
@@ -432,9 +477,26 @@
       <div class="role"><div class="rt">SUPPORT</div><div class="rsub">BACKLINE</div><p data-t="role_sup">リソース管理・生存・ピールの優先順位。後方からチームを支える判断力を養います。</p></div>
     </div>
     <div class="sched">
-      <div class="slot"><div class="d" data-t="sl1_d">火・木</div><div class="t">21:00 – 22:00</div></div>
-      <div class="slot"><div class="d" data-t="sl2_d">土・日</div><div class="t">14:00 – 15:30</div></div>
-      <div class="slot"><div class="d" data-t="sl3_d">土・日</div><div class="t">16:00 – 16:30</div></div>
+      <div class="slot"><div class="r">TANK</div><div class="d" data-t="sl1_d">火・木</div><div class="t">21:00 – 22:30</div></div>
+      <div class="slot"><div class="r">DPS</div><div class="d" data-t="sl2_d">水・金</div><div class="t">21:00 – 22:30</div></div>
+      <div class="slot"><div class="r">SUPPORT</div><div class="d" data-t="sl3_d">土・日</div><div class="t">20:00 – 21:30</div></div>
+    </div>
+    <p class="sched-note" data-t="sched_note">※ 開講スケジュールは参加人数・ティア構成により調整される場合があります。</p>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="block" id="outcomes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">06 / OUTCOMES</div>
+      <h2 data-t="out_h">受講後に得られるもの</h2>
+    </div>
+    <div class="out-grid">
+      <div class="out-cell"><h3 data-t="out_1h">明確になった弱点と改善点</h3><p data-t="out_1p">感覚ではなく、言語化された課題と次にやるべきことが手元に残ります。</p></div>
+      <div class="out-cell"><h3 data-t="out_2h">ロール別の判断基準</h3><p data-t="out_2p">立ち回り・ポジショニング・コールの優先順位を、状況ごとに判断できる力。</p></div>
+      <div class="out-cell"><h3 data-t="out_3h">フィードバックメモ</h3><p data-t="out_3p">受講内容と改善ポイントをまとめたメモをお渡しします。復習と継続的な成長に活用できます。</p></div>
+      <div class="out-cell"><h3 data-t="out_4h">成長し続ける自己分析力</h3><p data-t="out_4p">コーチング後も、自分でリプレイを見て改善できる視点が身につきます。</p></div>
     </div>
   </div>
 </section>
@@ -443,7 +505,7 @@
 <section class="block" id="reviews">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">05 / VOICES</div>
+      <div class="sec-num">07 / VOICES</div>
       <h2 data-t="rev_h">受講者の声</h2>
       <p data-t="rev_p">受講生のX（旧Twitter）投稿をここに掲載予定。集まり次第、順次反映します。</p>
     </div>
@@ -458,7 +520,7 @@
 <section class="block" id="pricing">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">06 / PRICING</div>
+      <div class="sec-num">08 / PRICING</div>
       <h2 data-t="price_h">料金・受講プラン</h2>
       <p data-t="price_p">仮オープン限定価格。グループクラスは同程度のティア・ロール構成が5名以上集まった場合に開講されます。</p>
     </div>
@@ -489,6 +551,7 @@
         </div>
       </div>
 
+      <ul class="price-notes" data-t="price_notes"><li>表示価格はすべて税込です。</li><li>すべて1名あたりの料金です。</li><li>グループクラスは同程度のティア・ロール構成が5名以上で開講します。</li><li>DPS / TANK / SUPPORTクラスは定員10名です。</li><li>受講後、内容をまとめたフィードバックメモをお渡しします。</li></ul>
       <div class="refund">
         <h4 data-t="ref_h">💰 返金・振替ポリシー</h4>
         <ul>
@@ -507,7 +570,7 @@
 <section class="block" id="steps">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">07 / HOW TO JOIN</div>
+      <div class="sec-num">09 / HOW TO JOIN</div>
       <h2 data-t="step_h">受講申請の流れ</h2>
       <p data-t="step_p">すべてオンライン、先着順で進行します。</p>
     </div>
@@ -520,14 +583,32 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">10 / FAQ</div>
+      <h2 data-t="faq_h">よくある質問</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item"><summary data-t="faq_q1">個人クラスとグループクラスの違いは？</summary><p data-t="faq_a1">個人クラスは1対1で、リプレイ分析またはライブでプレイしながらフィードバックする4回／計240分のプログラムです。グループクラスはロール別の講座型で8回／計720分、同程度のティア・ロール構成が5名以上で開講します。</p></details>
+      <details class="faq-item"><summary data-t="faq_q2">スケジュールは選べますか？</summary><p data-t="faq_a2">個人クラスはお申し込み後に個別で調整します。ロール別クラスは固定枠での開講となり、参加人数・ティア構成により調整される場合があります。</p></details>
+      <details class="faq-item"><summary data-t="faq_q3">支払いのタイミングは？</summary><p data-t="faq_a3">お申し込み後、受講日程が確定した段階でご案内します。</p></details>
+      <details class="faq-item"><summary data-t="faq_q4">キャンセル・返金はできますか？</summary><p data-t="faq_a4">返金・振替ポリシーに準じます。受講開始日の30日前まで全額を次回スケジュールへ無料振替できるほか、時期に応じた振替対応があります。</p></details>
+      <details class="faq-item"><summary data-t="faq_q5">対応言語は？</summary><p data-t="faq_a5">日本語・韓国語・英語に対応しています。</p></details>
+      <details class="faq-item"><summary data-t="faq_q6">受講後に残るものはありますか？</summary><p data-t="faq_a6">受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。</p></details>
+    </div>
+  </div>
+</section>
+
 <!-- MISSION -->
 <section class="block" id="mission">
   <div class="wrap">
     <div class="mission">
-      <div class="sec-num">08 / MISSION</div>
+      <div class="sec-num">11 / MISSION</div>
       <p class="slogan">LUCE IN ALTIS</p>
       <p data-t="mis_p1">最も低い場所から高く昇り、光り輝く。99DIVINEアカデミーは、単に「ランクを上げる講座」ではありません。受講生がゲームの中で自分の潜在能力を発見し、その可能性を現実へ広げていく過程を共に歩みます。</p>
-      <p data-t="mis_p2"><b style="color:var(--gold)">学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは「実力の向上」ではなく、「人生の力」を育てる教育です。</p>
+      <p data-t="mis_p2"><b style="color:var(--gold)">学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは、単なるランクアップだけでなく、実力向上を通じて、判断力・継続力・挑戦する力を育てる教育です。</p>
     </div>
   </div>
 </section>
@@ -544,6 +625,7 @@
 <footer>
   <div class="wrap">
     <div class="fbrand">99<b style="color:var(--gold)">DIVINE</b> ACADEMY</div>
+    <div class="flinks"><a class="flink" href="https://linktr.ee/99divine" target="_blank" rel="noopener">🔗&nbsp;&nbsp;99DIVINE Linktree</a></div>
     <p data-t="foot">© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.</p>
   </div>
 </footer>
@@ -566,7 +648,7 @@ const I18N = {
     msg_p1:"こんにちは、<b style='color:var(--gold)'>99DIVINE代表のSupreme</b>です。99DIVINEアカデミーは、単に「ゲームを上手くする場所」ではありません。ゲームを通じた“本物の成長”を日本のプレイヤーに届けるために立ち上げました。",
     msg_p2:"コミュニケーション・チームワーク・高速な判断力・マルチタスク・メンタルマネジメント。これらはゲームの中だけで終わらず、私自身、UC Irvineでコンピュータサイエンス学士号を取得し、Utah Valley Universityで民間航空免許（PPL）も取得する力になりました。<b style='color:var(--gold)'>ゲームは、人生全体を通して成長を促す挑戦と学びの場です。</b>",
     str_h:"99DIVINEの強み",str_p:"プロチーム出身のコーチ・選手陣が直接運営する、実践型の教育プログラム。",
-    str1_h:"リプレイ分析",str1_p:"プロ視点であなたのプレイを1フレーム単位で診断。弱点と改善策を明確に提示します。",
+    str1_h:"リプレイ分析",str1_p:"プロ視点であなたのプレイを細かく分析し、弱点と改善策を明確に提示します。",
     str2_h:"ライブコーチング",str2_p:"実戦中のリアルタイムフィードバック。判断の瞬間に指導が入ることで意思決定が変わります。",
     str3_h:"ロール別指導",str3_p:"TANK / DPS / SUPPORT、各ロール専門のコーチングで適性に合わせて成長を加速。",
     str4_h:"3言語対応",str4_p:"日本語・韓国語・英語に対応。言語の壁なく海外連携スキルも同時に習得できます。",
@@ -584,7 +666,13 @@ const I18N = {
     role_tank:"スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。",
     role_dps:"ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略で火力を最大化します。",
     role_sup:"リソース管理・生存・ピールの優先順位。後方からチームを支える判断力を養います。",
-    sl1_d:"火・木",sl2_d:"土・日",sl3_d:"土・日",
+    sl1_d:"火・木",sl2_d:"水・金",sl3_d:"土・日",
+    sched_note:"※ 開講スケジュールは参加人数・ティア構成により調整される場合があります。",
+    coach_bio:"強豪チームがひしめく日本・Pacificシーンで、優勝・準優勝を経験した実績を持つコーチが、実戦視点で一人ひとりの課題に向き合います。",
+    price_notes:"<li>表示価格はすべて税込です。</li><li>すべて1名あたりの料金です。</li><li>グループクラスは同程度のティア・ロール構成が5名以上で開講します。</li><li>DPS / TANK / SUPPORTクラスは定員10名です。</li><li>受講後、内容をまとめたフィードバックメモをお渡しします。</li>",
+    fy_h:"こんな方におすすめ",fy_1:"今のランク帯で伸び悩みを感じているプレイヤー",fy_2:"自分のクセや弱点を客観的に把握したい方",fy_3:"独学に限界を感じ、効率的に上達したい方",fy_4:"チーム／スクリム環境で連携を高めたい方",fy_5:"上位・海外シーンを本気で目指したい方",
+    out_h:"受講後に得られるもの",out_1h:"明確になった弱点と改善点",out_1p:"感覚ではなく、言語化された課題と次にやるべきことが手元に残ります。",out_2h:"ロール別の判断基準",out_2p:"立ち回り・ポジショニング・コールの優先順位を、状況ごとに判断できる力。",out_3h:"フィードバックメモ",out_3p:"受講内容と改善ポイントをまとめたメモをお渡しします。復習と継続的な成長に活用できます。",out_4h:"成長し続ける自己分析力",out_4p:"コーチング後も、自分でリプレイを見て改善できる視点が身につきます。",
+    faq_h:"よくある質問",faq_q1:"個人クラスとグループクラスの違いは？",faq_a1:"個人クラスは1対1で、リプレイ分析またはライブでプレイしながらフィードバックする4回／計240分のプログラムです。グループクラスはロール別の講座型で8回／計720分、同程度のティア・ロール構成が5名以上で開講します。",faq_q2:"スケジュールは選べますか？",faq_a2:"個人クラスはお申し込み後に個別で調整します。ロール別クラスは固定枠での開講となり、参加人数・ティア構成により調整される場合があります。",faq_q3:"支払いのタイミングは？",faq_a3:"お申し込み後、受講日程が確定した段階でご案内します。",faq_q4:"キャンセル・返金はできますか？",faq_a4:"返金・振替ポリシーに準じます。受講開始日の30日前まで全額を次回スケジュールへ無料振替できるほか、時期に応じた振替対応があります。",faq_q5:"対応言語は？",faq_a5:"日本語・韓国語・英語に対応しています。",faq_q6:"受講後に残るものはありますか？",faq_a6:"受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。",
     rev_h:"受講者の声",rev_p:"受講生のX（旧Twitter）投稿をここに掲載予定。集まり次第、順次反映します。",
     rev_slot:"投稿枠（準備中）",rev_note:"※ 各枠はX投稿の埋め込み／スクリーンショットに差し替え可能です。",
     price_h:"料金・受講プラン",price_p:"仮オープン限定価格。グループクラスは同程度のティア・ロール構成が5名以上集まった場合に開講されます。",
@@ -607,67 +695,10 @@ const I18N = {
     st3_h:"受講料の支払い",st3_p:"日程確定後、案内された方法で受講料をお支払いください。",
     st4_h:"授業確定",st4_p:"入金確認後、授業の日程と時間が最終確定します（先着順で締切）。",
     mis_p1:"最も低い場所から高く昇り、光り輝く。99DIVINEアカデミーは、単に「ランクを上げる講座」ではありません。受講生がゲームの中で自分の潜在能力を発見し、その可能性を現実へ広げていく過程を共に歩みます。",
-    mis_p2:"<b style='color:var(--gold)'>学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは「実力の向上」ではなく、「人生の力」を育てる教育です。",
+    mis_p2:"<b style='color:var(--gold)'>学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは、単なるランクアップだけでなく、実力向上を通じて、判断力・継続力・挑戦する力を育てる教育です。",
     fin_h:"READY TO <span>RISE?</span>",fin_p:"あなたの成長の旅は、今ここから始まります。先着順で締め切られます。",fin_btn:"受講申請する →",
     foot:"© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
     sticky:"🎮 受講申請する"
-  },
-  en:{
-    nav_str:"Strengths",nav_coach:"Coach",nav_curri:"Curriculum",nav_price:"Pricing",nav_apply:"Apply",
-    hero_eyebrow:"Overwatch Coaching — JP / KR / EN",
-    hero_h1a:"PLAY",hero_h1b:"LIKE PRO.",
-    hero_lead:"OWCS-proven coaches analyze your gameplay directly. Beyond climbing rank, we build decision-making, positioning, and team understanding — an Overwatch-focused online coaching class.",
-    hero_apply:"Apply Now →",hero_price:"See Pricing",
-    pill_1:"✅ Replay Analysis",pill_2:"✅ Live Coaching",pill_3:"✅ Role-Based",pill_4:"<b>JP / KR / EN</b> Support",
-    msg_h:"From the Founder",
-    msg_p1:"Hi, I'm <b style='color:var(--gold)'>Supreme, founder of 99DIVINE</b>. This academy isn't just a place to get better at the game. We built it to deliver real growth through gaming to players in Japan.",
-    msg_p2:"Communication, teamwork, fast decision-making, multitasking, mental management — these didn't end inside the game. They helped me earn a CS degree at UC Irvine and a private pilot license (PPL) at Utah Valley University. <b style='color:var(--gold)'>Gaming is a stage for growth across your whole life.</b>",
-    str_h:"Why 99DIVINE",str_p:"A hands-on program run directly by coaches and players from a pro team.",
-    str1_h:"Replay Analysis",str1_p:"Pro-level frame-by-frame diagnosis. We pinpoint weaknesses and clear fixes.",
-    str2_h:"Live Coaching",str2_p:"Real-time feedback mid-match. Guidance at the decision moment changes how you play.",
-    str3_h:"Role-Based",str3_p:"TANK / DPS / SUPPORT specialist coaching tailored to your strengths.",
-    str4_h:"Trilingual",str4_p:"Japanese, Korean & English. No language barrier — build cross-region skills too.",
-    str5_h:"Proven Results",str5_p:"2025 OWCS Pacific Stage 1 Champion (debut year) and more — winning-team know-how.",
-    coach_h:"Meet the Coach",coach_tag:"HEAD COACH",
-    coach_quote:"\"The only coach to seize the crown while VARREL swept everything but the main event.\"",
-    curri_h:"Personal Curriculum (3-Month Example)",
-    m1_label:"MONTH",m1_h:"Foundations",m1_goal:"🎯 Understand your current level objectively and build a stable base.",
-    m1_l1:"Role fundamentals and role understanding",m1_l2:"Positioning, vision control & comms basics",m1_l3:"Skill diagnosis via personal replay analysis",
-    m2_label:"MONTH",m2_h:"Individual Growth",m2_goal:"🎯 Fix weaknesses and establish your own playstyle.",
-    m2_l1:"Hero-based advanced strategy (TANK/DPS/SUPPORT)",m2_l2:"Live coaching: real-time in-game feedback",m2_l3:"Overcome weaknesses & define your style",
-    m3_label:"MONTH",m3_h:"Teamwork",m3_goal:"🎯 Raise team-level cooperation and tactical thinking; deliver results.",
-    m3_l1:"Team strategy (Dive / Brawl / Poke meta)",m3_l2:"Strengthening team comms systems",m3_l3:"Team play in scrim / in-house environments",
-    role_h:"Role-Based Curriculum",role_p:"Specialist lecture-style classes. 10 seats, opened by similar tier/role composition.",
-    role_tank:"Space management and engage timing. Master the playmaking frontline.",
-    role_dps:"Positioning and consistent kills. Maximize damage with hero-based strategy.",
-    role_sup:"Resource management, survival, peel priority. Support from the backline.",
-    sl1_d:"Tue / Thu",sl2_d:"Sat / Sun",sl3_d:"Sat / Sun",
-    rev_h:"Student Voices",rev_p:"Student posts from X (Twitter) will appear here as they come in.",
-    rev_slot:"Post slot (coming soon)",rev_note:"※ Each slot can be replaced with an X embed or screenshot.",
-    price_h:"Pricing & Plans",price_p:"Soft-open pricing. Group classes open when 5+ students of similar tier/role gather.",
-    pg_h:"Group Classes",pg_m:"8 sessions / 720 min total",pg_d:"All classes below are the same price. Opens once 5+ players of similar tier/role gather.",pg_list:"<li><b>Team Class</b> &mdash; Replay-analysis based, for teams aiming to grow as a unit.</li><li><b>DPS Class</b> (max 10) &mdash; Lecture-style class focused on the DPS role.</li><li><b>TANK Class</b> (max 10) &mdash; Lecture-style class focused on the TANK role.</li><li><b>SUPPORT Class</b> (max 10) &mdash; Lecture-style class focused on the SUPPORT role.</li>",rev_soon:"Coming soon…",
-    pp1_h:"Personal Class｜3-Month Growth Program",pp1_m:"4 sessions / 240 min total",pp1_d:"Via replay analysis or live ranked play, we find what you need and give feedback — improving key habits and blind spots you can't see yourself.",
-    pp2_h:"Team Class",pp2_m:"8 sessions / 720 min total",pp2_d:"Replay-based, for teams aiming to grow together.",
-    pp3_h:"DPS Class",pp3_m:"8 sessions / 720 min · 10 seats",pp3_d:"Lecture-style class specialized for DPS.",
-    pp4_h:"TANK Class",pp4_m:"8 sessions / 720 min · 10 seats",pp4_d:"Lecture-style class specialized for TANK.",
-    pp5_h:"SUPPORT Class",pp5_m:"8 sessions / 720 min · 10 seats",pp5_d:"Lecture-style class specialized for SUPPORT.",
-    yen:" JPY",yen2:" JPY",yen3:" JPY",yen4:" JPY",yen5:" JPY",
-    ref_h:"💰 Refund / Reschedule Policy",
-    ref1:"Up to 30 days before start: full transfer to next schedule (free)",
-    ref2:"Up to 14 days before start: one session transfer free",
-    ref3:"After first session: remaining sessions transferable (advance notice)",
-    ref4:"After 2nd session onward: no schedule changes",
-    ref_note:"If the organizer changes the schedule or assigned coach, we guarantee an equivalent substitute session or full refund. Transfer requests must be made 3 days before the session.",
-    step_h:"How to Apply",step_p:"Fully online, first-come first-served.",
-    st1_h:"Fill the Form",st1_p:"Enter nickname, BattleTag, tier, and desired role.",
-    st2_h:"Schedule",st2_p:"Staff arranges your dates and times individually.",
-    st3_h:"Payment",st3_p:"After dates are set, pay via the guided method.",
-    st4_h:"Confirmed",st4_p:"Once payment is confirmed, your schedule is finalized (first-come).",
-    mis_p1:"Rise from the lowest place and shine. 99DIVINE isn't merely a rank-climbing course. We walk with students as they discover their potential in-game and expand it into reality.",
-    mis_p2:"<b style='color:var(--gold)'>The goal isn't victory itself — it's growth.</b> 99DIVINE coaching builds not just skill, but the power for life.",
-    fin_h:"READY TO <span>RISE?</span>",fin_p:"Your growth journey starts here. Seats close on a first-come basis.",fin_btn:"Apply Now →",
-    foot:"© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
-    sticky:"🎮 Apply Now"
   },
   ko:{
     nav_str:"강점",nav_coach:"코치",nav_curri:"커리큘럼",nav_price:"요금",nav_apply:"수강 신청",
@@ -680,7 +711,7 @@ const I18N = {
     msg_p1:"안녕하세요, <b style='color:var(--gold)'>99DIVINE 대표 Supreme</b>입니다. 99DIVINE 아카데미는 단순히 '게임을 잘하게 만드는 곳'이 아닙니다. 게임을 통한 '진짜 성장'을 일본 플레이어에게 전하기 위해 시작했습니다.",
     msg_p2:"커뮤니케이션·팀워크·빠른 판단력·멀티태스킹·멘탈 관리. 이것들은 게임 안에서만 끝나지 않고, 저 또한 UC Irvine에서 컴퓨터과학 학사를, Utah Valley University에서 민간 항공 면허(PPL)를 취득하는 힘이 되었습니다. <b style='color:var(--gold)'>게임은 인생 전체의 성장을 이끄는 도전과 배움의 장입니다.</b>",
     str_h:"99DIVINE의 강점",str_p:"프로팀 출신 코치·선수진이 직접 운영하는 실전형 교육 프로그램.",
-    str1_h:"리플레이 분석",str1_p:"프로 관점으로 1프레임 단위 진단. 약점과 개선책을 명확히 제시합니다.",
+    str1_h:"리플레이 분석",str1_p:"프로 관점으로 당신의 플레이를 세밀하게 분석하고, 약점과 개선책을 명확히 제시합니다.",
     str2_h:"라이브 코칭",str2_p:"실전 중 실시간 피드백. 판단의 순간에 지도가 들어가 의사결정이 달라집니다.",
     str3_h:"롤별 지도",str3_p:"TANK / DPS / SUPPORT 전문 코칭으로 적성에 맞춘 성장 가속.",
     str4_h:"3개 언어 지원",str4_p:"일본어·한국어·영어 지원. 언어 장벽 없이 해외 연계 스킬도 함께 습득.",
@@ -698,7 +729,13 @@ const I18N = {
     role_tank:"스페이스 관리와 엔게이지 판단. 팀의 기점이 되는 무빙을 철저히 연마.",
     role_dps:"포지셔닝과 킬 획득의 재현성. 영웅별 응용 전략으로 화력 극대화.",
     role_sup:"리소스 관리·생존·필 우선순위. 후방에서 팀을 받치는 판단력 양성.",
-    sl1_d:"화 · 목",sl2_d:"토 · 일",sl3_d:"토 · 일",
+    sl1_d:"화 · 목",sl2_d:"수 · 금",sl3_d:"토 · 일",
+    sched_note:"※ 개강 스케줄은 참가 인원·티어 구성에 따라 조정될 수 있습니다.",
+    coach_bio:"강호 팀들이 즐비한 일본·Pacific 씬에서 우승·준우승을 경험한 실적을 지닌 코치가, 실전 관점에서 한 사람 한 사람의 과제를 마주합니다.",
+    price_notes:"<li>표시 가격은 모두 부가세 포함입니다.</li><li>모두 1인당 요금입니다.</li><li>그룹 클래스는 비슷한 티어·롤 구성 5명 이상이면 개강합니다.</li><li>DPS / TANK / SUPPORT 클래스는 정원 10명입니다.</li><li>수강 후, 내용을 정리한 피드백 메모를 드립니다.</li>",
+    fy_h:"이런 분께 추천",fy_1:"현재 랭크대에서 성장 정체를 느끼는 플레이어",fy_2:"자신의 습관·약점을 객관적으로 파악하고 싶은 분",fy_3:"독학의 한계를 느끼고 효율적으로 실력을 올리고 싶은 분",fy_4:"팀/스크림 환경에서 연계를 높이고 싶은 분",fy_5:"상위·해외 씬을 진지하게 목표로 하는 분",
+    out_h:"수강 후 얻을 수 있는 것",out_1h:"명확해진 약점과 개선점",out_1p:"감각이 아니라, 언어화된 과제와 다음에 해야 할 일이 손에 남습니다.",out_2h:"롤별 판단 기준",out_2p:"무브·포지셔닝·콜의 우선순위를 상황별로 판단하는 힘.",out_3h:"피드백 메모",out_3p:"수강 내용과 개선 포인트를 정리한 메모를 드립니다. 복습과 지속적인 성장에 활용할 수 있습니다.",out_4h:"계속 성장하는 자기 분석력",out_4p:"코칭이 끝난 뒤에도 스스로 리플레이를 보고 개선할 수 있는 시각이 몸에 뱁니다.",
+    faq_h:"자주 묻는 질문",faq_q1:"개인 클래스와 그룹 클래스의 차이는?",faq_a1:"개인 클래스는 1대1로 리플레이 분석 또는 라이브로 플레이하며 피드백하는 4회/총 240분 프로그램입니다. 그룹 클래스는 롤별 강의형으로 8회/총 720분, 비슷한 티어·롤 구성 5명 이상이면 개강합니다.",faq_q2:"스케줄은 선택할 수 있나요?",faq_a2:"개인 클래스는 신청 후 개별 조정합니다. 롤별 클래스는 고정 시간대로 개강하며, 참가 인원·티어 구성에 따라 조정될 수 있습니다.",faq_q3:"결제 시점은?",faq_a3:"신청 후 수강 일정이 확정된 단계에서 안내드립니다.",faq_q4:"취소·환불이 가능한가요?",faq_a4:"환불·대체 정책에 따릅니다. 수강 시작일 30일 전까지 전액을 다음 일정으로 무료 대체할 수 있으며, 시기에 따른 대체 대응이 있습니다.",faq_q5:"지원 언어는?",faq_a5:"일본어·한국어·영어를 지원합니다.",faq_q6:"수강 후 남는 것이 있나요?",faq_a6:"수강 내용과 개선 포인트를 정리한 피드백 메모를 드립니다.",
     rev_h:"수강생 후기",rev_p:"수강생의 X(트위터) 게시물을 이곳에 게재 예정. 모이는 대로 반영합니다.",
     rev_slot:"게시 슬롯 (준비 중)",rev_note:"※ 각 슬롯은 X 임베드/스크린샷으로 교체 가능합니다.",
     price_h:"요금 · 수강 플랜",price_p:"가오픈 한정 가격. 그룹 클래스는 비슷한 티어·롤 구성 5명 이상 모이면 개강.",
@@ -721,7 +758,7 @@ const I18N = {
     st3_h:"수강료 결제",st3_p:"일정 확정 후 안내된 방법으로 수강료를 결제.",
     st4_h:"수업 확정",st4_p:"입금 확인 후 수업 일정·시간이 최종 확정(선착순 마감).",
     mis_p1:"가장 낮은 곳에서 높이 올라 빛난다. 99DIVINE 아카데미는 단순한 '랭크 올리기 강좌'가 아닙니다. 수강생이 게임 속에서 자신의 잠재력을 발견하고, 그 가능성을 현실로 넓혀가는 과정을 함께합니다.",
-    mis_p2:"<b style='color:var(--gold)'>배움의 목표는 '승리 그 자체'가 아니라 '성장'.</b> 99DIVINE 코칭은 '실력 향상'이 아닌 '인생의 힘'을 키우는 교육입니다.",
+    mis_p2:"<b style='color:var(--gold)'>배움의 목표는 '승리 그 자체'가 아니라 '성장'.</b> 99DIVINE 코칭은 단순한 랭크 업뿐만 아니라, 실력 향상을 통해 판단력·지속력·도전하는 힘을 기르는 교육입니다.",
     fin_h:"READY TO <span>RISE?</span>",fin_p:"당신의 성장 여정은 지금 여기서 시작됩니다. 선착순으로 마감됩니다.",fin_btn:"수강 신청하기 →",
     foot:"© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
     sticky:"🎮 수강 신청하기"

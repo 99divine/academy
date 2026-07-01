@@ -2,7 +2,9 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='42' fill='%23d9a425'%3E9%3C/text%3E%3C/svg%3E">
 <title>99DIVINE ACADEMY — Overwatch Coaching</title>
 <meta name="description" content="OWCS実績を持つコーチが、あなたのプレイを直接分析。ランクアップだけでなく判断力・ポジショニング・チーム理解まで伸ばすオーバーウォッチ専門オンラインコーチング。日本語・韓国語対応。">
 <meta property="og:type" content="website">
@@ -286,6 +288,42 @@
   .faq-item summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:22px;line-height:1}
   .faq-item[open] summary::after{content:"\2212"}
   .faq-item p{padding:0 22px 20px;font-size:14px;color:var(--ink-dim);line-height:1.7}
+  /* mobile & polish pass */
+  *{-webkit-tap-highlight-color:transparent}
+  section[id]{scroll-margin-top:76px}
+  .sticky-bar{padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+  @media(max-width:820px){
+    section.block{padding:56px 0}
+    .sec-head{margin-bottom:34px}
+    .coach-card{margin:0 auto}
+    .month{padding:20px;gap:20px}
+    .month .mn{font-size:46px}
+    .final{padding:64px 0 72px}
+    .reviews-soon{padding:40px 20px}
+  }
+  @media(max-width:560px){
+    .nav-links a.nav-cta{display:none}
+    .nav-links{gap:14px}
+    .pcard .amt{font-size:28px}
+    .steps{grid-template-columns:1fr}
+  }
+  /* scroll reveal */
+  .rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+  .rv.in{opacity:1;transform:none}
+  .rv-stagger>*{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1)}
+  .rv-stagger.in>*{opacity:1;transform:none}
+  .rv-stagger.in>*:nth-child(1){transition-delay:.05s}
+  .rv-stagger.in>*:nth-child(2){transition-delay:.13s}
+  .rv-stagger.in>*:nth-child(3){transition-delay:.21s}
+  .rv-stagger.in>*:nth-child(4){transition-delay:.29s}
+  .rv-stagger.in>*:nth-child(5){transition-delay:.37s}
+  .rv-stagger.in>*:nth-child(6){transition-delay:.45s}
+  header{transition:box-shadow .3s}
+  header.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.45)}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .rv,.rv-stagger>*{opacity:1!important;transform:none!important;transition:none!important}
+  }
 </style>
 </head>
 <body>
@@ -327,7 +365,7 @@
       </div>
     </div>
     <div class="hero-media">
-      <img src="img/hero.jpg" alt="99DIVINE ACADEMY">
+      <img src="img/hero.jpg" alt="99DIVINE ACADEMY" width="1176" height="672" fetchpriority="high">
     </div>
   </div>
 </section>
@@ -390,7 +428,7 @@
     </div>
     <div class="coach">
       <div class="coach-card">
-        <img src="img/coach-gyomin.png" alt="Gyomin">
+        <img src="img/coach-gyomin.png" alt="Gyomin" width="342" height="510" loading="lazy" decoding="async">
         <div class="tag" data-t="coach_tag">HEAD COACH</div>
         <h3>GYOMIN</h3>
         <a class="coach-x" href="https://x.com/justgyomin" target="_blank" rel="noopener">𝕏&nbsp;&nbsp;Gyomin</a>
@@ -431,7 +469,7 @@
             <li data-t="m1_l3">個別リプレイ分析による現在実力の診断</li>
           </ul>
         </div>
-        <img src="img/curriculum-month1.jpg" alt="1ヶ月目">
+        <img src="img/curriculum-month1.jpg" alt="1ヶ月目" width="1176" height="700" loading="lazy" decoding="async">
       </div>
       <div class="month">
         <div class="mn">02<small data-t="m2_label">MONTH</small></div>
@@ -444,7 +482,7 @@
             <li data-t="m2_l3">弱点克服とプレイスタイルの確立</li>
           </ul>
         </div>
-        <img src="img/curriculum-month2.jpg" alt="2ヶ月目">
+        <img src="img/curriculum-month2.jpg" alt="2ヶ月目" width="1176" height="728" loading="lazy" decoding="async">
       </div>
       <div class="month">
         <div class="mn">03<small data-t="m3_label">MONTH</small></div>
@@ -457,7 +495,7 @@
             <li data-t="m3_l3">スクリム／内戦環境でのチームプレイ実践</li>
           </ul>
         </div>
-        <img src="img/curriculum-month3.jpg" alt="3ヶ月目">
+        <img src="img/curriculum-month3.jpg" alt="3ヶ月目" width="1176" height="728" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -775,11 +813,39 @@ function setLang(lang){
   document.querySelectorAll('.lang button').forEach(b=>{
     b.classList.toggle('on', b.getAttribute('data-lang')===lang);
   });
+  try{ localStorage.setItem('lang',lang); }catch(e){}
 }
 document.querySelectorAll('.lang button').forEach(b=>{
   b.addEventListener('click',()=>setLang(b.getAttribute('data-lang')));
 });
-setLang('ja');
+function initLang(){
+  let l='ja';
+  try{ l = localStorage.getItem('lang') || 'ja'; }catch(e){}
+  if(!I18N[l]) l='ja';
+  setLang(l);
+}
+initLang();
+
+/* ===== scroll reveal ===== */
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // targets: section heads & key blocks fade-up; grids stagger their children
+  document.querySelectorAll('section.block .sec-head, .hero-grid > div, .mission, .final .wrap, .coach, .refund, .price-notes, .reviews-soon, .sched, .sched-note').forEach(el=>el.classList.add('rv'));
+  document.querySelectorAll('.grid-5, .fy-grid, .out-grid, .curri, .roles, .steps, .faq-list, .price-row, .pills').forEach(el=>el.classList.add('rv-stagger'));
+  if(reduce || !('IntersectionObserver' in window)){
+    document.querySelectorAll('.rv,.rv-stagger').forEach(el=>el.classList.add('in'));
+    return;
+  }
+  const io = new IntersectionObserver((ents)=>{
+    ents.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv,.rv-stagger').forEach(el=>io.observe(el));
+  // header shadow on scroll
+  const hd=document.querySelector('header');
+  addEventListener('scroll',()=>hd.classList.toggle('scrolled', scrollY>8),{passive:true});
+})();
 </script>
 </body>
 </html>

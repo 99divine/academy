@@ -222,6 +222,15 @@
   .pcard .plist li{font-size:13px;color:var(--ink-dim);padding-left:18px;position:relative;line-height:1.65}
   .pcard .plist li::before{content:"\25B8";position:absolute;left:0;color:var(--gold)}
   .pcard .plist b{color:var(--ink);font-weight:700}
+  .rev-cols{columns:2;column-gap:16px}
+  .rev-card{break-inside:avoid;margin-bottom:16px;padding:26px 26px 22px;background:var(--bg-2);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px}
+  .rev-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .rev-av{width:42px;height:42px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--gold);color:#0a0a0a;font-family:'Anton',sans-serif;font-size:19px;border-radius:2px}
+  .rev-name{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:15px;color:var(--ink)}
+  .rev-q{margin-left:auto;font-family:'Anton',sans-serif;font-size:44px;line-height:.6;color:var(--gold);opacity:.35}
+  .rev-card p{font-size:13.5px;color:var(--ink-dim);line-height:1.85}
+  .rev-card p+p{margin-top:12px}
+  @media(max-width:760px){.rev-cols{columns:1}}
   .reviews-soon{border:1px dashed var(--line);border-radius:8px;padding:54px 24px;text-align:center;background:var(--bg-2)}
   .reviews-soon .x{font-family:'Bebas Neue';font-size:42px;color:var(--line);line-height:1}
   .reviews-soon p{font-family:'Anton',sans-serif;letter-spacing:.12em;color:var(--ink-dim);font-size:18px;margin-top:8px}
@@ -307,11 +316,39 @@
     .pcard .amt{font-size:28px}
     .steps{grid-template-columns:1fr}
   }
+  /* scroll progress bar */
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-bright));z-index:200;pointer-events:none}
+  /* hero entrance */
+  @keyframes heroIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+  .hero .eyebrow,.hero h1 span,.hero .lead,.hero-cta,.pills{opacity:0;animation:heroIn .8s cubic-bezier(.22,.61,.36,1) forwards}
+  .hero h1 span{display:block}
+  .hero .eyebrow{animation-delay:.05s}
+  .hero h1 span:first-child{animation-delay:.15s}
+  .hero h1 span.l2{animation-delay:.27s}
+  .hero .lead{animation-delay:.42s}
+  .hero-cta{animation-delay:.55s}
+  .pills{animation-delay:.68s}
+  .hero-media{opacity:0;animation:heroIn 1s .35s cubic-bezier(.22,.61,.36,1) forwards}
+  /* section head gold line grow */
+  .sec-head h2{position:relative;padding-bottom:14px}
+  .sec-head h2::after{content:"";position:absolute;left:0;bottom:0;width:64px;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .8s .25s cubic-bezier(.22,.61,.36,1)}
+  .sec-head.in h2::after{transform:scaleX(1)}
+  /* card micro-interactions */
+  .fy-cell,.out-cell,.rev-card,.pcard,.month,.faq-item,.slot,.coach-card{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+  .fy-cell:hover,.out-cell:hover,.rev-card:hover,.pcard:hover,.month:hover,.slot:hover{transform:translateY(-4px);border-color:rgba(217,164,37,.55);box-shadow:0 12px 28px rgba(0,0,0,.35)}
+  /* FAQ open fade */
+  @keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+  .faq-item[open] p{animation:faqIn .35s ease}
+  /* mobile sticky bar slide-in */
+  @media(max-width:820px){
+    .sticky-bar{transform:translateY(110%);transition:transform .45s cubic-bezier(.22,.61,.36,1)}
+    .sticky-bar.show{transform:none}
+  }
   /* scroll reveal */
-  .rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
-  .rv.in{opacity:1;transform:none}
-  .rv-stagger>*{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1)}
-  .rv-stagger.in>*{opacity:1;transform:none}
+  .rv{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1),filter .7s cubic-bezier(.22,.61,.36,1)}
+  .rv.in{opacity:1;transform:none;filter:none}
+  .rv-stagger>*{opacity:0;transform:translateY(22px);filter:blur(5px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1),filter .6s cubic-bezier(.22,.61,.36,1)}
+  .rv-stagger.in>*{opacity:1;transform:none;filter:none}
   .rv-stagger.in>*:nth-child(1){transition-delay:.05s}
   .rv-stagger.in>*:nth-child(2){transition-delay:.13s}
   .rv-stagger.in>*:nth-child(3){transition-delay:.21s}
@@ -322,7 +359,11 @@
   header.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.45)}
   @media(prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
-    .rv,.rv-stagger>*{opacity:1!important;transform:none!important;transition:none!important}
+    .rv,.rv-stagger>*{opacity:1!important;transform:none!important;transition:none!important;filter:none!important}
+    .hero .eyebrow,.hero h1 span,.hero .lead,.hero-cta,.pills,.hero-media{animation:none!important;opacity:1!important}
+    .sec-head h2::after{transform:scaleX(1)!important;transition:none!important}
+    .sticky-bar{transform:none!important}
+    #progress{display:none}
   }
 </style>
 </head>
@@ -545,11 +586,42 @@
     <div class="sec-head">
       <div class="sec-num">07 / VOICES</div>
       <h2 data-t="rev_h">受講者の声</h2>
-      <p data-t="rev_p">受講生の声をここに掲載予定。集まり次第、順次反映します。</p>
     </div>
-    <div class="reviews-soon">
-      <div class="x">𝕏</div>
-      <p data-t="rev_soon">準備中…</p>
+    <div class="rev-cols rv-stagger">
+
+      <article class="rev-card">
+        <div class="rev-top">
+          <span class="rev-av">H</span>
+          <div class="rev-name">Hさん</div>
+          <span class="rev-q">&ldquo;</span>
+        </div>
+        <p>自分の実力や理解力のせいもあるが、その場では理解が追いついていないときもある。 ただ内容をまとめてもらえるので、あとから理解が追いつき「こういうことか」と理解が進み、次のレッスンで答え合わせのような形ができて実力もあがるプログラムになっていると感じる。</p>
+        <p>マクロ視点が多いので、それは結構経験が必要な要素が多い部分だと思ってはいるので週1回の期間だと人によっては習得まで時間が足りないかも？とは思います。自分も今は時間がパツパツなので1日に3試合（30分は練習できるように）考えながらプレイしています。</p>
+        <p>ピークはM3で現在はD1までまた落ちてしまったのですが、直近のレッスンで言われた内容がやっと染み付いてきたのと、エイムの仕方や考えも一新したのも噛み合い、プレイフィールが向上していると感じています。 レッスンを受ける前と比べると天と地の差です。 最初のベンチャーは猪突猛進で突っ込んでチームを信用しない完全ソロなベンチャーだったとは思います。</p>
+        <p>今は判断力や経験を貯めている状態でまさに新しい壁に挑戦している状況です。ここを乗り越えてまたレッスンをお願いしたいと思います。ありがとうございました。</p>
+      </article>
+
+      <article class="rev-card">
+        <div class="rev-top">
+          <span class="rev-av">A</span>
+          <div class="rev-name">Aさん</div>
+          <span class="rev-q">&ldquo;</span>
+        </div>
+        <p>サポート（特にアナ）についてコーチングを受けました！ リプレイのフィードバックだけでなく、実際にGyominコーチのアナのプレイを見ながらさまざまな場面でアナが果たすべき役割を丁寧に教えていただきました。</p>
+        <p>また、目まぐるしく変化する戦況の中で、味方にどう関われば戦いやすくなるのか、そして敵にどのような圧力をかければ味方が動きやすくなるのかを状況ごとに分かりやすく解説していただけたのがとても印象的でした。</p>
+        <p>教えていただいたことを実践するようになってからは、以前よりも周囲を見渡せるようになり、「今自分が何をするべきか」を考えながらプレイできる場面がかなり増えたと実感しています。</p>
+        <p>アナでもっと上達したい方はもちろん、サポート全体の考え方を学びたい方にも本当におすすめできるコーチングでした。ありがとうございました！！</p>
+      </article>
+
+      <article class="rev-card">
+        <div class="rev-top">
+          <span class="rev-av">S</span>
+          <div class="rev-name">Sさん</div>
+          <span class="rev-q">&ldquo;</span>
+        </div>
+        <p>今までコーチングを受けさせていただいて、少しずつですが進歩しているように感じます。 ポジショニング、スキル、ULTタイミング等の選択肢を教えていただけるので、プレイ中に頭の中に入れながら動けるようになってきて自分の反省点や改善方法も考えられるようになりました！</p>
+      </article>
+
     </div>
   </div>
 </section>
@@ -830,7 +902,7 @@ initLang();
 (function(){
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   // targets: section heads & key blocks fade-up; grids stagger their children
-  document.querySelectorAll('section.block .sec-head, .hero-grid > div, .mission, .final .wrap, .coach, .refund, .price-notes, .reviews-soon, .sched, .sched-note').forEach(el=>el.classList.add('rv'));
+  document.querySelectorAll('section.block .sec-head, .mission, .final .wrap, .coach, .refund, .price-notes, .reviews-soon, .sched, .sched-note').forEach(el=>el.classList.add('rv'));
   document.querySelectorAll('.grid-5, .fy-grid, .out-grid, .curri, .roles, .steps, .faq-list, .price-row, .pills').forEach(el=>el.classList.add('rv-stagger'));
   if(reduce || !('IntersectionObserver' in window)){
     document.querySelectorAll('.rv,.rv-stagger').forEach(el=>el.classList.add('in'));
@@ -842,9 +914,18 @@ initLang();
     });
   },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.rv,.rv-stagger').forEach(el=>io.observe(el));
-  // header shadow on scroll
+  // header shadow + progress + sticky bar
   const hd=document.querySelector('header');
-  addEventListener('scroll',()=>hd.classList.toggle('scrolled', scrollY>8),{passive:true});
+  const pg=document.createElement('div'); pg.id='progress'; document.body.appendChild(pg);
+  const sb=document.querySelector('.sticky-bar');
+  function onScroll(){
+    hd.classList.toggle('scrolled', scrollY>8);
+    const max=document.documentElement.scrollHeight-innerHeight;
+    pg.style.width=(max>0?(scrollY/max*100):0)+'%';
+    if(sb) sb.classList.toggle('show', scrollY>420);
+  }
+  addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
 })();
 </script>
 </body>

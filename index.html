@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0a0a0a">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='42' fill='%23d9a425'%3E9%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#141310">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141310'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='42' fill='%23d9a425'%3E9%3C/text%3E%3C/svg%3E">
 <title>99DIVINE ACADEMY — Overwatch Coaching</title>
 <meta name="description" content="OWCS実績を持つコーチが、あなたのプレイを直接分析。ランクアップだけでなく判断力・ポジショニング・チーム理解まで伸ばすオーバーウォッチ専門オンラインコーチング。日本語・韓国語対応。">
 <meta property="og:type" content="website">
@@ -18,63 +18,74 @@
 <meta name="twitter:image" content="https://99divine.github.io/academy/img/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Barlow+Condensed:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0a0a0a;
-    --bg-2:#121212;
+    --bg:#141310;
+    --bg-2:#1c1a16;
     --ink:#f4f1ea;
     --ink-dim:#b9b4a8;
     --gold:#d9a425;
     --gold-bright:#f2bd3c;
-    --line:#2a2722;
-    --maxw:1180px;
+    --line:#332f28;
+    --maxw:1140px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
     background:var(--bg);
     color:var(--ink);
-    font-family:'Noto Sans JP',sans-serif;
-    line-height:1.7;
+    font-family:'Zen Kaku Gothic New',sans-serif;
+    font-weight:400;
+    line-height:1.8;
+    letter-spacing:.015em;
     overflow-x:hidden;
     -webkit-font-smoothing:antialiased;
   }
   /* film grain overlay */
   body::after{
-    content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.05;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.16;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
+  /* 下地のムラ：一様なベタ塗りを避ける */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(1100px 700px at 12% -8%, rgba(217,164,37,.05), transparent 60%),
+      radial-gradient(900px 600px at 95% 8%, rgba(120,110,95,.05), transparent 62%),
+      radial-gradient(1000px 800px at 50% 105%, rgba(217,164,37,.03), transparent 60%);
+  }
+  header,section,footer,.sticky-bar{position:relative;z-index:1}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;height:auto;display:block}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
 
-  .display{font-family:'Anton',sans-serif;letter-spacing:.01em;line-height:.95;text-transform:uppercase}
-  .bebas{font-family:'Bebas Neue',sans-serif;letter-spacing:.04em}
+  .display{font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:-.022em;line-height:.94;text-transform:uppercase}
+  .bebas{font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:.06em}
 
   /* ===== HEADER ===== */
   header{
     position:sticky;top:0;z-index:100;
-    background:rgba(10,10,10,.86);backdrop-filter:blur(8px);
+    background:rgba(20,19,16,.88);backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);
   }
   .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.06em}
+  .brand{font-family:'Barlow Condensed',sans-serif;font-size:24px;letter-spacing:.06em}
   .brand b{color:var(--gold)}
   .nav-links{display:flex;gap:26px;align-items:center}
   .nav-links a{font-size:13px;color:var(--ink-dim);transition:color .2s}
   .nav-links a:hover{color:var(--gold-bright)}
-  .lang{display:flex;gap:2px;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+  .lang{display:flex;gap:2px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
   .lang button{
     background:transparent;border:0;color:var(--ink-dim);
-    font:600 11px 'Noto Sans JP';padding:6px 9px;cursor:pointer;transition:.15s
+    font:600 11px 'Zen Kaku Gothic New';padding:6px 9px;cursor:pointer;transition:.15s
   }
-  .lang button.on{background:var(--gold);color:#0a0a0a}
+  .lang button.on{background:var(--gold);color:#141310}
   .nav-links a.nav-cta{
-    background:var(--gold);color:#0a0a0a;font-weight:800;font-size:13px;
-    padding:9px 18px;border-radius:2px;transition:.18s;white-space:nowrap
+    background:var(--gold);color:#141310;font-weight:700;font-size:13px;
+    padding:10px 20px;border-radius:6px;transition:.18s;white-space:nowrap
   }
-  .nav-links a.nav-cta:hover{background:var(--gold-bright);color:#0a0a0a;transform:translateY(-1px)}
+  .nav-links a.nav-cta:hover{background:var(--gold-bright);color:#141310;transform:translateY(-1px)}
   @media(max-width:860px){.nav-links a.nlink{display:none}}
 
   /* ===== HERO ===== */
@@ -82,31 +93,31 @@
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
   .eyebrow{
     display:inline-flex;align-items:center;gap:8px;
-    font:700 12px 'Noto Sans JP';letter-spacing:.18em;text-transform:uppercase;
+    font:700 12px 'Zen Kaku Gothic New';letter-spacing:.18em;text-transform:uppercase;
     color:var(--gold);margin-bottom:22px
   }
   .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
-  .hero h1{font-size:clamp(44px,7vw,86px);margin-bottom:8px}
+  .hero h1{font-size:clamp(38px,5.6vw,72px);margin-bottom:14px}
   .hero h1 .l2{color:var(--gold);display:block}
   .hero p.lead{font-size:clamp(15px,1.5vw,18px);color:var(--ink-dim);max-width:520px;margin:24px 0 34px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
   .btn{
     display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;
-    padding:15px 26px;border-radius:2px;transition:.18s;cursor:pointer;border:1px solid transparent
+    padding:15px 26px;border-radius:10px;transition:.18s;cursor:pointer;border:1px solid transparent
   }
-  .btn-gold{background:var(--gold);color:#0a0a0a}
+  .btn-gold{background:var(--gold);color:#141310}
   .btn-gold:hover{background:var(--gold-bright);transform:translateY(-2px)}
   .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
   .btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright)}
   .hero-media{position:relative}
   .hero-media img{
-    width:100%;border:1px solid var(--line);border-radius:4px;
+    width:100%;border:1px solid var(--line);border-radius:10px;
     filter:grayscale(.15) contrast(1.05)
   }
   .hero-media::before{
     content:"OWCS";position:absolute;top:-14px;left:-14px;z-index:2;
-    font-family:'Anton',sans-serif;font-size:13px;letter-spacing:.2em;
-    background:var(--gold);color:#0a0a0a;padding:6px 12px;border-radius:2px
+    font-family:'Archivo',sans-serif;font-size:13px;letter-spacing:.2em;
+    background:var(--gold);color:#141310;padding:6px 12px;border-radius:10px
   }
   .pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
   .pill{
@@ -121,97 +132,100 @@
   }
 
   /* ===== SECTION SHELL ===== */
-  section.block{padding:84px 0;border-bottom:1px solid var(--line)}
-  .sec-head{margin-bottom:48px}
-  .sec-num{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:15px;letter-spacing:.2em}
-  .sec-head h2{font-size:clamp(30px,4vw,52px);margin-top:6px}
+  section.block{padding:118px 0;border-bottom:1px solid var(--line)}
+  .sec-head{margin-bottom:64px}
+  .sec-num{font-family:'Barlow Condensed',sans-serif;color:var(--gold);font-size:15px;letter-spacing:.2em}
+  .sec-head h2{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:clamp(26px,3vw,38px);letter-spacing:.01em;line-height:1.5;margin-top:10px}
   .sec-head p{color:var(--ink-dim);margin-top:14px}
 
   /* strengths */
   .grid-5{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
   .cell{background:var(--bg);padding:30px 26px;transition:.2s}
   .cell:hover{background:var(--bg-2)}
-  .cell .ico{font-size:26px;margin-bottom:14px}
-  .cell h3{font-size:18px;margin-bottom:10px;color:var(--gold-bright)}
+  .cell .ico{font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px;opacity:.9}
+  .cell h3{font-size:17px;margin-bottom:10px;color:var(--ink)}
   .cell p{font-size:14px;color:var(--ink-dim)}
 
   /* coach */
   .coach{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
   .coach-card{
-    background:var(--bg-2);border:1px solid var(--line);border-radius:6px;
+    background:var(--bg-2);border:1px solid var(--line);border-radius:10px;
     padding:26px;text-align:center;position:relative
   }
-  .coach-card img{margin:0 auto 14px;width:230px}
+  .coach-card img{margin:0 auto 16px;width:210px;border-radius:50%;background:#1c1a16}
   .coach-card .tag{
-    display:inline-block;font:700 11px 'Noto Sans JP';letter-spacing:.12em;
+    display:inline-block;font:700 11px 'Zen Kaku Gothic New';letter-spacing:.12em;
     color:var(--gold);border:1px solid var(--gold);padding:5px 12px;border-radius:999px;margin-bottom:8px
   }
-  .coach-card h3{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:.04em}
+  .coach-card h3{font-family:'Barlow Condensed',sans-serif;font-size:38px;letter-spacing:.04em}
   .coach-quote{
     border-left:3px solid var(--gold);padding:6px 0 6px 18px;margin:0 0 26px;
     font-size:17px;color:var(--ink)
   }
   .ach-list{list-style:none;display:grid;gap:10px}
   .ach-list li{display:flex;gap:12px;align-items:baseline;font-size:15px;color:var(--ink-dim);border-bottom:1px dashed var(--line);padding-bottom:10px}
-  .ach-list li b{color:var(--gold);font-family:'Bebas Neue',sans-serif;font-size:17px;min-width:52px}
+  .ach-list li b{color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-size:17px;min-width:52px}
   .ach-list li.win span{color:var(--ink)}
   .ach-win{color:var(--gold-bright);font-weight:700}
   @media(max-width:820px){.coach{grid-template-columns:1fr;gap:30px}.coach-card{max-width:320px}}
 
   /* curriculum */
-  .curri{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
-  .gstep{background:var(--bg-2);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:24px 22px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-  .gstep:hover{transform:translateY(-4px);border-color:rgba(217,164,37,.55);box-shadow:0 12px 28px rgba(0,0,0,.35)}
-  .gstep .gs-num{font-family:'Anton',sans-serif;font-size:44px;line-height:.85;color:var(--gold)}
-  .gstep .gs-num small{display:block;font-family:'Bebas Neue';font-size:12px;letter-spacing:.2em;color:var(--ink-dim);margin-top:5px}
-  .gstep .gs-en{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:.14em;color:var(--ink-dim);margin:12px 0 6px}
+  .curri{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;border-top:1px solid var(--line)}
+  .gstep{background:transparent;border:none;border-left:1px solid var(--line);padding:26px 24px 28px;position:relative}
+  .gstep:first-child{border-left:none;padding-left:0}
+  .gstep::before{content:"";position:absolute;top:-1px;left:-1px;width:38px;height:3px;background:var(--gold)}
+  .gstep:first-child::before{left:0}
+
+  .gstep .gs-num{font-family:'Archivo',sans-serif;font-size:34px;line-height:.9;color:var(--ink);opacity:.28}
+  .gstep .gs-num small{display:block;font-family:'Barlow Condensed';font-size:11px;letter-spacing:.2em;margin-top:4px}
+  .gstep .gs-en{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.14em;color:var(--gold);margin:14px 0 6px}
   .gstep h3{font-size:18px;margin-bottom:8px}
-  .gstep .goal{font-size:12.5px;color:var(--gold-bright);margin-bottom:14px;font-weight:700;line-height:1.6}
+  .gstep .goal{font-size:13px;color:var(--ink-dim);margin-bottom:16px;line-height:1.75;padding-bottom:16px;border-bottom:1px solid var(--line)}
   .gstep ul{list-style:none;display:grid;gap:7px}
   .gstep ul li{font-size:13px;color:var(--ink-dim);padding-left:16px;position:relative;line-height:1.55}
   .gstep ul li::before{content:"▸";position:absolute;left:0;color:var(--gold)}
   .curri-note{font-size:12px;color:var(--ink-dim);opacity:.85;margin-top:18px;line-height:1.7}
-  @media(max-width:1020px){.curri{grid-template-columns:1fr 1fr}}
-  @media(max-width:640px){.curri{grid-template-columns:1fr}}
+  @media(max-width:1020px){.curri{grid-template-columns:1fr 1fr}.gstep:nth-child(3){border-left:none;padding-left:0}.gstep:nth-child(3)::before{left:0}}
+  @media(max-width:640px){.curri{grid-template-columns:1fr}.gstep{border-left:none;padding-left:0;border-top:1px solid var(--line)}.gstep:first-child{border-top:none}.gstep::before{left:0}}
 
   /* role curriculum table */
   .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:30px}
   .role{background:var(--bg);padding:26px}
-  .role .rt{font-family:'Anton',sans-serif;font-size:24px;letter-spacing:.05em;color:var(--gold);margin-bottom:6px}
+  .role .rt{font-family:'Archivo',sans-serif;font-size:24px;letter-spacing:.05em;color:var(--gold);margin-bottom:6px}
   .role .rsub{font-size:12px;color:var(--ink-dim);margin-bottom:16px;text-transform:uppercase;letter-spacing:.1em}
   .role p{font-size:14px;color:var(--ink-dim)}
   .sched{display:flex;flex-wrap:wrap;gap:12px}
-  .slot{background:var(--bg-2);border:1px solid var(--line);border-radius:4px;padding:14px 18px;flex:1;min-width:200px}
-  .slot .d{font-family:'Bebas Neue';color:var(--gold);font-size:16px;letter-spacing:.1em;margin-bottom:4px}
+  .slot{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:14px 18px;flex:1;min-width:200px}
+  .slot .d{font-family:'Barlow Condensed';color:var(--gold);font-size:16px;letter-spacing:.1em;margin-bottom:4px}
   .slot .t{font-size:14px}
   @media(max-width:760px){.roles{grid-template-columns:1fr}}
 
   /* reviews */
   .reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
   .review-slot{
-    background:var(--bg-2);border:1px dashed var(--line);border-radius:8px;
+    background:var(--bg-2);border:1px dashed var(--line);border-radius:10px;
     min-height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;
     text-align:center;padding:26px;color:var(--ink-dim);transition:.2s
   }
-  .review-slot .x{font-family:'Bebas Neue';font-size:30px;color:var(--line)}
+  .review-slot .x{font-family:'Barlow Condensed';font-size:30px;color:var(--line)}
   .review-slot p{font-size:13px;margin-top:8px}
   .review-note{font-size:13px;color:var(--ink-dim);margin-top:18px;text-align:center}
 
   /* pricing */
   .price-wrap{display:grid;grid-template-columns:1fr;gap:34px}
   .price-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-  .ptag{font-family:'Bebas Neue';color:var(--gold);font-size:18px;letter-spacing:.14em;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .ptag{font-family:'Barlow Condensed';color:var(--gold);font-size:18px;letter-spacing:.14em;margin-bottom:14px;display:flex;align-items:center;gap:10px}
   .ptag::after{content:"";flex:1;height:1px;background:var(--line)}
-  .pcard{background:var(--bg-2);border:1px solid var(--line);border-radius:6px;padding:24px;transition:.2s;position:relative}
+  .pcard{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:24px;transition:.2s;position:relative}
   .pcard:hover{border-color:var(--gold);transform:translateY(-3px)}
   .pcard.feature{border-color:var(--gold)}
-  .pcard.feature::before{content:"RECOMMENDED";position:absolute;top:-11px;left:24px;background:var(--gold);color:#0a0a0a;font:700 11px 'Noto Sans JP';padding:3px 10px;border-radius:2px}
+  .pcard.feature::before{content:"RECOMMENDED";position:absolute;top:-11px;left:24px;background:var(--gold);color:#141310;font:700 11px 'Zen Kaku Gothic New';padding:3px 10px;border-radius:10px}
   .pcard h4{font-size:16px;margin-bottom:4px}
   .pcard .meta{font-size:12px;color:var(--ink-dim);margin-bottom:14px}
-  .pcard .amt{font-family:'Anton',sans-serif;font-size:32px;color:var(--ink)}
-  .pcard .amt small{font-size:14px;color:var(--ink-dim);font-family:'Noto Sans JP'}
+  .pcard .amt{font-family:'Archivo',sans-serif;font-size:32px;color:var(--ink)}
+  .pcard .amt small{font-size:14px;color:var(--ink-dim);font-family:'Zen Kaku Gothic New'}
   .pcard .desc{font-size:13px;color:var(--ink-dim);margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
-  .refund{background:var(--bg-2);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;padding:24px}
+  .refund{background:var(--bg-2);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:24px}
   .refund h4{color:var(--gold-bright);margin-bottom:14px;font-size:16px}
   .refund ul{list-style:none;display:grid;gap:9px}
   .refund li{font-size:13px;color:var(--ink-dim);padding-left:18px;position:relative}
@@ -222,90 +236,94 @@
   .pcard .plist li::before{content:"\25B8";position:absolute;left:0;color:var(--gold)}
   .pcard .plist b{color:var(--ink);font-weight:700}
   .rev-cols{columns:2;column-gap:16px}
-  .rev-card{break-inside:avoid;margin-bottom:16px;padding:26px 26px 22px;background:var(--bg-2);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px}
+  .rev-card{break-inside:avoid;margin-bottom:16px;padding:26px 26px 22px;background:var(--bg-2);border:1px solid var(--line);border-radius:10px}
   .rev-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-  .rev-av{width:42px;height:42px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--gold);color:#0a0a0a;font-family:'Anton',sans-serif;font-size:19px;border-radius:2px}
-  .rev-name{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:15px;color:var(--ink)}
-  .rev-q{margin-left:auto;font-family:'Anton',sans-serif;font-size:44px;line-height:.6;color:var(--gold);opacity:.35}
+  .rev-av{width:46px;height:46px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--gold);color:#141310;font-family:'Archivo',sans-serif;font-weight:700;font-size:17px;border-radius:50%}
+  .rev-name{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:15px;color:var(--ink)}
+  .rev-q{margin-left:auto;font-family:'Archivo',sans-serif;font-size:44px;line-height:.6;color:var(--gold);opacity:.35}
   .rev-card p{font-size:13.5px;color:var(--ink-dim);line-height:1.85}
   .rev-card p+p{margin-top:12px}
   @media(max-width:760px){.rev-cols{columns:1}}
-  .reviews-soon{border:1px dashed var(--line);border-radius:8px;padding:54px 24px;text-align:center;background:var(--bg-2)}
-  .reviews-soon .x{font-family:'Bebas Neue';font-size:42px;color:var(--line);line-height:1}
-  .reviews-soon p{font-family:'Anton',sans-serif;letter-spacing:.12em;color:var(--ink-dim);font-size:18px;margin-top:8px}
+  .reviews-soon{border:1px dashed var(--line);border-radius:10px;padding:54px 24px;text-align:center;background:var(--bg-2)}
+  .reviews-soon .x{font-family:'Barlow Condensed';font-size:42px;color:var(--line);line-height:1}
+  .reviews-soon p{font-family:'Archivo',sans-serif;letter-spacing:.12em;color:var(--ink-dim);font-size:18px;margin-top:8px}
 
   /* steps */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
   .step{background:var(--bg);padding:26px}
-  .step .sn{font-family:'Anton';font-size:40px;color:var(--gold);line-height:1}
+  .step .sn{font-family:'Archivo';font-size:40px;color:var(--gold);line-height:1}
   .step h4{font-size:15px;margin:10px 0 8px}
   .step p{font-size:13px;color:var(--ink-dim)}
   @media(max-width:760px){.steps{grid-template-columns:1fr 1fr}}
 
   /* mission */
   .mission{text-align:center;max-width:760px;margin:0 auto}
-  .mission .slogan{font-family:'Anton';font-size:clamp(26px,4vw,46px);color:var(--gold);margin:30px 0;line-height:1.05}
+  .mission .slogan{font-family:'Zen Old Mincho',serif;font-weight:700;font-size:clamp(22px,2.8vw,34px);color:var(--gold);margin:34px 0;line-height:1.75;letter-spacing:.04em}
   .mission p{color:var(--ink-dim);margin-bottom:16px}
 
   /* final cta */
   .final{padding:96px 0;text-align:center;background:
      radial-gradient(circle at 50% 0%, rgba(217,164,37,.10), transparent 60%)}
-  .final h2{font-family:'Anton';font-size:clamp(34px,6vw,72px);text-transform:uppercase;margin-bottom:18px}
+  .final h2{font-family:'Archivo';font-size:clamp(34px,6vw,72px);text-transform:uppercase;margin-bottom:18px}
   .final h2 span{color:var(--gold)}
   .final p{color:var(--ink-dim);max-width:480px;margin:0 auto 34px}
 
   footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--ink-dim);font-size:13px}
-  footer .fbrand{font-family:'Bebas Neue';font-size:22px;color:var(--ink);letter-spacing:.06em;margin-bottom:8px}
+  footer .fbrand{font-family:'Barlow Condensed';font-size:22px;color:var(--ink);letter-spacing:.06em;margin-bottom:8px}
   footer b{color:var(--gold)}
 
   /* sticky mobile CTA bar */
   .sticky-bar{
     position:fixed;left:0;right:0;bottom:0;z-index:200;display:none;
-    background:rgba(10,10,10,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line);
+    background:rgba(20,19,16,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line);
     padding:12px 16px
   }
-  .sticky-bar a{display:block;text-align:center;background:var(--gold);color:#0a0a0a;font-weight:700;padding:14px;border-radius:3px}
+  .sticky-bar a{display:block;text-align:center;background:var(--gold);color:#141310;font-weight:700;padding:14px;border-radius:10px}
   @media(max-width:820px){.sticky-bar{display:block} body{padding-bottom:72px}}
 
   [data-i18n-group]{display:none}
   [data-i18n-group].active{display:block}
   /* added sections & fixes */
-  .slot .r{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:.08em;color:var(--gold);margin-bottom:3px}
+  .slot .r{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.08em;color:var(--gold);margin-bottom:3px}
   .sched-note{font-size:12px;color:var(--ink-dim);opacity:.85;margin-top:14px}
   .coach-bio{font-size:15px;color:var(--ink-dim);line-height:1.75;margin-bottom:16px}
-  .coach-card .coach-x{display:inline-flex;align-items:center;margin-top:14px;padding:8px 18px;border:1px solid var(--line);border-radius:2px;font-family:'Bebas Neue',sans-serif;letter-spacing:.06em;font-size:15px;color:var(--ink);transition:.18s}
+  .coach-card .coach-x{display:inline-flex;align-items:center;margin-top:14px;padding:8px 18px;border:1px solid var(--line);border-radius:10px;font-family:'Barlow Condensed',sans-serif;letter-spacing:.06em;font-size:15px;color:var(--ink);transition:.18s}
   .coach-card .coach-x:hover{border-color:var(--gold);color:var(--gold)}
   .flinks{margin:16px 0 6px}
-  .flink{display:inline-flex;align-items:center;padding:9px 18px;border:1px solid var(--line);border-radius:2px;font-size:14px;color:var(--ink);transition:.18s}
+  .flink{display:inline-flex;align-items:center;padding:9px 18px;border:1px solid var(--line);border-radius:10px;font-size:14px;color:var(--ink);transition:.18s}
   .flink:hover{border-color:var(--gold);color:var(--gold)}
   .price-row.p3{grid-template-columns:repeat(3,1fr);align-items:stretch}
-  .p3 .pcard.feature{border-width:2px;transform:scale(1.03);box-shadow:0 0 0 1px rgba(217,164,37,.25),0 16px 40px rgba(0,0,0,.4);z-index:1}
+  .p3 .pcard.feature{border-color:var(--gold);background:#221e18}
   .pc-intro{font-size:14px;color:var(--ink-dim);line-height:1.75;margin:10px 0 18px}
-  .pbadge{display:inline-block;font-size:11px;font-weight:700;color:var(--gold-bright);border:1px solid rgba(217,164,37,.5);border-radius:2px;padding:3px 9px;margin-bottom:12px}
+  .pbadge{display:inline-block;font-size:11px;font-weight:700;color:var(--gold-bright);border:1px solid rgba(217,164,37,.5);border-radius:10px;padding:3px 9px;margin-bottom:12px}
   .psave{font-size:12.5px;color:var(--ink-dim);margin-top:8px}
   .psave b{color:var(--gold-bright);font-size:14px;font-weight:800}
-  .amt .per{font-size:13px;color:var(--ink-dim);margin-left:6px;font-family:'Noto Sans JP',sans-serif;font-weight:400}
+  .amt .per{font-size:13px;color:var(--ink-dim);margin-left:6px;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:400}
   .pg-cond{font-size:12px;color:var(--ink-dim);opacity:.85;margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
-  @media(max-width:1020px){.price-row.p3{grid-template-columns:1fr}.p3 .pcard.feature{transform:none}}
-  .price-notes{list-style:none;display:grid;gap:8px;margin:22px 0 0;padding:18px 20px;border:1px dashed var(--line);border-radius:4px;background:var(--bg-2)}
+  @media(max-width:1020px){.price-row.p3{grid-template-columns:1fr}}
+  .price-notes{list-style:none;display:grid;gap:8px;margin:22px 0 0;padding:18px 20px;border:1px dashed var(--line);border-radius:10px;background:var(--bg-2)}
   .price-notes li{font-size:13px;color:var(--ink-dim);line-height:1.6;padding-left:18px;position:relative}
   .price-notes li::before{content:"\2022";position:absolute;left:4px;color:var(--gold)}
-  .fy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-  .fy-cell{display:flex;gap:12px;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:4px;background:var(--bg-2)}
-  .fy-cell .fy-ic{color:var(--gold);font-size:18px;line-height:1.4}
-  .fy-cell p{font-size:15px;color:var(--ink-dim);line-height:1.6}
-  .out-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-  .out-cell{padding:24px;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:4px;background:var(--bg-2)}
-  .out-cell .out-ic{font-size:26px;line-height:1;margin-bottom:12px}
-  .out-cell h3{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:17px;margin-bottom:8px;color:var(--ink)}
-  .out-cell p{font-size:14px;color:var(--ink-dim);line-height:1.65}
-  .faq-list{display:grid;gap:10px;max-width:860px}
-  .faq-item{border:1px solid var(--line);border-radius:4px;background:var(--bg-2);overflow:hidden}
-  .faq-item summary{cursor:pointer;list-style:none;padding:18px 48px 18px 22px;font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:15px;color:var(--ink);position:relative}
+  .fy-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:56px;max-width:1000px}
+  .fy-list li{border-bottom:1px solid var(--line);padding:16px 0 16px 30px;position:relative}
+  .fy-list li::before{content:"";position:absolute;left:2px;top:27px;width:9px;height:9px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg)}
+  .fy-list li p{font-size:15.5px;color:var(--ink);line-height:1.6}
+  .fy-list li:nth-last-child(-n+1){border-bottom:none}
+  @media(max-width:760px){.fy-list{grid-template-columns:1fr}.fy-list li:last-child{border-bottom:none}}
+  .out-list{display:grid;gap:0;max-width:940px}
+  .out-row{display:grid;grid-template-columns:74px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+  .out-row:last-child{border-bottom:1px solid var(--line)}
+  .out-n{font-family:'Archivo',sans-serif;font-size:26px;color:var(--gold);line-height:1.2;opacity:.85}
+  .out-body h3{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:18px;margin-bottom:7px;color:var(--ink)}
+  .out-body p{font-size:14.5px;color:var(--ink-dim);line-height:1.75}
+  @media(max-width:640px){.out-row{grid-template-columns:52px 1fr;gap:14px}.out-n{font-size:21px}}
+  .faq-list{display:grid;gap:10px;max-width:880px}
+  .faq-item{border:1px solid var(--line);border-radius:10px;background:var(--bg-2);overflow:hidden}
+  .faq-item summary{cursor:pointer;list-style:none;padding:18px 48px 18px 22px;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:15px;color:var(--ink);position:relative}
   .faq-item summary::-webkit-details-marker{display:none}
   .faq-item summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:22px;line-height:1}
   .faq-item[open] summary::after{content:"\2212"}
-  .faq-item p{padding:0 22px 20px;font-size:14px;color:var(--ink-dim);line-height:1.7}
+  .faq-item p{padding:0 22px 20px;font-size:14.5px;color:var(--ink-dim);line-height:1.8}
   /* mobile & polish pass */
   *{-webkit-tap-highlight-color:transparent}
   section[id]{scroll-margin-top:76px}
@@ -324,7 +342,6 @@
     .steps{grid-template-columns:1fr}
   }
   /* scroll progress bar */
-  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-bright));z-index:200;pointer-events:none}
   /* hero entrance */
   @keyframes heroIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
   .hero .eyebrow,.hero h1 span,.hero .lead,.hero-cta,.pills{opacity:0;animation:heroIn .8s cubic-bezier(.22,.61,.36,1) forwards}
@@ -341,8 +358,8 @@
   .sec-head h2::after{content:"";position:absolute;left:0;bottom:0;width:64px;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .8s .25s cubic-bezier(.22,.61,.36,1)}
   .sec-head.in h2::after{transform:scaleX(1)}
   /* card micro-interactions */
-  .fy-cell,.out-cell,.rev-card,.pcard,.faq-item,.slot,.coach-card{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-  .fy-cell:hover,.out-cell:hover,.rev-card:hover,.pcard:hover,.slot:hover{transform:translateY(-4px);border-color:rgba(217,164,37,.55);box-shadow:0 12px 28px rgba(0,0,0,.35)}
+  .rev-card,.pcard,.faq-item,.slot,.coach-card,.gstep{transition:border-color .25s ease}
+  .rev-card:hover,.pcard:hover,.slot:hover,
   /* FAQ open fade */
   @keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
   .faq-item[open] p{animation:faqIn .35s ease}
@@ -352,16 +369,16 @@
     .sticky-bar.show{transform:none}
   }
   /* scroll reveal */
-  .rv{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1),filter .7s cubic-bezier(.22,.61,.36,1)}
-  .rv.in{opacity:1;transform:none;filter:none}
-  .rv-stagger>*{opacity:0;transform:translateY(22px);filter:blur(5px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1),filter .6s cubic-bezier(.22,.61,.36,1)}
-  .rv-stagger.in>*{opacity:1;transform:none;filter:none}
-  .rv-stagger.in>*:nth-child(1){transition-delay:.05s}
-  .rv-stagger.in>*:nth-child(2){transition-delay:.13s}
-  .rv-stagger.in>*:nth-child(3){transition-delay:.21s}
-  .rv-stagger.in>*:nth-child(4){transition-delay:.29s}
-  .rv-stagger.in>*:nth-child(5){transition-delay:.37s}
-  .rv-stagger.in>*:nth-child(6){transition-delay:.45s}
+  .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .rv.in{opacity:1;transform:none}
+  .rv-stagger>*{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+  .rv-stagger.in>*{opacity:1;transform:none}
+  .rv-stagger.in>*:nth-child(1){transition-delay:0.04s}
+  .rv-stagger.in>*:nth-child(2){transition-delay:0.08s}
+  .rv-stagger.in>*:nth-child(3){transition-delay:0.12s}
+  .rv-stagger.in>*:nth-child(4){transition-delay:0.16s}
+  .rv-stagger.in>*:nth-child(5){transition-delay:0.20s}
+  .rv-stagger.in>*:nth-child(6){transition-delay:0.24s}
   header{transition:box-shadow .3s}
   header.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.45)}
   @media(prefers-reduced-motion:reduce){
@@ -370,7 +387,6 @@
     .hero .eyebrow,.hero h1 span,.hero .lead,.hero-cta,.pills,.hero-media{animation:none!important;opacity:1!important}
     .sec-head h2::after{transform:scaleX(1)!important;transition:none!important}
     .sticky-bar{transform:none!important}
-    #progress{display:none}
   }
 </style>
 </head>
@@ -406,9 +422,9 @@
         <a class="btn btn-ghost" href="#pricing" data-t="hero_price">料金を見る</a>
       </div>
       <div class="pills">
-        <span class="pill" data-t="pill_1">✅ リプレイ分析</span>
-        <span class="pill" data-t="pill_2">✅ ライブコーチング</span>
-        <span class="pill" data-t="pill_3">✅ ロール別指導</span>
+        <span class="pill" data-t="pill_1">リプレイ分析</span>
+        <span class="pill" data-t="pill_2">ライブコーチング</span>
+        <span class="pill" data-t="pill_3">ロール別指導</span>
         <span class="pill" data-t="pill_4"><b>JP / KR</b> 対応</span>
       </div>
     </div>
@@ -441,11 +457,11 @@
       <p data-t="str_p">プロチーム出身のコーチ・選手陣が直接運営する、実践型の教育プログラム。</p>
     </div>
     <div class="grid-5">
-      <div class="cell"><div class="ico">🎯</div><h3 data-t="str1_h">リプレイ分析</h3><p data-t="str1_p">プロ視点であなたのプレイを細かく分析し、弱点と改善策を明確に提示します。</p></div>
-      <div class="cell"><div class="ico">⚡</div><h3 data-t="str2_h">ライブコーチング</h3><p data-t="str2_p">実戦中のリアルタイムフィードバック。判断の瞬間に指導が入ることで意思決定が変わります。</p></div>
-      <div class="cell"><div class="ico">🛡️</div><h3 data-t="str3_h">ロール別指導</h3><p data-t="str3_p">TANK / DPS / SUPPORT、各ロール専門のコーチングで適性に合わせて成長を加速。</p></div>
-      <div class="cell"><div class="ico">🌐</div><h3 data-t="str4_h">日本語・韓国語対応</h3><p data-t="str4_p">日本語・韓国語に対応。言語の壁なく海外連携スキルも同時に習得できます。</p></div>
-      <div class="cell"><div class="ico">🏆</div><h3 data-t="str5_h">大会実績</h3><p data-t="str5_p">2025 OWCS Pacific Stage 1 優勝（創立初年度）など、結果を出すチームのノウハウを伝授。</p></div>
+      <div class="cell"><div class="ico">01</div><h3 data-t="str1_h">リプレイ分析</h3><p data-t="str1_p">プロ視点であなたのプレイを細かく分析し、弱点と改善策を明確に提示します。</p></div>
+      <div class="cell"><div class="ico">02</div><h3 data-t="str2_h">ライブコーチング</h3><p data-t="str2_p">実戦中のリアルタイムフィードバック。判断の瞬間に指導が入ることで意思決定が変わります。</p></div>
+      <div class="cell"><div class="ico">03</div><h3 data-t="str3_h">ロール別指導</h3><p data-t="str3_p">TANK / DPS / SUPPORT、各ロール専門のコーチングで適性に合わせて成長を加速。</p></div>
+      <div class="cell"><div class="ico">04</div><h3 data-t="str4_h">日本語・韓国語対応</h3><p data-t="str4_p">日本語・韓国語に対応。言語の壁なく海外連携スキルも同時に習得できます。</p></div>
+      <div class="cell"><div class="ico">05</div><h3 data-t="str5_h">大会実績</h3><p data-t="str5_p">2025 OWCS Pacific Stage 1 優勝（創立初年度）など、結果を出すチームのノウハウを伝授。</p></div>
     </div>
   </div>
 </section>
@@ -457,13 +473,13 @@
       <div class="sec-num">02 / FOR YOU</div>
       <h2 data-t="fy_h">こんな方におすすめ</h2>
     </div>
-    <div class="fy-grid">
-      <div class="fy-cell"><span class="fy-ic">🎮</span><p data-t="fy_1">今のランク帯で伸び悩みを感じているプレイヤー</p></div>
-      <div class="fy-cell"><span class="fy-ic">🔍</span><p data-t="fy_2">自分のクセや弱点を客観的に把握したい方</p></div>
-      <div class="fy-cell"><span class="fy-ic">📈</span><p data-t="fy_3">独学に限界を感じ、効率的に上達したい方</p></div>
-      <div class="fy-cell"><span class="fy-ic">🤝</span><p data-t="fy_4">自分のロール理解や実戦での判断力をさらに深めたい方</p></div>
-      <div class="fy-cell"><span class="fy-ic">🌏</span><p data-t="fy_5">上位・海外シーンを本気で目指したい方</p></div>
-    </div>
+    <ul class="fy-list">
+      <li><p data-t="fy_1">今のランク帯で伸び悩みを感じているプレイヤー</p></li>
+      <li><p data-t="fy_2">自分のクセや弱点を客観的に把握したい方</p></li>
+      <li><p data-t="fy_3">独学に限界を感じ、効率的に上達したい方</p></li>
+      <li><p data-t="fy_4">自分のロール理解や実戦での判断力をさらに深めたい方</p></li>
+      <li><p data-t="fy_5">上位・海外シーンを本気で目指したい方</p></li>
+    </ul>
   </div>
 </section>
 
@@ -553,9 +569,9 @@
       <div class="role"><div class="rt">SUPPORT</div><div class="rsub">BACKLINE</div><p data-t="role_sup">リソース管理・生存・ピールの優先順位。後方からチームを支える判断力を養います。</p></div>
     </div>
     <div class="sched">
-      <div class="slot"><div class="r">🛡️ TANK</div><div class="d" data-t="sl1_d">火・木</div><div class="t">21:00 – 22:30</div></div>
-      <div class="slot"><div class="r">⚔️ DPS</div><div class="d" data-t="sl2_d">水・金</div><div class="t">21:00 – 22:30</div></div>
-      <div class="slot"><div class="r">💉 SUPPORT</div><div class="d" data-t="sl3_d">土・日</div><div class="t">20:00 – 21:30</div></div>
+      <div class="slot"><div class="r">TANK</div><div class="d" data-t="sl1_d">火・木</div><div class="t">21:00 – 22:30</div></div>
+      <div class="slot"><div class="r">DPS</div><div class="d" data-t="sl2_d">水・金</div><div class="t">21:00 – 22:30</div></div>
+      <div class="slot"><div class="r">SUPPORT</div><div class="d" data-t="sl3_d">土・日</div><div class="t">20:00 – 21:30</div></div>
     </div>
     <p class="sched-note" data-t="sched_note">※ 開講スケジュールは参加人数・ティア構成により調整される場合があります。</p>
   </div>
@@ -568,11 +584,11 @@
       <div class="sec-num">06 / OUTCOMES</div>
       <h2 data-t="out_h">受講から得られるもの</h2>
     </div>
-    <div class="out-grid">
-      <div class="out-cell"><div class="out-ic">🧭</div><h3 data-t="out_1h">明確になった弱点と改善点</h3><p data-t="out_1p">感覚ではなく、言語化された課題と次にやるべきことが手元に残ります。</p></div>
-      <div class="out-cell"><div class="out-ic">🧠</div><h3 data-t="out_2h">ロール別の判断基準</h3><p data-t="out_2p">立ち回り・ポジショニング・コールの優先順位を、状況ごとに判断できる力。</p></div>
-      <div class="out-cell"><div class="out-ic">📝</div><h3 data-t="out_3h">フィードバックメモ</h3><p data-t="out_3p">受講内容と改善ポイントをまとめたメモをお渡しします。復習と継続的な成長に活用できます。</p></div>
-      <div class="out-cell"><div class="out-ic">🔁</div><h3 data-t="out_4h">成長し続ける自己分析力</h3><p data-t="out_4p">コーチング後も、自分でリプレイを振り返り、課題を発見し、改善の優先順位を考えられる視点を身につけます。</p></div>
+    <div class="out-list">
+      <div class="out-row"><div class="out-n">01</div><div class="out-body"><h3 data-t="out_1h">明確になった弱点と改善点</h3><p data-t="out_1p">感覚ではなく、言語化された課題と次にやるべきことが手元に残ります。</p></div></div>
+      <div class="out-row"><div class="out-n">02</div><div class="out-body"><h3 data-t="out_2h">ロール別の判断基準</h3><p data-t="out_2p">立ち回り・ポジショニング・コールの優先順位を、状況ごとに判断できる力。</p></div></div>
+      <div class="out-row"><div class="out-n">03</div><div class="out-body"><h3 data-t="out_3h">フィードバックメモ</h3><p data-t="out_3p">受講内容と改善ポイントをまとめたメモをお渡しします。復習と継続的な成長に活用できます。</p></div></div>
+      <div class="out-row"><div class="out-n">04</div><div class="out-body"><h3 data-t="out_4h">成長し続ける自己分析力</h3><p data-t="out_4p">コーチング後も、自分でリプレイを振り返り、課題を発見し、改善の優先順位を考えられる視点を身につけます。</p></div></div>
     </div>
   </div>
 </section>
@@ -634,7 +650,7 @@
 
     <div class="price-wrap">
       <div>
-        <div class="ptag">👤 PERSONAL COACHING</div>
+        <div class="ptag">PERSONAL COACHING</div>
         <p class="pc-intro" data-t="pc_intro">1対1で、一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。リプレイ分析またはライブコーチングを通じて、現在の問題点を明確にし、改善につなげます。</p>
         <div class="price-row p3">
           <div class="pcard">
@@ -666,7 +682,7 @@
       </div>
 
       <div>
-        <div class="ptag">👥 ROLE-BASED GROUP CLASS</div>
+        <div class="ptag">ROLE-BASED GROUP CLASS</div>
         <div class="price-row">
           <div class="pcard group">
             <h4 data-t="pg_h">ロール別グループクラス</h4>
@@ -681,7 +697,7 @@
 
       <ul class="price-notes" data-t="price_notes"><li>表示価格はすべて税込です。</li><li>ロール別グループクラスは1名あたりの料金です。</li><li>ロール別グループクラスは、同程度のティア・ロール構成が5名以上で開講します。</li><li>TANK / DPS / SUPPORTクラスは各定員10名です。</li><li>個人コーチングでは、受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。</li><li>受講生の課題・目標に応じて、指導内容やカリキュラムの進行速度は異なります。</li></ul>
       <div class="refund">
-        <h4 data-t="ref_h">💰 返金・振替ポリシー</h4>
+        <h4 data-t="ref_h">返金・振替ポリシー</h4>
         <ul>
           <li data-t="ref1">授業予定日の3日前まで：無料で日程変更可能</li>
           <li data-t="ref2">授業予定日の3日前を過ぎた変更：原則として1回分消化</li>
@@ -755,14 +771,14 @@
 <footer>
   <div class="wrap">
     <div class="fbrand">99<b style="color:var(--gold)">DIVINE</b> ACADEMY</div>
-    <div class="flinks"><a class="flink" href="https://linktr.ee/99divine" target="_blank" rel="noopener">🔗&nbsp;&nbsp;99DIVINE Linktree</a></div>
+    <div class="flinks"><a class="flink" href="https://linktr.ee/99divine" target="_blank" rel="noopener">99DIVINE Linktree</a></div>
     <p data-t="foot">© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.</p>
   </div>
 </footer>
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-bar">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAxDYl8WAAkac5rsFmhIC6i-8uuoxmyYWtQhMUxzZZwfTcOw/viewform" target="_blank" rel="noopener" data-t="sticky">🎮 受講申請する</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAxDYl8WAAkac5rsFmhIC6i-8uuoxmyYWtQhMUxzZZwfTcOw/viewform" target="_blank" rel="noopener" data-t="sticky">受講申請する</a>
 </div>
 
 <script>
@@ -773,7 +789,7 @@ const I18N = {
     hero_h1a:"PLAY",hero_h1b:"LIKE PRO.",
     hero_lead:"OWCS実績を持つコーチが、あなたのプレイを直接分析。ランクアップだけでなく、判断力・ポジショニング・チーム理解まで伸ばすオーバーウォッチ専門のオンラインコーチングクラスです。",
     hero_apply:"受講申請する →",hero_price:"料金を見る",
-    pill_1:"✅ リプレイ分析",pill_2:"✅ ライブコーチング",pill_3:"✅ ロール別指導",pill_4:"<b>JP / KR</b> 対応",
+    pill_1:"リプレイ分析",pill_2:"ライブコーチング",pill_3:"ロール別指導",pill_4:"<b>JP / KR</b> 対応",
     msg_h:"代表の言葉",
     msg_p1:"こんにちは、<b style='color:var(--gold)'>99DIVINE代表のSupreme</b>です。99DIVINEアカデミーは、単に「ゲームを上手くする場所」ではありません。ゲームを通じた“本物の成長”を日本のプレイヤーに届けるために立ち上げました。",
     msg_p2:"コミュニケーション・チームワーク・高速な判断力・マルチタスク・メンタルマネジメント。これらはゲームの中だけで終わらず、私自身、UC Irvineでコンピュータサイエンス学士号を取得し、Utah Valley Universityで民間航空免許（PPL）も取得する力になりました。<b style='color:var(--gold)'>ゲームは、人生全体を通して成長を促す挑戦と学びの場です。</b>",
@@ -811,7 +827,7 @@ const I18N = {
     pp2_h:"4回集中プログラム",pp2_m:"4回 / 計240分",pp2_s:"通常44,000円 → <b>4,200円お得</b>",pp2_d:"継続的なリプレイ分析やライブコーチングを通じて、課題を整理しながら改善を進める集中プログラムです。",pp2_list:"<li>1対1コーチング × 4回</li><li>リプレイ分析</li><li>ライブコーチング</li><li>個人課題に合わせた指導</li><li>フィードバックメモ</li>",
     pp3_b:"本気で継続的に成長したい方に",pp3_h:"12回継続プログラム",pp3_m:"12回 / 計720分",pp3_s:"4回プログラム × 3回分 132,000円 → <b>22,600円お得</b>",pp3_d:"継続的な指導を通じて、基礎理解から個人課題の改善、実戦適応、自己分析力まで、長期的な成長を目指すプログラムです。",pp3_list:"<li>1対1コーチング × 12回</li><li>継続的なリプレイ分析</li><li>ライブコーチング</li><li>課題に応じた指導内容の調整</li><li>成長段階に応じた優先順位設定</li><li>フィードバックメモ</li>",
     yen:"円",yen2:"円",yen3:"円",yen4:"円",yen5:"円",
-    ref_h:"💰 返金・振替ポリシー",
+    ref_h:"返金・振替ポリシー",
     ref1:"授業予定日の3日前まで：無料で日程変更可能",
     ref2:"授業予定日の3日前を過ぎた変更：原則として1回分消化",
     ref3:"無断欠席：1回分消化",
@@ -826,7 +842,7 @@ const I18N = {
     mis_p2:"<b style='color:var(--gold)'>学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは、単なるランクアップだけでなく、実力向上を通じて、判断力・継続力・挑戦する力を育てる教育です。",
     fin_h:"READY TO <span>RISE?</span>",fin_p:"あなたの成長の旅は、今ここから始まります。先着順で締め切られます。",fin_btn:"受講申請する →",
     foot:"© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
-    sticky:"🎮 受講申請する"
+    sticky:"受講申請する"
   },
   ko:{
     nav_str:"강점",nav_coach:"코치",nav_curri:"커리큘럼",nav_price:"요금",nav_apply:"수강 신청",
@@ -834,7 +850,7 @@ const I18N = {
     hero_h1a:"PLAY",hero_h1b:"LIKE PRO.",
     hero_lead:"OWCS 실적을 가진 코치가 당신의 플레이를 직접 분석합니다. 랭크 상승뿐 아니라 판단력·포지셔닝·팀 이해까지 키우는 오버워치 전문 온라인 코칭 클래스입니다.",
     hero_apply:"수강 신청하기 →",hero_price:"요금 보기",
-    pill_1:"✅ 리플레이 분석",pill_2:"✅ 라이브 코칭",pill_3:"✅ 롤별 지도",pill_4:"<b>JP / KR</b> 지원",
+    pill_1:"리플레이 분석",pill_2:"라이브 코칭",pill_3:"롤별 지도",pill_4:"<b>JP / KR</b> 지원",
     msg_h:"대표의 말",
     msg_p1:"안녕하세요, <b style='color:var(--gold)'>99DIVINE 대표 Supreme</b>입니다. 99DIVINE 아카데미는 단순히 '게임을 잘하게 만드는 곳'이 아닙니다. 게임을 통한 '진짜 성장'을 일본 플레이어에게 전하기 위해 시작했습니다.",
     msg_p2:"커뮤니케이션·팀워크·빠른 판단력·멀티태스킹·멘탈 관리. 이것들은 게임 안에서만 끝나지 않고, 저 또한 UC Irvine에서 컴퓨터과학 학사를, Utah Valley University에서 민간 항공 면허(PPL)를 취득하는 힘이 되었습니다. <b style='color:var(--gold)'>게임은 인생 전체의 성장을 이끄는 도전과 배움의 장입니다.</b>",
@@ -872,7 +888,7 @@ const I18N = {
     pp2_h:"4회 집중 프로그램",pp2_m:"4회 / 총 240분",pp2_s:"정가 44,000엔 → <b>4,200엔 할인</b>",pp2_d:"지속적인 리플레이 분석과 라이브 코칭을 통해 과제를 정리하며 개선을 진행하는 집중 프로그램입니다.",pp2_list:"<li>1대1 코칭 × 4회</li><li>리플레이 분석</li><li>라이브 코칭</li><li>개인 과제에 맞춘 지도</li><li>피드백 메모</li>",
     pp3_b:"진지하게 꾸준히 성장하고 싶은 분께",pp3_h:"12회 지속 프로그램",pp3_m:"12회 / 총 720분",pp3_s:"4회 프로그램 × 3회분 132,000엔 → <b>22,600엔 할인</b>",pp3_d:"지속적인 지도를 통해 기초 이해부터 개인 과제 개선, 실전 적응, 자기 분석력까지 장기적인 성장을 목표로 하는 프로그램입니다.",pp3_list:"<li>1대1 코칭 × 12회</li><li>지속적인 리플레이 분석</li><li>라이브 코칭</li><li>과제에 따른 지도 내용 조정</li><li>성장 단계에 따른 우선순위 설정</li><li>피드백 메모</li>",
     yen:" 엔",yen2:" 엔",yen3:" 엔",yen4:" 엔",yen5:" 엔",
-    ref_h:"💰 환불 · 변경 정책",
+    ref_h:"환불 · 변경 정책",
     ref1:"수업 예정일 3일 전까지: 무료로 일정 변경 가능",
     ref2:"수업 예정일 3일 전을 지난 변경: 원칙적으로 1회분 소진",
     ref3:"무단 결석: 1회분 소진",
@@ -887,7 +903,7 @@ const I18N = {
     mis_p2:"<b style='color:var(--gold)'>배움의 목표는 '승리 그 자체'가 아니라 '성장'.</b> 99DIVINE 코칭은 단순한 랭크 업뿐만 아니라, 실력 향상을 통해 판단력·지속력·도전하는 힘을 기르는 교육입니다.",
     fin_h:"READY TO <span>RISE?</span>",fin_p:"당신의 성장 여정은 지금 여기서 시작됩니다. 선착순으로 마감됩니다.",fin_btn:"수강 신청하기 →",
     foot:"© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
-    sticky:"🎮 수강 신청하기"
+    sticky:"수강 신청하기"
   }
 };
 
@@ -932,12 +948,9 @@ initLang();
   document.querySelectorAll('.rv,.rv-stagger').forEach(el=>io.observe(el));
   // header shadow + progress + sticky bar
   const hd=document.querySelector('header');
-  const pg=document.createElement('div'); pg.id='progress'; document.body.appendChild(pg);
   const sb=document.querySelector('.sticky-bar');
   function onScroll(){
     hd.classList.toggle('scrolled', scrollY>8);
-    const max=document.documentElement.scrollHeight-innerHeight;
-    pg.style.width=(max>0?(scrollY/max*100):0)+'%';
     if(sb) sb.classList.toggle('show', scrollY>420);
   }
   addEventListener('scroll',onScroll,{passive:true});

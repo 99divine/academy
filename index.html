@@ -485,15 +485,15 @@
   <div class="wrap nav">
     <div class="brand">99<b>DIVINE</b> ACADEMY</div>
     <nav class="nav-links">
-      <a class="nlink" href="#strengths" data-t="nav_str">強み</a>
-      <a class="nlink" href="#coach" data-t="nav_coach">コーチ</a>
-      <a class="nlink" href="#curriculum" data-t="nav_curri">カリキュラム</a>
-      <a class="nlink" href="#pricing" data-t="nav_price">料金</a>
+      <a class="nlink" href="#strengths" data-ga="cta_nav_strengths" data-t="nav_str">強み</a>
+      <a class="nlink" href="#coach" data-ga="cta_nav_coach" data-t="nav_coach">コーチ</a>
+      <a class="nlink" href="#curriculum" data-ga="cta_nav_curriculum" data-t="nav_curri">カリキュラム</a>
+      <a class="nlink" href="#pricing" data-ga="cta_nav_pricing" data-t="nav_price">料金</a>
       <div class="lang">
-        <button data-lang="ja" class="on">JP</button>
-        <button data-lang="ko">KR</button>
+        <button data-lang="ja" class="on" data-ga="cta_lang_ja">JP</button>
+        <button data-lang="ko" data-ga="cta_lang_ko">KR</button>
       </div>
-      <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-t="nav_apply">受講申請</a>
+      <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_header" data-t="nav_apply">受講申請</a>
     </nav>
   </div>
 </header>
@@ -506,8 +506,8 @@
       <h1 class="display"><span data-t="hero_h1a">PLAY</span><span class="l2" data-t="hero_h1b">LIKE PRO.</span></h1>
       <p class="lead" data-t="hero_lead">OWCS実績を持つコーチが、あなたのプレイを直接分析。ランクアップだけでなく、判断力・ポジショニング・チーム理解まで伸ばすオーバーウォッチ専門のオンラインコーチングクラスです。</p>
       <div class="hero-cta">
-        <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-t="hero_apply">受講申請する →</a>
-        <a class="btn btn-ghost" href="#pricing" data-t="hero_price">料金を見る</a>
+        <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_hero" data-t="hero_apply">受講申請する →</a>
+        <a class="btn btn-ghost" href="#pricing" data-ga="cta_view_pricing" data-t="hero_price">料金を見る</a>
       </div>
       <div class="pills">
         <span class="pill" data-t="pill_1">リプレイ分析</span>
@@ -591,7 +591,7 @@
         <img src="img/coach-gyomin.png" alt="Gyomin" width="342" height="510" loading="lazy" decoding="async">
         <div class="tag" data-t="coach_tag">HEAD COACH</div>
         <h3>GYOMIN</h3>
-        <a class="coach-x" href="https://x.com/justgyomin" target="_blank" rel="noopener">𝕏&nbsp;&nbsp;Gyomin</a>
+        <a class="coach-x" data-ga="cta_link_coach_x" href="https://x.com/justgyomin" target="_blank" rel="noopener">𝕏&nbsp;&nbsp;Gyomin</a>
       </div>
       <div>
         <p class="coach-bio" data-t="coach_bio">強豪チームがひしめく日本・Pacificシーンで、優勝・準優勝を経験した実績を持つコーチが、実戦視点で一人ひとりの課題に向き合います。</p>
@@ -860,21 +860,21 @@
   <div class="wrap">
     <h2 class="display" data-t="fin_h">READY TO <span>RISE?</span></h2>
     <p data-t="fin_p">あなたの成長の旅は、今ここから始まります。先着順で締め切られます。</p>
-    <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-t="fin_btn">受講申請する →</a>
+    <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_final" data-t="fin_btn">受講申請する →</a>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <div class="fbrand">99<b style="color:var(--gold)">DIVINE</b> ACADEMY</div>
-    <div class="flinks"><a class="flink" href="https://linktr.ee/99divine" target="_blank" rel="noopener">99DIVINE Linktree</a></div>
+    <div class="flinks"><a class="flink" data-ga="cta_link_linktree" href="https://linktr.ee/99divine" target="_blank" rel="noopener">99DIVINE Linktree</a></div>
     <p data-t="foot">© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.</p>
   </div>
 </footer>
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-bar">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-t="sticky">受講申請する</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_sticky" data-t="sticky">受講申請する</a>
 </div>
 
 <script>
@@ -1069,6 +1069,16 @@ initLang();
   });
   vid.addEventListener('error',()=>box.classList.remove('has-video')); // 未設置なら静止画
   vid.load();
+})();
+</script>
+<!-- GA4 クリック計測: data-ga を持つ要素のクリックをイベント送信 -->
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var el = e.target.closest ? e.target.closest('[data-ga]') : null;
+    if(!el) return;
+    if(typeof gtag === 'function'){ gtag('event', el.getAttribute('data-ga')); }
+  }, true);
 })();
 </script>
 </body>

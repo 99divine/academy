@@ -476,6 +476,28 @@
     .sec-head h2::after{transform:scaleX(1)!important;transition:none!important}
     .sticky-bar{transform:none!important}
   }
+
+  /* ===== coaching program: flow + tabs ===== */
+  .flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;max-width:820px;margin:0 auto 40px;padding:20px 24px;border:1px solid var(--line);border-radius:12px;background:var(--bg-2)}
+  .flow .fstep{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:14px;color:var(--ink)}
+  .flow .farr{color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-size:18px}
+  .cp-tabs{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:620px;margin:0 auto 46px;padding:6px;border:1px solid var(--line);border-radius:12px;background:var(--bg-2)}
+  .cp-tab{flex:1;min-width:140px;background:transparent;border:0;color:var(--ink-dim);font:700 14px 'Zen Kaku Gothic New';letter-spacing:.02em;padding:14px 12px;border-radius:8px;cursor:pointer;transition:.18s}
+  .cp-tab:hover{color:var(--ink)}
+  .cp-tab.on{background:var(--gold);color:#141310}
+  .cp-panel{display:none}
+  .cp-panel.on{display:block;animation:cpIn .4s ease}
+  @keyframes cpIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .cp-panel .ptag{margin:6px 0 16px}
+  .cp-panel .curri,.cp-panel .price-row,.cp-panel .tc-curri,.cp-panel .curri-note,.cp-panel .roles,.cp-panel .sched{margin-bottom:30px}
+  .cp-panel .sched-note{margin-bottom:8px}
+  .tc-curri{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .tc-col{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:24px}
+  .tc-col .tc-label{font-family:'Barlow Condensed',sans-serif;color:var(--gold);font-size:16px;letter-spacing:.1em;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .tc-col ol{list-style:none;counter-reset:tc;display:grid;gap:9px}
+  .tc-col ol li{counter-increment:tc;font-size:13.5px;color:var(--ink-dim);padding-left:32px;position:relative;line-height:1.6}
+  .tc-col ol li::before{content:counter(tc,decimal-leading-zero);position:absolute;left:0;top:1px;color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:.05em}
+  @media(max-width:760px){.tc-curri{grid-template-columns:1fr}.cp-tab{min-width:108px;font-size:13px;padding:12px 8px}}
 </style>
 </head>
 <body>
@@ -487,7 +509,6 @@
     <nav class="nav-links">
       <a class="nlink" href="#strengths" data-ga="cta_nav_strengths" data-t="nav_str">強み</a>
       <a class="nlink" href="#coach" data-ga="cta_nav_coach" data-t="nav_coach">コーチ</a>
-      <a class="nlink" href="#curriculum" data-ga="cta_nav_curriculum" data-t="nav_curri">カリキュラム</a>
       <a class="nlink" href="#pricing" data-ga="cta_nav_pricing" data-t="nav_price">料金</a>
       <div class="lang">
         <button data-lang="ja" class="on" data-ga="cta_lang_ja">JP</button>
@@ -579,105 +600,11 @@
   </div>
 </section>
 
-<!-- COACH -->
-<section class="block tex t-grunge2 s-standard" id="coach">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-num">03 / COACH</div>
-      <h2 data-t="coach_h">コーチ紹介</h2>
-    </div>
-    <div class="coach">
-      <div class="coach-card">
-        <img src="img/coach-gyomin.png" alt="Gyomin" width="342" height="510" loading="lazy" decoding="async">
-        <div class="tag" data-t="coach_tag">HEAD COACH</div>
-        <h3>GYOMIN</h3>
-        <a class="coach-x" data-ga="cta_link_coach_x" href="https://x.com/justgyomin" target="_blank" rel="noopener">𝕏&nbsp;&nbsp;Gyomin</a>
-      </div>
-      <div>
-        <p class="coach-bio" data-t="coach_bio">強豪チームがひしめく日本・Pacificシーンで、優勝・準優勝を経験した実績を持つコーチが、実戦視点で一人ひとりの課題に向き合います。</p>
-        <p class="coach-quote" data-t="coach_quote">「VARRELが本大会以外を総なめにする中、栄冠を掴んだ唯一の指導者。」</p>
-        <ul class="ach-list">
-          <li><b>2026</b><span>Saudi eLeague Woman <span class="ach-win">優勝</span></span></li>
-          <li><b>2025</b><span>OWCS Stage 2 Pacific <span class="ach-win">準優勝</span></span></li>
-          <li><b>2025</b><span>OWCS Stage 1 Japan 3rd</span></li>
-          <li><b>2025</b><span>OWCS Stage 3 Japan 3rd</span></li>
-          <li><b>2025</b><span>Saudi eLeague Woman <span class="ach-win">優勝</span></span></li>
-          <li><b>2024</b><span>OWCS JP Stage 2 <span class="ach-win">優勝</span></span></li>
-          <li><b>2023</b><span>Saudi eLeague 3rd</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CURRICULUM -->
-<section class="block s-diagram" id="curriculum">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-num">04 / PERSONAL GROWTH CURRICULUM</div>
-      <h2 data-t="curri_h">個人成長カリキュラム</h2>
-    </div>
-    <div class="curri">
-      <div class="gstep">
-        <div class="gs-num">01<small>STEP</small></div>
-        <div class="gs-en">FOUNDATION</div>
-        <h3 data-t="gs1_h">基礎理解・現状分析</h3>
-        <div class="goal" data-t="gs1_goal">現在のプレイを客観的に分析し、成長の土台となる基本的な判断基準を整理します。</div>
-        <ul data-t="gs1_list"><li>現在のプレイと課題の分析</li><li>ロールごとの役割理解</li><li>基本的なポジショニング</li><li>視野・情報認識</li><li>状況に応じた基本判断</li><li>個別リプレイ分析</li></ul>
-      </div>
-      <div class="gstep">
-        <div class="gs-num">02<small>STEP</small></div>
-        <div class="gs-en">INDIVIDUAL DEVELOPMENT</div>
-        <h3 data-t="gs2_h">個人課題の改善</h3>
-        <div class="goal" data-t="gs2_goal">一人ひとりの弱点やプレイ傾向に合わせて、必要な部分を重点的に改善します。</div>
-        <ul data-t="gs2_list"><li>個人の弱点改善</li><li>ヒーロー別の応用理解</li><li>リプレイ分析</li><li>ライブコーチング</li><li>スキル・ULT使用判断</li><li>自分に合ったプレイスタイルの確立</li></ul>
-      </div>
-      <div class="gstep">
-        <div class="gs-num">03<small>STEP</small></div>
-        <div class="gs-en">PRACTICAL APPLICATION</div>
-        <h3 data-t="gs3_h">実戦への適応</h3>
-        <div class="goal" data-t="gs3_goal">学んだ内容を、異なる構成・マップ・試合状況でも再現できるようにします。</div>
-        <ul data-t="gs3_list"><li>構成や状況に応じた役割理解</li><li>Dive / Brawl / Pokeへの適応</li><li>プレッシャー下での判断</li><li>味方との連携</li><li>有利・不利状況の判断</li><li>実戦での再現性向上</li></ul>
-      </div>
-      <div class="gstep">
-        <div class="gs-num">04<small>STEP</small></div>
-        <div class="gs-en">SELF-IMPROVEMENT</div>
-        <h3 data-t="gs4_h">継続的な成長</h3>
-        <div class="goal" data-t="gs4_goal">コーチング後も、自分自身で課題を発見し、成長を続けられる力を身につけます。</div>
-        <ul data-t="gs4_list"><li>自己リプレイ分析</li><li>繰り返すミスの発見</li><li>練習優先順位の設定</li><li>自分のプレイを言語化する力</li><li>改善サイクルの構築</li><li>自ら成長し続ける力</li></ul>
-      </div>
-    </div>
-    <p class="curri-note" data-t="curri_note">※ 受講生のランク・経験・課題・目標に応じて、各ステップの進行速度や指導内容は異なります。すべての受講生が同じ順序・期間で進むものではなく、一人ひとりの状況に合わせてカリキュラムを調整します。</p>
-  </div>
-</section>
-
-<!-- ROLE CURRICULUM -->
-<section class="block s-quiet" id="roles">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-num">05 / ROLE CLASS</div>
-      <h2 data-t="role_h">ロール別カリキュラム</h2>
-      <p data-t="role_p">ロールに特化した講座型クラス。定員10名、同程度のティア・ロール構成で開講します。</p>
-    </div>
-    <div class="roles">
-      <div class="role"><div class="rt">TANK</div><div class="rsub">FRONTLINE</div><p data-t="role_tank">スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。</p></div>
-      <div class="role"><div class="rt">DPS</div><div class="rsub">DAMAGE</div><p data-t="role_dps">ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略で火力を最大化します。</p></div>
-      <div class="role"><div class="rt">SUPPORT</div><div class="rsub">BACKLINE</div><p data-t="role_sup">リソース管理・生存・ピールの優先順位。後方からチームを支える判断力を養います。</p></div>
-    </div>
-    <div class="sched">
-      <div class="slot"><div class="r">TANK</div><div class="d" data-t="sl1_d">火・木</div><div class="t">21:00 – 22:30</div></div>
-      <div class="slot"><div class="r">DPS</div><div class="d" data-t="sl2_d">水・金</div><div class="t">21:00 – 22:30</div></div>
-      <div class="slot"><div class="r">SUPPORT</div><div class="d" data-t="sl3_d">土・日</div><div class="t">20:00 – 21:30</div></div>
-    </div>
-    <p class="sched-note" data-t="sched_note">※ 開講スケジュールは参加人数・ティア構成により調整される場合があります。</p>
-  </div>
-</section>
-
 <!-- OUTCOMES -->
 <section class="block s-quiet" id="outcomes">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">06 / OUTCOMES</div>
+      <div class="sec-num">03 / OUTCOMES</div>
       <h2 data-t="out_h">受講から得られるもの</h2>
     </div>
     <div class="out-list">
@@ -693,7 +620,7 @@
 <section class="block tex t-brick s-quiet" id="reviews">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">07 / VOICES</div>
+      <div class="sec-num">04 / VOICES</div>
       <h2 data-t="rev_h">受講者の声</h2>
     </div>
     <div class="rev-cols rv-stagger">
@@ -735,20 +662,96 @@
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- COACH -->
+<section class="block tex t-grunge2 s-standard" id="coach">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">05 / COACH</div>
+      <h2 data-t="coach_h">コーチ紹介</h2>
+    </div>
+    <div class="coach">
+      <div class="coach-card">
+        <img src="img/coach-gyomin.png" alt="Gyomin" width="342" height="510" loading="lazy" decoding="async">
+        <div class="tag" data-t="coach_tag">HEAD COACH</div>
+        <h3>GYOMIN</h3>
+        <a class="coach-x" data-ga="cta_link_coach_x" href="https://x.com/justgyomin" target="_blank" rel="noopener">𝕏&nbsp;&nbsp;Gyomin</a>
+      </div>
+      <div>
+        <p class="coach-bio" data-t="coach_bio">強豪チームがひしめく日本・Pacificシーンで、優勝・準優勝を経験した実績を持つコーチが、実戦視点で一人ひとりの課題に向き合います。</p>
+        <p class="coach-quote" data-t="coach_quote">「VARRELが本大会以外を総なめにする中、栄冠を掴んだ唯一の指導者。」</p>
+        <ul class="ach-list">
+          <li><b>2026</b><span>Saudi eLeague Woman <span class="ach-win">優勝</span></span></li>
+          <li><b>2025</b><span>OWCS Stage 2 Pacific <span class="ach-win">準優勝</span></span></li>
+          <li><b>2025</b><span>OWCS Stage 1 Japan 3rd</span></li>
+          <li><b>2025</b><span>OWCS Stage 3 Japan 3rd</span></li>
+          <li><b>2025</b><span>Saudi eLeague Woman <span class="ach-win">優勝</span></span></li>
+          <li><b>2024</b><span>OWCS JP Stage 2 <span class="ach-win">優勝</span></span></li>
+          <li><b>2023</b><span>Saudi eLeague 3rd</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACHING PROGRAM -->
 <section class="block tex t-hex s-loud" id="pricing">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">08 / PRICING</div>
-      <h2 data-t="price_h">料金・受講プラン</h2>
-      <p data-t="price_p">個人コーチングは1回・4回・12回から選択できます。ロール別グループクラスは、同程度のティア・ロール構成が5名以上集まった場合に開講されます。</p>
+      <div class="sec-num">06 / COACHING PROGRAM</div>
+      <h2 data-t="cp_h">コーチングプログラム</h2>
+      <p data-t="cp_p">個人・チーム・ロール別グループの3つから、目的に合わせて選べます。</p>
     </div>
 
-    <div class="price-wrap">
-      <div>
-        <div class="ptag">PERSONAL COACHING</div>
-        <p class="pc-intro" data-t="pc_intro">1対1で、一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。リプレイ分析またはライブコーチングを通じて、現在の問題点を明確にし、改善につなげます。</p>
-        <div class="price-row p3">
+    <div class="flow rv">
+      <span class="fstep" data-t="cpf1">リプレイ分析</span><span class="farr">→</span>
+      <span class="fstep" data-t="cpf2">実戦・スクリム</span><span class="farr">→</span>
+      <span class="fstep" data-t="cpf3">フィードバック</span><span class="farr">→</span>
+      <span class="fstep" data-t="cpf4">次回の課題設定</span>
+    </div>
+
+    <div class="cp-tabs" role="tablist">
+      <button class="cp-tab on" data-tab="personal" data-ga="cta_tab_personal" data-t="tab_personal">個人コーチング</button>
+      <button class="cp-tab" data-tab="team" data-ga="cta_tab_team" data-t="tab_team">チームコーチング</button>
+      <button class="cp-tab" data-tab="role" data-ga="cta_tab_role" data-t="tab_role">ロール別グループ</button>
+    </div>
+
+    <!-- PERSONAL -->
+    <div class="cp-panel on" data-panel="personal">
+      <p class="pc-intro" data-t="pc_intro">1対1で、一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。リプレイ分析またはライブコーチングを通じて、現在の問題点を明確にし、改善につなげます。</p>
+      <div class="ptag">CURRICULUM</div>
+      <div class="curri">
+      <div class="gstep">
+        <div class="gs-num">01<small>STEP</small></div>
+        <div class="gs-en">FOUNDATION</div>
+        <h3 data-t="gs1_h">基礎理解・現状分析</h3>
+        <div class="goal" data-t="gs1_goal">現在のプレイを客観的に分析し、成長の土台となる基本的な判断基準を整理します。</div>
+        <ul data-t="gs1_list"><li>現在のプレイと課題の分析</li><li>ロールごとの役割理解</li><li>基本的なポジショニング</li><li>視野・情報認識</li><li>状況に応じた基本判断</li><li>個別リプレイ分析</li></ul>
+      </div>
+      <div class="gstep">
+        <div class="gs-num">02<small>STEP</small></div>
+        <div class="gs-en">INDIVIDUAL DEVELOPMENT</div>
+        <h3 data-t="gs2_h">個人課題の改善</h3>
+        <div class="goal" data-t="gs2_goal">一人ひとりの弱点やプレイ傾向に合わせて、必要な部分を重点的に改善します。</div>
+        <ul data-t="gs2_list"><li>個人の弱点改善</li><li>ヒーロー別の応用理解</li><li>リプレイ分析</li><li>ライブコーチング</li><li>スキル・ULT使用判断</li><li>自分に合ったプレイスタイルの確立</li></ul>
+      </div>
+      <div class="gstep">
+        <div class="gs-num">03<small>STEP</small></div>
+        <div class="gs-en">PRACTICAL APPLICATION</div>
+        <h3 data-t="gs3_h">実戦への適応</h3>
+        <div class="goal" data-t="gs3_goal">学んだ内容を、異なる構成・マップ・試合状況でも再現できるようにします。</div>
+        <ul data-t="gs3_list"><li>構成や状況に応じた役割理解</li><li>Dive / Brawl / Pokeへの適応</li><li>プレッシャー下での判断</li><li>味方との連携</li><li>有利・不利状況の判断</li><li>実戦での再現性向上</li></ul>
+      </div>
+      <div class="gstep">
+        <div class="gs-num">04<small>STEP</small></div>
+        <div class="gs-en">SELF-IMPROVEMENT</div>
+        <h3 data-t="gs4_h">継続的な成長</h3>
+        <div class="goal" data-t="gs4_goal">コーチング後も、自分自身で課題を発見し、成長を続けられる力を身につけます。</div>
+        <ul data-t="gs4_list"><li>自己リプレイ分析</li><li>繰り返すミスの発見</li><li>練習優先順位の設定</li><li>自分のプレイを言語化する力</li><li>改善サイクルの構築</li><li>自ら成長し続ける力</li></ul>
+      </div>
+    </div>
+      <p class="curri-note" data-t="curri_note">※ 受講生のランク・経験・課題・目標に応じて、各ステップの進行速度や指導内容は異なります。すべての受講生が同じ順序・期間で進むものではなく、一人ひとりの状況に合わせてカリキュラムを調整します。</p>
+      <div class="ptag">PLANS</div>
+      <div class="price-row p3">
           <div class="pcard">
             <div class="pbadge" data-t="pp1_b">初めての方におすすめ</div>
             <h4 data-t="pp1_h">1回コーチング</h4>
@@ -775,12 +778,69 @@
             <ul class="plist" data-t="pp3_list"><li>1対1コーチング × 12回</li><li>継続的なリプレイ分析</li><li>ライブコーチング</li><li>課題に応じた指導内容の調整</li><li>成長段階に応じた優先順位設定</li><li>フィードバックメモ</li></ul>
           </div>
         </div>
-      </div>
+    </div>
 
-      <div>
-        <div class="ptag">ROLE-BASED GROUP CLASS</div>
-        <div class="price-row">
-          <div class="pcard group">
+    <!-- TEAM -->
+    <div class="cp-panel" data-panel="team">
+      <p class="pc-intro" data-t="tc_intro">事前にリプレイを分析し、実際のスクリムを観戦した上で、チーム全体にフィードバックを行います。個人の技術だけでなく、連携・コール・ポジショニング・ULT管理・構成理解など、チームとして勝つために必要な部分を改善します。</p>
+      <div class="ptag">CURRICULUM</div>
+      <div class="tc-curri">
+        <div class="tc-col">
+          <div class="tc-label" data-t="tc4_label">4回プラン</div>
+          <ol data-t="tc4_list"><li>チームの現状分析</li><li>コール・フォーカス・連携改善</li><li>スキル・ULT・構成理解</li><li>総合評価と今後の練習方針</li></ol>
+        </div>
+        <div class="tc-col">
+          <div class="tc-label" data-t="tc8_label">8回集中プラン</div>
+          <ol data-t="tc8_list"><li>チーム診断</li><li>役割とプレイスタイル整理</li><li>ポジショニングとセットアップ</li><li>エンゲージとターゲット選択</li><li>スキル・ULT管理</li><li>相手に合わせた試合中の修正</li><li>大会を想定した実戦練習</li><li>最終評価と今後の方針</li></ol>
+        </div>
+      </div>
+      <div class="ptag">PLANS</div>
+      <div class="price-row p3">
+        <div class="pcard">
+          <div class="pbadge" data-t="tt1_b">まずは1回から</div>
+          <h4 data-t="tt1_h">1回プラン</h4>
+          <div class="meta" data-t="tt1_m">1回 / 1チーム</div>
+          <div class="amt">38,000<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1チーム</span></div>
+          <div class="desc" data-t="tt1_d">チームの現状を把握したい方向け。1回のスクリム観戦とフィードバックで課題を明確にします。</div>
+          <ul class="plist" data-t="tt1_list"><li>事前リプレイ分析</li><li>スクリム観戦</li><li>スクリム後のフィードバック</li><li>次回までの課題設定</li></ul>
+        </div>
+        <div class="pcard feature">
+          <h4 data-t="tt2_h">4回プラン</h4>
+          <div class="meta" data-t="tt2_m">4回 / 週1回目安</div>
+          <div class="amt">139,800<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1チーム</span></div>
+          <div class="desc" data-t="tt2_d">週1回を目安に、チームの基礎的な連携と判断基準を整えます。</div>
+          <ul class="plist" data-t="tt2_list"><li>毎回：リプレイ分析＋スクリム観戦</li><li>コール・フォーカス・連携改善</li><li>スキル・ULT・構成理解</li><li>総合評価と今後の練習方針</li></ul>
+        </div>
+        <div class="pcard">
+          <div class="pbadge" data-t="tt3_b">大会に向けて</div>
+          <h4 data-t="tt3_h">8回集中プラン</h4>
+          <div class="meta" data-t="tt3_m">8回 / 週2回目安</div>
+          <div class="amt">259,800<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1チーム</span></div>
+          <div class="desc" data-t="tt3_d">週2回を目安に、大会に向けて短期間でチームを改善します。</div>
+          <ul class="plist" data-t="tt3_list"><li>毎回：リプレイ分析＋スクリム観戦</li><li>ポジショニング・セットアップ</li><li>エンゲージとターゲット選択</li><li>試合中の修正・ULT管理</li><li>大会想定の実戦練習と最終評価</li></ul>
+        </div>
+      </div>
+      <p class="pg-cond" data-t="tc_note">※ すべてのプランにリプレイ分析とスクリム観戦が含まれます。／ チームのレベルや目標に応じて内容を調整します。</p>
+    </div>
+
+    <!-- ROLE -->
+    <div class="cp-panel" data-panel="role">
+      <p class="pc-intro" data-t="role_p">ロールに特化した講座型クラス。定員10名、同程度のティア・ロール構成で開講します。</p>
+      <div class="ptag">CLASSES</div>
+      <div class="roles">
+      <div class="role"><div class="rt">TANK</div><div class="rsub">FRONTLINE</div><p data-t="role_tank">スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。</p></div>
+      <div class="role"><div class="rt">DPS</div><div class="rsub">DAMAGE</div><p data-t="role_dps">ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略で火力を最大化します。</p></div>
+      <div class="role"><div class="rt">SUPPORT</div><div class="rsub">BACKLINE</div><p data-t="role_sup">リソース管理・生存・ピールの優先順位。後方からチームを支える判断力を養います。</p></div>
+    </div>
+      <div class="sched">
+      <div class="slot"><div class="r">TANK</div><div class="d" data-t="sl1_d">火・木</div><div class="t">21:00 – 22:30</div></div>
+      <div class="slot"><div class="r">DPS</div><div class="d" data-t="sl2_d">水・金</div><div class="t">21:00 – 22:30</div></div>
+      <div class="slot"><div class="r">SUPPORT</div><div class="d" data-t="sl3_d">土・日</div><div class="t">20:00 – 21:30</div></div>
+    </div>
+      <p class="sched-note" data-t="sched_note">※ 開講スケジュールは参加人数・ティア構成により調整される場合があります。</p>
+      <div class="ptag">PLANS</div>
+      <div class="price-row">
+        <div class="pcard group">
             <h4 data-t="pg_h">ロール別グループクラス</h4>
             <div class="meta" data-t="pg_m">8回 / 計720分</div>
             <div class="amt">28,000<small data-t="yen4">円</small><span class="per" data-t="pg_per">／ 1名あたり</span></div>
@@ -788,11 +848,11 @@
             <ul class="plist" data-t="pg_list"><li><b>TANK CLASS</b>｜スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。</li><li><b>DPS CLASS</b>｜ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略を通じて火力を最大化します。</li><li><b>SUPPORT CLASS</b>｜リソース管理・生存・ピールの優先順位。後方から試合を動かす判断力を養います。</li></ul>
             <p class="pg-cond" data-t="pg_cond">同程度のティア・ロール構成が5名以上で開講／各クラス定員10名／表示価格は税込・1名あたり</p>
           </div>
-        </div>
       </div>
+    </div>
 
-      <ul class="price-notes" data-t="price_notes"><li>表示価格はすべて税込です。</li><li>ロール別グループクラスは1名あたりの料金です。</li><li>ロール別グループクラスは、同程度のティア・ロール構成が5名以上で開講します。</li><li>TANK / DPS / SUPPORTクラスは各定員10名です。</li><li>個人コーチングでは、受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。</li><li>受講生の課題・目標に応じて、指導内容やカリキュラムの進行速度は異なります。</li></ul>
-      <div class="refund">
+    <ul class="price-notes" data-t="price_notes"><li>表示価格はすべて税込です。</li><li>ロール別グループクラスは1名あたりの料金です。</li><li>ロール別グループクラスは、同程度のティア・ロール構成が5名以上で開講します。</li><li>TANK / DPS / SUPPORTクラスは各定員10名です。</li><li>個人コーチングでは、受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。</li><li>受講生の課題・目標に応じて、指導内容やカリキュラムの進行速度は異なります。</li></ul>
+    <div class="refund">
         <h4 data-t="ref_h">返金・振替ポリシー</h4>
         <ul>
           <li data-t="ref1">授業予定日の3日前まで：無料で日程変更可能</li>
@@ -802,7 +862,6 @@
           <li data-t="ref5">各プランには受講有効期限があります</li>
         </ul>
       </div>
-    </div>
   </div>
 </section>
 
@@ -810,7 +869,7 @@
 <section class="block s-quiet" id="steps">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">09 / HOW TO JOIN</div>
+      <div class="sec-num">07 / HOW TO JOIN</div>
       <h2 data-t="step_h">受講申請の流れ</h2>
       <p data-t="step_p">すべてオンライン、先着順で進行します。</p>
     </div>
@@ -827,7 +886,7 @@
 <section class="block s-quiet" id="faq">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">10 / FAQ</div>
+      <div class="sec-num">08 / FAQ</div>
       <h2 data-t="faq_h">よくある質問</h2>
     </div>
     <div class="faq-list">
@@ -847,7 +906,7 @@
 <section class="block tex t-stars s-emotive" id="mission">
   <div class="wrap">
     <div class="mission">
-      <div class="sec-num">11 / MISSION</div>
+      <div class="sec-num">09 / MISSION</div>
       <p class="slogan">LUCE IN ALTIS</p>
       <p data-t="mis_p1">最も低い場所から高く昇り、光り輝く。99DIVINEアカデミーは、単に「ランクを上げる講座」ではありません。受講生がゲームの中で自分の潜在能力を発見し、その可能性を現実へ広げていく過程を共に歩みます。</p>
       <p data-t="mis_p2"><b style="color:var(--gold)">学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは、単なるランクアップだけでなく、実力向上を通じて、判断力・継続力・挑戦する力を育てる教育です。</p>
@@ -938,6 +997,20 @@ const I18N = {
     mis_p2:"<b style='color:var(--gold)'>学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは、単なるランクアップだけでなく、実力向上を通じて、判断力・継続力・挑戦する力を育てる教育です。",
     fin_h:"READY TO <span>RISE?</span>",fin_p:"あなたの成長の旅は、今ここから始まります。先着順で締め切られます。",fin_btn:"受講申請する →",
     foot:"© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
+    cp_h:"コーチングプログラム",
+    cp_p:"個人・チーム・ロール別グループの3つから、目的に合わせて選べます。",
+    cpf1:"リプレイ分析",cpf2:"実戦・スクリム",cpf3:"フィードバック",cpf4:"次回の課題設定",
+    tab_personal:"個人コーチング",tab_team:"チームコーチング",tab_role:"ロール別グループ",
+    tc_intro:"事前にリプレイを分析し、実際のスクリムを観戦した上で、チーム全体にフィードバックを行います。個人の技術だけでなく、連携・コール・ポジショニング・ULT管理・構成理解など、チームとして勝つために必要な部分を改善します。",
+    tc4_label:"4回プラン",
+    tc4_list:"<li>チームの現状分析</li><li>コール・フォーカス・連携改善</li><li>スキル・ULT・構成理解</li><li>総合評価と今後の練習方針</li>",
+    tc8_label:"8回集中プラン",
+    tc8_list:"<li>チーム診断</li><li>役割とプレイスタイル整理</li><li>ポジショニングとセットアップ</li><li>エンゲージとターゲット選択</li><li>スキル・ULT管理</li><li>相手に合わせた試合中の修正</li><li>大会を想定した実戦練習</li><li>最終評価と今後の方針</li>",
+    tt_per:"／ 1チーム",
+    tt1_b:"まずは1回から",tt1_h:"1回プラン",tt1_m:"1回 / 1チーム",tt1_d:"チームの現状を把握したい方向け。1回のスクリム観戦とフィードバックで課題を明確にします。",tt1_list:"<li>事前リプレイ分析</li><li>スクリム観戦</li><li>スクリム後のフィードバック</li><li>次回までの課題設定</li>",
+    tt2_h:"4回プラン",tt2_m:"4回 / 週1回目安",tt2_d:"週1回を目安に、チームの基礎的な連携と判断基準を整えます。",tt2_list:"<li>毎回：リプレイ分析＋スクリム観戦</li><li>コール・フォーカス・連携改善</li><li>スキル・ULT・構成理解</li><li>総合評価と今後の練習方針</li>",
+    tt3_b:"大会に向けて",tt3_h:"8回集中プラン",tt3_m:"8回 / 週2回目安",tt3_d:"週2回を目安に、大会に向けて短期間でチームを改善します。",tt3_list:"<li>毎回：リプレイ分析＋スクリム観戦</li><li>ポジショニング・セットアップ</li><li>エンゲージとターゲット選択</li><li>試合中の修正・ULT管理</li><li>大会想定の実戦練習と最終評価</li>",
+    tc_note:"※ すべてのプランにリプレイ分析とスクリム観戦が含まれます。／ チームのレベルや目標に応じて内容を調整します。",
     sticky:"受講申請する"
   },
   ko:{
@@ -999,6 +1072,20 @@ const I18N = {
     mis_p2:"<b style='color:var(--gold)'>배움의 목표는 '승리 그 자체'가 아니라 '성장'.</b> 99DIVINE 코칭은 단순한 랭크 업뿐만 아니라, 실력 향상을 통해 판단력·지속력·도전하는 힘을 기르는 교육입니다.",
     fin_h:"READY TO <span>RISE?</span>",fin_p:"당신의 성장 여정은 지금 여기서 시작됩니다. 선착순으로 마감됩니다.",fin_btn:"수강 신청하기 →",
     foot:"© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
+    cp_h:"코칭 프로그램",
+    cp_p:"개인·팀·롤별 그룹 3가지 중에서 목적에 맞게 선택할 수 있습니다.",
+    cpf1:"리플레이 분석",cpf2:"실전·스크림",cpf3:"피드백",cpf4:"다음 과제 설정",
+    tab_personal:"개인 코칭",tab_team:"팀 코칭",tab_role:"롤별 그룹",
+    tc_intro:"사전에 리플레이를 분석하고, 실제 스크림을 관전한 뒤 팀 전체에 피드백을 진행합니다. 개인 기량뿐 아니라 연계·콜·포지셔닝·궁극기 관리·조합 이해 등 팀으로서 이기기 위해 필요한 부분을 개선합니다.",
+    tc4_label:"4회 플랜",
+    tc4_list:"<li>팀 현황 분석</li><li>콜·포커스·연계 개선</li><li>스킬·궁극기·조합 이해</li><li>종합 평가와 향후 연습 방침</li>",
+    tc8_label:"8회 집중 플랜",
+    tc8_list:"<li>팀 진단</li><li>역할과 플레이 스타일 정리</li><li>포지셔닝과 셋업</li><li>인게이지와 타겟 선택</li><li>스킬·궁극기 관리</li><li>상대에 맞춘 경기 중 수정</li><li>대회를 상정한 실전 연습</li><li>최종 평가와 향후 방침</li>",
+    tt_per:"／ 1팀",
+    tt1_b:"우선 1회부터",tt1_h:"1회 플랜",tt1_m:"1회 / 1팀",tt1_d:"팀의 현황을 파악하고 싶은 분께. 1회 스크림 관전과 피드백으로 과제를 명확히 합니다.",tt1_list:"<li>사전 리플레이 분석</li><li>스크림 관전</li><li>스크림 후 피드백</li><li>다음까지의 과제 설정</li>",
+    tt2_h:"4회 플랜",tt2_m:"4회 / 주 1회 기준",tt2_d:"주 1회를 기준으로 팀의 기본적인 연계와 판단 기준을 정비합니다.",tt2_list:"<li>매회: 리플레이 분석＋스크림 관전</li><li>콜·포커스·연계 개선</li><li>스킬·궁극기·조합 이해</li><li>종합 평가와 향후 연습 방침</li>",
+    tt3_b:"대회를 향해",tt3_h:"8회 집중 플랜",tt3_m:"8회 / 주 2회 기준",tt3_d:"주 2회를 기준으로 대회를 향해 단기간에 팀을 개선합니다.",tt3_list:"<li>매회: 리플레이 분석＋스크림 관전</li><li>포지셔닝·셋업</li><li>인게이지와 타겟 선택</li><li>경기 중 수정·궁극기 관리</li><li>대회 상정 실전 연습과 최종 평가</li>",
+    tc_note:"※ 모든 플랜에 리플레이 분석과 스크림 관전이 포함됩니다. ／ 팀의 레벨과 목표에 따라 내용을 조정합니다.",
     sticky:"수강 신청하기"
   }
 };
@@ -1069,6 +1156,22 @@ initLang();
   });
   vid.addEventListener('error',()=>box.classList.remove('has-video')); // 未設置なら静止画
   vid.load();
+})();
+
+/* ===== coaching program tabs ===== */
+(function(){
+  const tabs=[...document.querySelectorAll('.cp-tab')];
+  const panels=[...document.querySelectorAll('.cp-panel')];
+  if(!tabs.length) return;
+  function activate(name){
+    tabs.forEach(t=>t.classList.toggle('on', t.dataset.tab===name));
+    panels.forEach(p=>{
+      const on = p.dataset.panel===name;
+      p.classList.toggle('on', on);
+      if(on) p.querySelectorAll('.rv,.rv-stagger').forEach(el=>el.classList.add('in'));
+    });
+  }
+  tabs.forEach(t=>t.addEventListener('click',()=>activate(t.dataset.tab)));
 })();
 </script>
 <!-- GA4 クリック計測: data-ga を持つ要素のクリックをイベント送信 -->

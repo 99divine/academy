@@ -498,6 +498,21 @@
   .tc-col ol li{counter-increment:tc;font-size:13.5px;color:var(--ink-dim);padding-left:32px;position:relative;line-height:1.6}
   .tc-col ol li::before{content:counter(tc,decimal-leading-zero);position:absolute;left:0;top:1px;color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:.05em}
   @media(max-width:760px){.tc-curri{grid-template-columns:1fr}.cp-tab{min-width:108px;font-size:13px;padding:12px 8px}}
+
+  /* ===== team session time table (service breakdown) ===== */
+  .ts-time{margin:0 0 26px;border:1px solid var(--line);border-radius:12px;background:var(--bg-2);overflow:hidden}
+  .ts-time .ts-h{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:15px;color:var(--ink);padding:16px 20px;border-bottom:1px solid var(--line)}
+  .ts-table{width:100%;border-collapse:collapse}
+  .ts-table th,.ts-table td{padding:12px 20px;font-size:14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+  .ts-table tr:last-child th,.ts-table tr:last-child td{border-bottom:none}
+  .ts-table .ts-hd th{font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:.1em;font-size:12px;text-transform:uppercase;color:var(--ink-dim)}
+  .ts-table td.ts-l{color:var(--ink-dim)}
+  .ts-table .ts-t{text-align:right;white-space:nowrap}
+  .ts-table td.ts-t{font-family:'Barlow Condensed',sans-serif;letter-spacing:.03em;font-size:15px;color:var(--ink)}
+  .ts-table tr.ts-total td{background:rgba(217,164,37,.06);color:var(--ink);font-weight:700}
+  .ts-table tr.ts-total td.ts-t{color:var(--gold-bright)}
+  .ts-note{font-size:13.5px;color:var(--ink);line-height:1.8;margin:0 0 30px;padding:2px 0 2px 16px;border-left:3px solid var(--gold)}
+  @media(max-width:760px){.ts-time .ts-h{font-size:14px;padding:14px 16px}.ts-table th,.ts-table td{padding:11px 16px;font-size:13.5px}}
 </style>
 </head>
 <body>
@@ -783,6 +798,11 @@
     <!-- TEAM -->
     <div class="cp-panel" data-panel="team">
       <p class="pc-intro" data-t="tc_intro">事前にリプレイを分析し、実際のスクリムを観戦した上で、チーム全体にフィードバックを行います。個人の技術だけでなく、連携・コール・ポジショニング・ULT管理・構成理解など、チームとして勝つために必要な部分を改善します。</p>
+      <div class="ts-time">
+        <div class="ts-h" data-t="tc_time_h">1回のチームコーチングに含まれる目安時間</div>
+        <table class="ts-table" data-t="tc_time_tbl"><tr class="ts-hd"><th>内容</th><th class="ts-t">目安時間</th></tr><tr><td class="ts-l">事前リプレイ分析</td><td class="ts-t">30〜45分</td></tr><tr><td class="ts-l">スクリム観戦</td><td class="ts-t">90〜120分</td></tr><tr><td class="ts-l">スクリム終了後のフィードバック</td><td class="ts-t">45〜60分</td></tr><tr><td class="ts-l">フィードバックメモ・次回課題の整理</td><td class="ts-t">約15分</td></tr><tr class="ts-total"><td class="ts-l">合計対応時間</td><td class="ts-t">約3〜4時間</td></tr></table>
+      </div>
+      <p class="ts-note" data-t="tc_time_note">1回のセッションでは、スクリム中の指導時間だけでなく、事前分析から終了後の課題整理までを一貫して行います。</p>
       <div class="ptag">CURRICULUM</div>
       <div class="tc-curri">
         <div class="tc-col">
@@ -1009,6 +1029,9 @@ const I18N = {
     tt_per:"／ 1名あたり",
     tt1_note:"5名参加の場合",tt2_note:"1回あたり 5,750円・5名参加の場合",tt3_note:"1回あたり 5,250円・5名参加の場合",
     tt1_team:"チーム料金 <b>33,000円</b>",tt2_team:"チーム料金 <b>115,000円</b>",tt3_team:"チーム料金 <b>210,000円</b>",
+    tc_time_h:"1回のチームコーチングに含まれる目安時間",
+    tc_time_tbl:"<tr class='ts-hd'><th>内容</th><th class='ts-t'>目安時間</th></tr><tr><td class='ts-l'>事前リプレイ分析</td><td class='ts-t'>30〜45分</td></tr><tr><td class='ts-l'>スクリム観戦</td><td class='ts-t'>90〜120分</td></tr><tr><td class='ts-l'>スクリム終了後のフィードバック</td><td class='ts-t'>45〜60分</td></tr><tr><td class='ts-l'>フィードバックメモ・次回課題の整理</td><td class='ts-t'>約15分</td></tr><tr class='ts-total'><td class='ts-l'>合計対応時間</td><td class='ts-t'>約3〜4時間</td></tr>",
+    tc_time_note:"1回のセッションでは、スクリム中の指導時間だけでなく、事前分析から終了後の課題整理までを一貫して行います。",
     tt1_b:"まずは1回から",tt1_h:"1回プラン",tt1_m:"1回 / 1チーム",tt1_d:"事前リプレイ分析・スクリム観戦・チームフィードバック・次回練習に向けた目標設定を含みます。",tt1_list:"<li>事前リプレイ分析</li><li>スクリム観戦</li><li>スクリム後のフィードバック</li><li>次回までの課題設定</li>",
     tt2_h:"4回プラン",tt2_m:"4回 / 週1回目安",tt2_d:"毎週のコーチングで継続的に改善したいチームにおすすめ。",tt2_list:"<li>毎回：リプレイ分析＋スクリム観戦</li><li>コール・フォーカス・連携改善</li><li>スキル・ULT・構成理解</li><li>総合評価と今後の練習方針</li>",
     tt3_b:"大会に向けて",tt3_h:"8回集中プラン",tt3_m:"8回 / 週2回目安",tt3_d:"大会に向けた準備や、短期集中で改善したいチームにおすすめ。",tt3_list:"<li>毎回：リプレイ分析＋スクリム観戦</li><li>ポジショニング・セットアップ</li><li>エンゲージとターゲット選択</li><li>試合中の修正・ULT管理</li><li>大会想定の実戦練習と最終評価</li>",
@@ -1086,6 +1109,9 @@ const I18N = {
     tt_per:"／ 1인당",
     tt1_note:"5명 참가 시",tt2_note:"1회당 5,750엔・5명 참가 시",tt3_note:"1회당 5,250엔・5명 참가 시",
     tt1_team:"팀 요금 <b>33,000엔</b>",tt2_team:"팀 요금 <b>115,000엔</b>",tt3_team:"팀 요금 <b>210,000엔</b>",
+    tc_time_h:"1회 팀 코칭에 포함되는 예상 시간",
+    tc_time_tbl:"<tr class='ts-hd'><th>내용</th><th class='ts-t'>예상 시간</th></tr><tr><td class='ts-l'>사전 리플레이 분석</td><td class='ts-t'>30〜45분</td></tr><tr><td class='ts-l'>스크림 관전</td><td class='ts-t'>90〜120분</td></tr><tr><td class='ts-l'>스크림 종료 후 피드백</td><td class='ts-t'>45〜60분</td></tr><tr><td class='ts-l'>피드백 메모・다음 과제 정리</td><td class='ts-t'>약 15분</td></tr><tr class='ts-total'><td class='ts-l'>총 대응 시간</td><td class='ts-t'>약 3〜4시간</td></tr>",
+    tc_time_note:"1회 세션에서는 스크림 중 지도 시간뿐 아니라, 사전 분석부터 종료 후 과제 정리까지 일관되게 진행합니다.",
     tt1_b:"우선 1회부터",tt1_h:"1회 플랜",tt1_m:"1회 / 1팀",tt1_d:"사전 리플레이 분석・스크림 관전・팀 피드백・다음 연습을 위한 목표 설정을 포함합니다.",tt1_list:"<li>사전 리플레이 분석</li><li>스크림 관전</li><li>스크림 후 피드백</li><li>다음까지의 과제 설정</li>",
     tt2_h:"4회 플랜",tt2_m:"4회 / 주 1회 기준",tt2_d:"매주 코칭으로 꾸준히 개선하고 싶은 팀에게 추천.",tt2_list:"<li>매회: 리플레이 분석＋스크림 관전</li><li>콜·포커스·연계 개선</li><li>스킬·궁극기·조합 이해</li><li>종합 평가와 향후 연습 방침</li>",
     tt3_b:"대회를 향해",tt3_h:"8회 집중 플랜",tt3_m:"8회 / 주 2회 기준",tt3_d:"대회 준비나 단기 집중으로 개선하고 싶은 팀에게 추천.",tt3_list:"<li>매회: 리플레이 분석＋스크림 관전</li><li>포지셔닝·셋업</li><li>인게이지와 타겟 선택</li><li>경기 중 수정·궁극기 관리</li><li>대회 상정 실전 연습과 최종 평가</li>",

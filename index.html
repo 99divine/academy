@@ -261,6 +261,11 @@
   .rev-name{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:15px;color:var(--ink)}
   .rev-q{margin-left:auto;font-family:'Archivo',sans-serif;font-size:44px;line-height:.6;color:var(--gold);opacity:.35}
   .rev-card p{font-size:13.5px;color:var(--ink-dim);line-height:1.85}
+  .rev-summary{display:none}
+  html[lang="ko"] .rev-summary{display:block;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .rev-card .rev-summary p{color:var(--ink);font-weight:700}
+  .rev-summary small{display:block;color:var(--gold);margin-bottom:6px}
+  .rev-summary .rev-original-label{margin:10px 0 0;color:var(--ink-dim)}
   .rev-card p+p{margin-top:12px}
   @media(max-width:760px){.rev-cols{columns:1}}
   .reviews-soon{border:1px dashed var(--line);border-radius:10px;padding:54px 24px;text-align:center;background:var(--bg-2)}
@@ -540,7 +545,7 @@
     <div>
       <span class="eyebrow" data-t="hero_eyebrow">Overwatch Coaching — JP / KR</span>
       <h1 class="display"><span data-t="hero_h1a">PLAY</span><span class="l2" data-t="hero_h1b">LIKE PRO.</span></h1>
-      <p class="lead" data-t="hero_lead">OWCS実績を持つコーチが、あなたのプレイを直接分析。ランクアップだけでなく、判断力・ポジショニング・チーム理解まで伸ばすオーバーウォッチ専門のオンラインコーチングクラスです。</p>
+      <p class="lead" data-t="hero_lead">ランクが伸び悩む原因を、プロの視点から明らかにします。リプレイ分析とリアルタイムのフィードバックを通じて、次の試合で何を変えるべきかを具体的にします。</p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_hero" data-t="hero_apply">受講申請する →</a>
         <a class="btn btn-ghost" href="#pricing" data-ga="cta_view_pricing" data-t="hero_price">料金を見る</a>
@@ -566,27 +571,13 @@
   </div>
 </section>
 
-<!-- REP MESSAGE -->
-<section class="block tex t-stars s-emotive" id="message">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-num">00 / MESSAGE</div>
-      <h2 data-t="msg_h">代表の言葉</h2>
-    </div>
-    <div class="mission" style="text-align:left;max-width:none;margin:0">
-      <p data-t="msg_p1">こんにちは、<b style="color:var(--gold)">99DIVINE代表のSupreme</b>です。99DIVINEアカデミーは、単に「ゲームを上手くする場所」ではありません。ゲームを通じた“本物の成長”を日本のプレイヤーに届けるために立ち上げました。</p>
-      <p data-t="msg_p2" style="margin-top:14px">コミュニケーション・チームワーク・高速な判断力・マルチタスク・メンタルマネジメント。これらはゲームの中だけで終わらず、私自身、UC Irvineでコンピュータサイエンス学士号を取得し、Utah Valley Universityで民間航空免許（PPL）も取得する力になりました。<b style="color:var(--gold)">ゲームは、人生全体を通して成長を促す挑戦と学びの場です。</b></p>
-    </div>
-  </div>
-</section>
-
 <!-- STRENGTHS -->
 <section class="block s-standard" id="strengths">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">01 / STRENGTHS</div>
+      <div class="sec-num">02 / STRENGTHS</div>
       <h2 data-t="str_h">99DIVINEの強み</h2>
-      <p data-t="str_p">プロチーム出身のコーチ・選手陣が直接運営する、実践型の教育プログラム。</p>
+      <p data-t="str_p">競技シーンで培った経験をもとに、リプレイ分析から実戦での活用まで、一人ひとりに合った改善課題を提示します。</p>
     </div>
     <div class="grid-5">
       <div class="cell"><div class="ico">01</div><h3 data-t="str1_h">リプレイ分析</h3><p data-t="str1_p">プロ視点であなたのプレイを細かく分析し、弱点と改善策を明確に提示します。</p></div>
@@ -602,7 +593,7 @@
 <section class="block tex t-brick s-right" id="foryou">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">02 / FOR YOU</div>
+      <div class="sec-num">03 / FOR YOU</div>
       <h2 data-t="fy_h">こんな方におすすめ</h2>
     </div>
     <ul class="fy-list">
@@ -619,7 +610,7 @@
 <section class="block s-quiet" id="outcomes">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">03 / OUTCOMES</div>
+      <div class="sec-num">04 / OUTCOMES</div>
       <h2 data-t="out_h">受講から得られるもの</h2>
     </div>
     <div class="out-list">
@@ -635,7 +626,7 @@
 <section class="block tex t-brick s-quiet" id="reviews">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">04 / VOICES</div>
+      <div class="sec-num">05 / VOICES</div>
       <h2 data-t="rev_h">受講者の声</h2>
     </div>
     <div class="rev-cols rv-stagger">
@@ -643,34 +634,49 @@
       <article class="rev-card">
         <div class="rev-top">
           <span class="rev-av">H</span>
-          <div class="rev-name">Hさん</div>
+          <div class="rev-name" data-t="rev_name_h">Hさん</div>
           <span class="rev-q">&ldquo;</span>
         </div>
-        <p>自分の実力や理解力のせいもあるが、その場では理解が追いついていないときもある。 ただ内容をまとめてもらえるので、あとから理解が追いつき「こういうことか」と理解が進み、次のレッスンで答え合わせのような形ができて実力もあがるプログラムになっていると感じる。</p>
-        <p>マクロ視点が多いので、それは結構経験が必要な要素が多い部分だと思ってはいるので週1回の期間だと人によっては習得まで時間が足りないかも？とは思います。自分も今は時間がパツパツなので1日に3試合（30分は練習できるように）考えながらプレイしています。</p>
-        <p>ピークはM3で現在はD1までまた落ちてしまったのですが、直近のレッスンで言われた内容がやっと染み付いてきたのと、エイムの仕方や考えも一新したのも噛み合い、プレイフィールが向上していると感じています。 レッスンを受ける前と比べると天と地の差です。 最初のベンチャーは猪突猛進で突っ込んでチームを信用しない完全ソロなベンチャーだったとは思います。</p>
-        <p>今は判断力や経験を貯めている状態でまさに新しい壁に挑戦している状況です。ここを乗り越えてまたレッスンをお願いしたいと思います。ありがとうございました。</p>
+        <div class="rev-summary" lang="ko">
+          <small data-t="rev_summary_label"></small>
+          <p data-t="rev_summary_h"></p>
+          <small class="rev-original-label" data-t="rev_original_label"></small>
+        </div>
+        <p lang="ja">自分の実力や理解力のせいもあるが、その場では理解が追いついていないときもある。 ただ内容をまとめてもらえるので、あとから理解が追いつき「こういうことか」と理解が進み、次のレッスンで答え合わせのような形ができて実力もあがるプログラムになっていると感じる。</p>
+        <p lang="ja">マクロ視点が多いので、それは結構経験が必要な要素が多い部分だと思ってはいるので週1回の期間だと人によっては習得まで時間が足りないかも？とは思います。自分も今は時間がパツパツなので1日に3試合（30分は練習できるように）考えながらプレイしています。</p>
+        <p lang="ja">ピークはM3で現在はD1までまた落ちてしまったのですが、直近のレッスンで言われた内容がやっと染み付いてきたのと、エイムの仕方や考えも一新したのも噛み合い、プレイフィールが向上していると感じています。 レッスンを受ける前と比べると天と地の差です。 最初のベンチャーは猪突猛進で突っ込んでチームを信用しない完全ソロなベンチャーだったとは思います。</p>
+        <p lang="ja">今は判断力や経験を貯めている状態でまさに新しい壁に挑戦している状況です。ここを乗り越えてまたレッスンをお願いしたいと思います。ありがとうございました。</p>
       </article>
 
       <article class="rev-card">
         <div class="rev-top">
           <span class="rev-av">A</span>
-          <div class="rev-name">Aさん</div>
+          <div class="rev-name" data-t="rev_name_a">Aさん</div>
           <span class="rev-q">&ldquo;</span>
         </div>
-        <p>サポート（特にアナ）についてコーチングを受けました！ リプレイのフィードバックだけでなく、実際にGyominコーチのアナのプレイを見ながらさまざまな場面でアナが果たすべき役割を丁寧に教えていただきました。</p>
-        <p>また、目まぐるしく変化する戦況の中で、味方にどう関われば戦いやすくなるのか、そして敵にどのような圧力をかければ味方が動きやすくなるのかを状況ごとに分かりやすく解説していただけたのがとても印象的でした。</p>
-        <p>教えていただいたことを実践するようになってからは、以前よりも周囲を見渡せるようになり、「今自分が何をするべきか」を考えながらプレイできる場面がかなり増えたと実感しています。</p>
-        <p>アナでもっと上達したい方はもちろん、サポート全体の考え方を学びたい方にも本当におすすめできるコーチングでした。ありがとうございました！！</p>
+        <div class="rev-summary" lang="ko">
+          <small data-t="rev_summary_label"></small>
+          <p data-t="rev_summary_a"></p>
+          <small class="rev-original-label" data-t="rev_original_label"></small>
+        </div>
+        <p lang="ja">サポート（特にアナ）についてコーチングを受けました！ リプレイのフィードバックだけでなく、実際にGyominコーチのアナのプレイを見ながらさまざまな場面でアナが果たすべき役割を丁寧に教えていただきました。</p>
+        <p lang="ja">また、目まぐるしく変化する戦況の中で、味方にどう関われば戦いやすくなるのか、そして敵にどのような圧力をかければ味方が動きやすくなるのかを状況ごとに分かりやすく解説していただけたのがとても印象的でした。</p>
+        <p lang="ja">教えていただいたことを実践するようになってからは、以前よりも周囲を見渡せるようになり、「今自分が何をするべきか」を考えながらプレイできる場面がかなり増えたと実感しています。</p>
+        <p lang="ja">アナでもっと上達したい方はもちろん、サポート全体の考え方を学びたい方にも本当におすすめできるコーチングでした。ありがとうございました！！</p>
       </article>
 
       <article class="rev-card">
         <div class="rev-top">
           <span class="rev-av">S</span>
-          <div class="rev-name">Sさん</div>
+          <div class="rev-name" data-t="rev_name_s">Sさん</div>
           <span class="rev-q">&ldquo;</span>
         </div>
-        <p>今までコーチングを受けさせていただいて、少しずつですが進歩しているように感じます。 ポジショニング、スキル、ULTタイミング等の選択肢を教えていただけるので、プレイ中に頭の中に入れながら動けるようになってきて自分の反省点や改善方法も考えられるようになりました！</p>
+        <div class="rev-summary" lang="ko">
+          <small data-t="rev_summary_label"></small>
+          <p data-t="rev_summary_s"></p>
+          <small class="rev-original-label" data-t="rev_original_label"></small>
+        </div>
+        <p lang="ja">今までコーチングを受けさせていただいて、少しずつですが進歩しているように感じます。 ポジショニング、スキル、ULTタイミング等の選択肢を教えていただけるので、プレイ中に頭の中に入れながら動けるようになってきて自分の反省点や改善方法も考えられるようになりました！</p>
       </article>
 
     </div>
@@ -681,7 +687,7 @@
 <section class="block tex t-grunge2 s-standard" id="coach">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">05 / COACH</div>
+      <div class="sec-num">06 / COACH</div>
       <h2 data-t="coach_h">コーチ紹介</h2>
     </div>
     <div class="coach">
@@ -692,15 +698,15 @@
         <a class="coach-x" data-ga="cta_link_coach_x" href="https://x.com/justgyomin" target="_blank" rel="noopener">𝕏&nbsp;&nbsp;Gyomin</a>
       </div>
       <div>
-        <p class="coach-bio" data-t="coach_bio">強豪チームがひしめく日本・Pacificシーンで、優勝・準優勝を経験した実績を持つコーチが、実戦視点で一人ひとりの課題に向き合います。</p>
+        <p class="coach-bio" data-t="coach_bio">大会実績を持つGYOMINコーチが、一人ひとりのリプレイを分析し、実際のプレーにすぐ生かせる改善点を一緒に整理します。</p>
         <p class="coach-quote" data-t="coach_quote">「VARRELが本大会以外を総なめにする中、栄冠を掴んだ唯一の指導者。」</p>
         <ul class="ach-list">
-          <li><b>2026</b><span>Saudi eLeague Woman <span class="ach-win">優勝</span></span></li>
-          <li><b>2025</b><span>OWCS Stage 2 Pacific <span class="ach-win">準優勝</span></span></li>
+          <li><b>2026</b><span>Saudi eLeague Woman <span class="ach-win" data-t="ach_win">優勝</span></span></li>
+          <li><b>2025</b><span>OWCS Stage 2 Pacific <span class="ach-win" data-t="ach_runner_up">準優勝</span></span></li>
           <li><b>2025</b><span>OWCS Stage 1 Japan 3rd</span></li>
           <li><b>2025</b><span>OWCS Stage 3 Japan 3rd</span></li>
-          <li><b>2025</b><span>Saudi eLeague Woman <span class="ach-win">優勝</span></span></li>
-          <li><b>2024</b><span>OWCS JP Stage 2 <span class="ach-win">優勝</span></span></li>
+          <li><b>2025</b><span>Saudi eLeague Woman <span class="ach-win" data-t="ach_win">優勝</span></span></li>
+          <li><b>2024</b><span>OWCS JP Stage 2 <span class="ach-win" data-t="ach_win">優勝</span></span></li>
           <li><b>2023</b><span>Saudi eLeague 3rd</span></li>
         </ul>
       </div>
@@ -712,9 +718,9 @@
 <section class="block tex t-hex s-loud" id="pricing">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">06 / COACHING PROGRAM</div>
+      <div class="sec-num">07 / COACHING PROGRAM</div>
       <h2 data-t="cp_h">コーチングプログラム</h2>
-      <p data-t="cp_p">個人・チーム・ロール別グループの3つから、目的に合わせて選べます。</p>
+      <p data-t="cp_p">現在の実力や目標に合わせて、個人コーチング・チームコーチング・ロール別グループコーチングから選べます。各プランの進め方と料金をご確認ください。</p>
     </div>
 
     <div class="flow rv">
@@ -777,10 +783,10 @@
           </div>
           <div class="pcard feature">
             <h4 data-t="pp2_h">4回集中プログラム</h4>
-            <div class="meta" data-t="pp2_m">4回 / 計240分</div>
+            <div class="meta" data-t="pp2_m">4回 / 1回60分（計240分）</div>
             <div class="amt">39,800<small data-t="yen2">円</small></div>
             <div class="psave" data-t="pp2_s">通常44,000円 → <b>4,200円お得</b></div>
-            <div class="desc" data-t="pp2_d">継続的なリプレイ分析やライブコーチングを通じて、課題を整理しながら改善を進める集中プログラムです。</div>
+            <div class="desc" data-t="pp2_d">一度の分析で終わらず、コーチングと学んだことを実戦で試すサイクルを重ねながら、改善の方向性を確認します。</div>
             <ul class="plist" data-t="pp2_list"><li>1対1コーチング × 4回</li><li>リプレイ分析</li><li>ライブコーチング</li><li>個人課題に合わせた指導</li><li>フィードバックメモ</li></ul>
           </div>
           <div class="pcard">
@@ -889,7 +895,7 @@
 <section class="block s-quiet" id="steps">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">07 / HOW TO JOIN</div>
+      <div class="sec-num">08 / HOW TO JOIN</div>
       <h2 data-t="step_h">受講申請の流れ</h2>
       <p data-t="step_p">すべてオンライン、先着順で進行します。</p>
     </div>
@@ -906,7 +912,7 @@
 <section class="block s-quiet" id="faq">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-num">08 / FAQ</div>
+      <div class="sec-num">09 / FAQ</div>
       <h2 data-t="faq_h">よくある質問</h2>
     </div>
     <div class="faq-list">
@@ -922,11 +928,25 @@
   </div>
 </section>
 
+<!-- REP MESSAGE -->
+<section class="block tex t-stars s-emotive" id="message">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">10 / MESSAGE</div>
+      <h2 data-t="msg_h">代表の言葉</h2>
+    </div>
+    <div class="mission" style="text-align:left;max-width:none;margin:0">
+      <p data-t="msg_p1">こんにちは、<b style="color:var(--gold)">99DIVINE代表のSupreme</b>です。99DIVINEアカデミーは、単に「ゲームを上手くする場所」ではありません。ゲームを通じた“本物の成長”を日本のプレイヤーに届けるために立ち上げました。</p>
+      <p data-t="msg_p2" style="margin-top:14px">コミュニケーション・チームワーク・高速な判断力・マルチタスク・メンタルマネジメント。これらはゲームの中だけで終わらず、私自身、UC Irvineでコンピュータサイエンス学士号を取得し、Utah Valley Universityで民間航空免許（PPL）も取得する力になりました。<b style="color:var(--gold)">ゲームは、人生全体を通して成長を促す挑戦と学びの場です。</b></p>
+    </div>
+  </div>
+</section>
+
 <!-- MISSION -->
 <section class="block tex t-stars s-emotive" id="mission">
   <div class="wrap">
     <div class="mission">
-      <div class="sec-num">09 / MISSION</div>
+      <div class="sec-num">11 / MISSION</div>
       <p class="slogan">LUCE IN ALTIS</p>
       <p data-t="mis_p1">最も低い場所から高く昇り、光り輝く。99DIVINEアカデミーは、単に「ランクを上げる講座」ではありません。受講生がゲームの中で自分の潜在能力を発見し、その可能性を現実へ広げていく過程を共に歩みます。</p>
       <p data-t="mis_p2"><b style="color:var(--gold)">学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは、単なるランクアップだけでなく、実力向上を通じて、判断力・継続力・挑戦する力を育てる教育です。</p>
@@ -959,16 +979,30 @@
 <script>
 const I18N = {
   ja:{
+    rev_name_h:"Hさん",
+    rev_name_a:"Aさん",
+    rev_name_s:"Sさん",
+    rev_summary_label:"",
+    rev_original_label:"",
+    rev_summary_h:"",
+    rev_summary_a:"",
+    rev_summary_s:"",
+    ach_win:"優勝",
+    ach_runner_up:"準優勝",
+    meta_title:"99DIVINE ACADEMY — Overwatch Coaching",
+    meta_description:"OWCS実績を持つコーチが、あなたのプレイを直接分析。ランクアップだけでなく判断力・ポジショニング・チーム理解まで伸ばすオーバーウォッチ専門オンラインコーチング。日本語・韓国語対応。",
+    meta_social_description:"OWCS実績コーチによるオーバーウォッチ専門オンラインコーチング。日本語・韓国語対応。",
+
     nav_str:"強み",nav_coach:"コーチ",nav_curri:"カリキュラム",nav_price:"料金",nav_apply:"受講申請",
     hero_eyebrow:"Overwatch Coaching — JP / KR",
     hero_h1a:"PLAY",hero_h1b:"LIKE PRO.",
-    hero_lead:"OWCS実績を持つコーチが、あなたのプレイを直接分析。ランクアップだけでなく、判断力・ポジショニング・チーム理解まで伸ばすオーバーウォッチ専門のオンラインコーチングクラスです。",
+    hero_lead:"ランクが伸び悩む原因を、プロの視点から明らかにします。リプレイ分析とリアルタイムのフィードバックを通じて、次の試合で何を変えるべきかを具体的にします。",
     hero_apply:"受講申請する →",hero_price:"料金を見る",
     pill_1:"リプレイ分析",pill_2:"ライブコーチング",pill_3:"ロール別指導",pill_4:"<b>JP / KR</b> 対応",
     msg_h:"代表の言葉",
     msg_p1:"こんにちは、<b style='color:var(--gold)'>99DIVINE代表のSupreme</b>です。99DIVINEアカデミーは、単に「ゲームを上手くする場所」ではありません。ゲームを通じた“本物の成長”を日本のプレイヤーに届けるために立ち上げました。",
     msg_p2:"コミュニケーション・チームワーク・高速な判断力・マルチタスク・メンタルマネジメント。これらはゲームの中だけで終わらず、私自身、UC Irvineでコンピュータサイエンス学士号を取得し、Utah Valley Universityで民間航空免許（PPL）も取得する力になりました。<b style='color:var(--gold)'>ゲームは、人生全体を通して成長を促す挑戦と学びの場です。</b>",
-    str_h:"99DIVINEの強み",str_p:"プロチーム出身のコーチ・選手陣が直接運営する、実践型の教育プログラム。",
+    str_h:"99DIVINEの強み",str_p:"競技シーンで培った経験をもとに、リプレイ分析から実戦での活用まで、一人ひとりに合った改善課題を提示します。",
     str1_h:"リプレイ分析",str1_p:"プロ視点であなたのプレイを細かく分析し、弱点と改善策を明確に提示します。",
     str2_h:"ライブコーチング",str2_p:"実戦中のリアルタイムフィードバック。判断の瞬間に指導が入ることで意思決定が変わります。",
     str3_h:"ロール別指導",str3_p:"TANK / DPS / SUPPORT、各ロール専門のコーチングで適性に合わせて成長を加速。",
@@ -988,7 +1022,7 @@ const I18N = {
     role_sup:"リソース管理・生存・ピールの優先順位。後方からチームを支える判断力を養います。",
     sl1_d:"火・木",sl2_d:"水・金",sl3_d:"土・日",
     sched_note:"※ 開講スケジュールは参加人数・ティア構成により調整される場合があります。",
-    coach_bio:"強豪チームがひしめく日本・Pacificシーンで、優勝・準優勝を経験した実績を持つコーチが、実戦視点で一人ひとりの課題に向き合います。",
+    coach_bio:"大会実績を持つGYOMINコーチが、一人ひとりのリプレイを分析し、実際のプレーにすぐ生かせる改善点を一緒に整理します。",
     price_notes:"<li>表示価格はすべて税込です。</li><li>ロール別グループクラスは1名あたりの料金です。</li><li>ロール別グループクラスは、同程度のティア・ロール構成が5名以上で開講します。</li><li>TANK / DPS / SUPPORTクラスは各定員10名です。</li><li>個人コーチングでは、受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。</li><li>受講生の課題・目標に応じて、指導内容やカリキュラムの進行速度は異なります。</li>",
     fy_h:"こんな方におすすめ",fy_1:"今のランク帯で伸び悩みを感じているプレイヤー",fy_2:"自分のクセや弱点を客観的に把握したい方",fy_3:"独学に限界を感じ、効率的に上達したい方",fy_4:"自分のロール理解や実戦での判断力をさらに深めたい方",fy_5:"上位・海外シーンを本気で目指したい方",
     out_h:"受講から得られるもの",out_1h:"明確になった弱点と改善点",out_1p:"感覚ではなく、言語化された課題と次にやるべきことが手元に残ります。",out_2h:"ロール別の判断基準",out_2p:"立ち回り・ポジショニング・コールの優先順位を、状況ごとに判断できる力。",out_3h:"フィードバックメモ",out_3p:"受講内容と改善ポイントをまとめたメモをお渡しします。復習と継続的な成長に活用できます。",out_4h:"成長し続ける自己分析力",out_4p:"コーチング後も、自分でリプレイを振り返り、課題を発見し、改善の優先順位を考えられる視点を身につけます。",
@@ -999,7 +1033,7 @@ const I18N = {
     pg_h:"ロール別グループクラス",pg_m:"8回 / 計720分",pg_per:"／ 1名あたり",pg_d:"TANK / DPS / SUPPORT、それぞれのロールに特化した講座型グループクラスです。同程度のティア・ロール構成で学び、ロール理解と実戦判断力を深めます。",pg_list:"<li><b>TANK CLASS</b>｜スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。</li><li><b>DPS CLASS</b>｜ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略を通じて火力を最大化します。</li><li><b>SUPPORT CLASS</b>｜リソース管理・生存・ピールの優先順位。後方から試合を動かす判断力を養います。</li>",pg_cond:"同程度のティア・ロール構成が5名以上で開講／各クラス定員10名／表示価格は税込・1名あたり",rev_soon:"準備中…",
     pc_intro:"1対1で、一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。リプレイ分析またはライブコーチングを通じて、現在の問題点を明確にし、改善につなげます。",
     pp1_b:"初めての方におすすめ",pp1_h:"1回コーチング",pp1_m:"1回 / 60分",pp1_d:"まずは自分の課題を知りたい方や、特定の悩みを集中的に改善したい方向け。",pp1_list:"<li>リプレイ分析 または ライブコーチング</li><li>現在の課題分析</li><li>改善ポイントの提示</li><li>フィードバックメモ</li>",
-    pp2_h:"4回集中プログラム",pp2_m:"4回 / 計240分",pp2_s:"通常44,000円 → <b>4,200円お得</b>",pp2_d:"継続的なリプレイ分析やライブコーチングを通じて、課題を整理しながら改善を進める集中プログラムです。",pp2_list:"<li>1対1コーチング × 4回</li><li>リプレイ分析</li><li>ライブコーチング</li><li>個人課題に合わせた指導</li><li>フィードバックメモ</li>",
+    pp2_h:"4回集中プログラム",pp2_m:"4回 / 1回60分（計240分）",pp2_s:"通常44,000円 → <b>4,200円お得</b>",pp2_d:"一度の分析で終わらず、コーチングと学んだことを実戦で試すサイクルを重ねながら、改善の方向性を確認します。",pp2_list:"<li>1対1コーチング × 4回</li><li>リプレイ分析</li><li>ライブコーチング</li><li>個人課題に合わせた指導</li><li>フィードバックメモ</li>",
     pp3_b:"本気で継続的に成長したい方に",pp3_h:"12回継続プログラム",pp3_m:"12回 / 計720分",pp3_s:"1回コーチング × 12回 132,000円 → <b>22,600円お得</b>",pp3_d:"継続的な指導を通じて、基礎理解から個人課題の改善、実戦適応、自己分析力まで、長期的な成長を目指すプログラムです。",pp3_list:"<li>1対1コーチング × 12回</li><li>継続的なリプレイ分析</li><li>ライブコーチング</li><li>課題に応じた指導内容の調整</li><li>成長段階に応じた優先順位設定</li><li>フィードバックメモ</li>",
     yen:"円",yen2:"円",yen3:"円",yen4:"円",yen5:"円",
     ref_h:"返金・振替ポリシー",
@@ -1018,7 +1052,7 @@ const I18N = {
     fin_h:"READY TO <span>RISE?</span>",fin_p:"あなたの成長の旅は、今ここから始まります。先着順で締め切られます。",fin_btn:"受講申請する →",
     foot:"© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
     cp_h:"コーチングプログラム",
-    cp_p:"個人・チーム・ロール別グループの3つから、目的に合わせて選べます。",
+    cp_p:"現在の実力や目標に合わせて、個人コーチング・チームコーチング・ロール別グループコーチングから選べます。各プランの進め方と料金をご確認ください。",
     cpf1:"リプレイ分析",cpf2:"実戦・スクリム",cpf3:"フィードバック",cpf4:"次回の課題設定",
     tab_personal:"個人コーチング",tab_team:"チームコーチング",tab_role:"ロール別グループ",
     tc_intro:"事前にリプレイを分析し、実際のスクリムを観戦した上で、チーム全体にフィードバックを行います。個人の技術だけでなく、連携・コール・ポジショニング・ULT管理・構成理解など、チームとして勝つために必要な部分を改善します。",
@@ -1039,16 +1073,30 @@ const I18N = {
     sticky:"受講申請する"
   },
   ko:{
+    rev_name_h:"H 수강생",
+    rev_name_a:"A 수강생",
+    rev_name_s:"S 수강생",
+    rev_summary_label:"후기 핵심 요약",
+    rev_original_label:"일본어 원문",
+    rev_summary_h:"수업 내용을 정리한 메모로 복습하고 다음 수업에서 확인하며 이해를 넓혔고, 플레이 감각의 변화를 느꼈습니다.",
+    rev_summary_a:"아나의 역할과 상황별 판단을 배우고 실천하면서, 주변을 살피고 지금 해야 할 일을 생각하며 플레이하는 순간이 늘었습니다.",
+    rev_summary_s:"포지셔닝·스킬·궁극기 타이밍의 선택지를 배우면서, 자신의 플레이를 돌아보고 개선 방법을 생각할 수 있게 됐습니다.",
+    ach_win:"우승",
+    ach_runner_up:"준우승",
+    meta_title:"99DIVINE ACADEMY — 오버워치 코칭",
+    meta_description:"OWCS 실적을 보유한 코치가 플레이를 직접 분석합니다. 랭크 상승뿐 아니라 판단력·포지셔닝·팀 이해까지 키우는 오버워치 전문 온라인 코칭. 일본어·한국어 지원.",
+    meta_social_description:"OWCS 실적 코치의 오버워치 전문 온라인 코칭. 일본어·한국어 지원.",
+
     nav_str:"강점",nav_coach:"코치",nav_curri:"커리큘럼",nav_price:"요금",nav_apply:"수강 신청",
     hero_eyebrow:"Overwatch Coaching — JP / KR",
     hero_h1a:"PLAY",hero_h1b:"LIKE PRO.",
-    hero_lead:"OWCS 실적을 가진 코치가 당신의 플레이를 직접 분석합니다. 랭크 상승뿐 아니라 판단력·포지셔닝·팀 이해까지 키우는 오버워치 전문 온라인 코칭 클래스입니다.",
+    hero_lead:"랭크가 막힌 이유를 프로의 시선으로 짚어드립니다. 리플레이 분석과 실시간 피드백으로, 다음 경기에서 무엇을 바꿀지 구체화합니다.",
     hero_apply:"수강 신청하기 →",hero_price:"요금 보기",
     pill_1:"리플레이 분석",pill_2:"라이브 코칭",pill_3:"롤별 지도",pill_4:"<b>JP / KR</b> 지원",
     msg_h:"대표의 말",
     msg_p1:"안녕하세요, <b style='color:var(--gold)'>99DIVINE 대표 Supreme</b>입니다. 99DIVINE 아카데미는 단순히 '게임을 잘하게 만드는 곳'이 아닙니다. 게임을 통한 '진짜 성장'을 일본 플레이어에게 전하기 위해 시작했습니다.",
     msg_p2:"커뮤니케이션·팀워크·빠른 판단력·멀티태스킹·멘탈 관리. 이것들은 게임 안에서만 끝나지 않고, 저 또한 UC Irvine에서 컴퓨터과학 학사를, Utah Valley University에서 민간 항공 면허(PPL)를 취득하는 힘이 되었습니다. <b style='color:var(--gold)'>게임은 인생 전체의 성장을 이끄는 도전과 배움의 장입니다.</b>",
-    str_h:"99DIVINE의 강점",str_p:"프로팀 출신 코치·선수진이 직접 운영하는 실전형 교육 프로그램.",
+    str_h:"99DIVINE의 강점",str_p:"프로 무대에서 쌓은 경험을 바탕으로, 리플레이 분석부터 실전 적용까지 개인별 개선 과제를 제시합니다.",
     str1_h:"리플레이 분석",str1_p:"프로 관점으로 당신의 플레이를 세밀하게 분석하고, 약점과 개선책을 명확히 제시합니다.",
     str2_h:"라이브 코칭",str2_p:"실전 중 실시간 피드백. 판단의 순간에 지도가 들어가 의사결정이 달라집니다.",
     str3_h:"롤별 지도",str3_p:"TANK / DPS / SUPPORT 전문 코칭으로 적성에 맞춘 성장 가속.",
@@ -1068,7 +1116,7 @@ const I18N = {
     role_sup:"리소스 관리·생존·필 우선순위. 후방에서 팀을 받치는 판단력 양성.",
     sl1_d:"화 · 목",sl2_d:"수 · 금",sl3_d:"토 · 일",
     sched_note:"※ 개강 스케줄은 참가 인원·티어 구성에 따라 조정될 수 있습니다.",
-    coach_bio:"강호 팀들이 즐비한 일본·Pacific 씬에서 우승·준우승을 경험한 실적을 지닌 코치가, 실전 관점에서 한 사람 한 사람의 과제를 마주합니다.",
+    coach_bio:"대회 실적을 보유한 GYOMIN 코치가 개인별 리플레이를 분석하고, 플레이에 바로 적용할 수 있는 개선 과제를 함께 정리합니다.",
     price_notes:"<li>표시 가격은 모두 부가세 포함입니다.</li><li>롤별 그룹 클래스는 1인당 요금입니다.</li><li>롤별 그룹 클래스는 비슷한 티어·롤 구성 5명 이상이면 개강합니다.</li><li>TANK / DPS / SUPPORT 클래스는 각 정원 10명입니다.</li><li>개인 코칭에서는 수강 내용과 개선 포인트를 정리한 피드백 메모를 드립니다.</li><li>수강생의 과제·목표에 따라 지도 내용과 커리큘럼 진행 속도가 다릅니다.</li>",
     fy_h:"이런 분께 추천",fy_1:"현재 랭크대에서 성장 정체를 느끼는 플레이어",fy_2:"자신의 습관·약점을 객관적으로 파악하고 싶은 분",fy_3:"독학의 한계를 느끼고 효율적으로 실력을 올리고 싶은 분",fy_4:"자신의 롤 이해와 실전 판단력을 더 깊게 다지고 싶은 분",fy_5:"상위·해외 씬을 진지하게 목표로 하는 분",
     out_h:"수강을 통해 얻을 수 있는 것",out_1h:"명확해진 약점과 개선점",out_1p:"감각이 아니라, 언어화된 과제와 다음에 해야 할 일이 손에 남습니다.",out_2h:"롤별 판단 기준",out_2p:"무브·포지셔닝·콜의 우선순위를 상황별로 판단하는 힘.",out_3h:"피드백 메모",out_3p:"수강 내용과 개선 포인트를 정리한 메모를 드립니다. 복습과 지속적인 성장에 활용할 수 있습니다.",out_4h:"계속 성장하는 자기 분석력",out_4p:"코칭 이후에도 스스로 리플레이를 돌아보고, 과제를 발견하고, 개선 우선순위를 생각할 수 있는 시각을 기릅니다.",
@@ -1079,7 +1127,7 @@ const I18N = {
     pg_h:"롤별 그룹 클래스",pg_m:"8회 / 총 720분",pg_per:"／ 1인당",pg_d:"TANK / DPS / SUPPORT 각 롤에 특화된 강의형 그룹 클래스입니다. 비슷한 티어·롤 구성으로 배우며, 롤 이해와 실전 판단력을 다집니다.",pg_list:"<li><b>TANK CLASS</b> &mdash; 스페이스 관리와 인게이지 판단. 팀의 기점이 되는 무빙을 철저히 다듬습니다.</li><li><b>DPS CLASS</b> &mdash; 포지셔닝과 킬 획득의 재현성. 영웅별 응용 전략으로 화력을 극대화합니다.</li><li><b>SUPPORT CLASS</b> &mdash; 리소스 관리·생존·필의 우선순위. 후방에서 경기를 움직이는 판단력을 기릅니다.</li>",pg_cond:"비슷한 티어·롤 구성 5명 이상 개강／각 클래스 정원 10명／표시 가격은 부가세 포함·1인당",rev_soon:"준비 중…",
     pc_intro:"1대1로, 한 사람 한 사람의 과제·목표·플레이 스타일에 맞춰 지도 내용을 조정합니다. 리플레이 분석 또는 라이브 코칭을 통해 현재 문제점을 명확히 하고 개선으로 이어갑니다.",
     pp1_b:"처음이신 분께 추천",pp1_h:"1회 코칭",pp1_m:"1회 / 60분",pp1_d:"먼저 자신의 과제를 알고 싶은 분, 특정 고민을 집중적으로 개선하고 싶은 분께.",pp1_list:"<li>리플레이 분석 또는 라이브 코칭</li><li>현재 과제 분석</li><li>개선 포인트 제시</li><li>피드백 메모</li>",
-    pp2_h:"4회 집중 프로그램",pp2_m:"4회 / 총 240분",pp2_s:"정가 44,000엔 → <b>4,200엔 할인</b>",pp2_d:"지속적인 리플레이 분석과 라이브 코칭을 통해 과제를 정리하며 개선을 진행하는 집중 프로그램입니다.",pp2_list:"<li>1대1 코칭 × 4회</li><li>리플레이 분석</li><li>라이브 코칭</li><li>개인 과제에 맞춘 지도</li><li>피드백 메모</li>",
+    pp2_h:"4회 집중 프로그램",pp2_m:"4회 / 회당 60분 (총 240분)",pp2_s:"정가 44,000엔 → <b>4,200엔 할인</b>",pp2_d:"한 번의 진단으로 끝나지 않고, 코칭과 실전 적용을 반복하며 개선 방향을 점검합니다.",pp2_list:"<li>1대1 코칭 × 4회</li><li>리플레이 분석</li><li>라이브 코칭</li><li>개인 과제에 맞춘 지도</li><li>피드백 메모</li>",
     pp3_b:"진지하게 꾸준히 성장하고 싶은 분께",pp3_h:"12회 지속 프로그램",pp3_m:"12회 / 총 720분",pp3_s:"1회 코칭 × 12회 132,000엔 → <b>22,600엔 할인</b>",pp3_d:"지속적인 지도를 통해 기초 이해부터 개인 과제 개선, 실전 적응, 자기 분석력까지 장기적인 성장을 목표로 하는 프로그램입니다.",pp3_list:"<li>1대1 코칭 × 12회</li><li>지속적인 리플레이 분석</li><li>라이브 코칭</li><li>과제에 따른 지도 내용 조정</li><li>성장 단계에 따른 우선순위 설정</li><li>피드백 메모</li>",
     yen:" 엔",yen2:" 엔",yen3:" 엔",yen4:" 엔",yen5:" 엔",
     ref_h:"환불 · 변경 정책",
@@ -1098,7 +1146,7 @@ const I18N = {
     fin_h:"READY TO <span>RISE?</span>",fin_p:"당신의 성장 여정은 지금 여기서 시작됩니다. 선착순으로 마감됩니다.",fin_btn:"수강 신청하기 →",
     foot:"© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
     cp_h:"코칭 프로그램",
-    cp_p:"개인·팀·롤별 그룹 3가지 중에서 목적에 맞게 선택할 수 있습니다.",
+    cp_p:"현재 실력과 목표에 맞춰 개인 코칭, 팀 코칭, 롤별 그룹 중 선택할 수 있습니다. 각 플랜별 진행 방식과 비용을 확인하세요.",
     cpf1:"리플레이 분석",cpf2:"실전·스크림",cpf3:"피드백",cpf4:"다음 과제 설정",
     tab_personal:"개인 코칭",tab_team:"팀 코칭",tab_role:"롤별 그룹",
     tc_intro:"사전에 리플레이를 분석하고, 실제 스크림을 관전한 뒤 팀 전체에 피드백을 진행합니다. 개인 기량뿐 아니라 연계·콜·포지셔닝·궁극기 관리·조합 이해 등 팀으로서 이기기 위해 필요한 부분을 개선합니다.",
@@ -1123,6 +1171,14 @@ const I18N = {
 function setLang(lang){
   const dict = I18N[lang] || I18N.ja;
   document.documentElement.lang = lang;
+  document.title = dict.meta_title;
+  document.querySelector('meta[name="description"]').content = dict.meta_description;
+  ['meta[property="og:title"]', 'meta[name="twitter:title"]'].forEach(selector=>{
+    document.querySelector(selector).content = dict.meta_title;
+  });
+  ['meta[property="og:description"]', 'meta[name="twitter:description"]'].forEach(selector=>{
+    document.querySelector(selector).content = dict.meta_social_description;
+  });
   document.querySelectorAll('[data-t]').forEach(el=>{
     const k = el.getAttribute('data-t');
     if(dict[k] !== undefined) el.innerHTML = dict[k];

@@ -518,6 +518,82 @@
   .ts-table tr.ts-total td.ts-t{color:var(--gold-bright)}
   .ts-note{font-size:13.5px;color:var(--ink);line-height:1.8;margin:0 0 30px;padding:2px 0 2px 16px;border-left:3px solid var(--gold)}
   @media(max-width:760px){.ts-time .ts-h{font-size:14px;padding:14px 16px}.ts-table th,.ts-table td{padding:11px 16px;font-size:13.5px}}
+
+  /* Enrollment clarity: retain brand tokens and existing section rhythm. */
+  .signup-note,.plan-note{font-size:14px;color:var(--ink-dim);line-height:1.8;margin:16px 0 0}
+  .final .signup-note{margin:18px auto 0;max-width:640px}
+  .lesson-preview{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:28px;min-width:0}
+  .lesson-preview::before{display:none}
+  .preview-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+  .preview-brand{font:700 18px 'Barlow Condensed',sans-serif;letter-spacing:.06em;color:var(--gold)}
+  .preview-label{font-size:12px;color:var(--ink-dim);border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+  .lesson-preview h2{font-size:25px;line-height:1.5;margin-bottom:24px}
+  .preview-steps{list-style:none;display:grid;gap:0}
+  .preview-steps li{display:grid;grid-template-columns:32px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--line)}
+  .preview-step{font:700 22px 'Barlow Condensed',sans-serif;color:var(--gold)}
+  .preview-steps h3{font-size:16px;margin-bottom:5px}
+  .preview-steps p{font-size:15px;color:var(--ink-dim);line-height:1.75}
+  .preview-note{font-size:12px;color:var(--ink-dim);margin-top:16px}
+  .coach-subhead{font-size:15px;color:var(--gold);margin-bottom:10px}
+  .coach-fit{margin:0 0 28px;display:grid;gap:8px}
+  .coach-fit dt{font-size:14px;color:var(--gold);font-weight:700}
+  .coach-fit dd{font-size:15px;color:var(--ink-dim);margin-bottom:8px}
+  .rev-summary,html[lang="ko"] .rev-summary{display:block;margin-bottom:0;padding-bottom:0;border:0}
+  .rev-card p{font-size:15px}
+  .rev-card .rev-summary p{font-size:16px;color:var(--ink);font-weight:700}
+  .review-details{margin-top:18px;border-top:1px solid var(--line)}
+  .review-details summary,.program-details summary{cursor:pointer;color:var(--gold);font-size:15px;font-weight:700;padding:16px 0;min-height:48px}
+  .review-original{padding:0 0 8px}
+  .rev-card .original-label{font-size:12px;color:var(--gold);margin:0 0 12px}
+  .program-details{margin:24px 0 30px;border:1px solid var(--line);border-radius:10px;background:var(--bg-2)}
+  .program-details summary{padding:18px 22px}
+  .program-detail-body{padding:8px 22px 22px}
+  .program-detail-body .gstep{padding-right:18px;padding-left:18px}
+  .program-detail-body .gstep:first-child{padding-left:0}
+  .gstep .goal,.gstep ul li,.tc-col ol li,.pcard .desc,.pcard .plist li,.pc-intro,.price-notes li{font-size:15px;line-height:1.8}
+  .curri-note{font-size:14px}
+  .cp-tabs{margin-bottom:24px}
+  .pc-intro{margin-bottom:24px}
+  .pcard{display:flex;flex-direction:column;min-width:0}
+  .pcard .pbadge{align-self:flex-start}
+  .pcard.feature::before{content:none}
+  .recommend-badge{position:absolute;top:-12px;left:24px;padding:3px 12px;border-radius:10px;background:var(--gold);color:var(--bg);font-size:12px;font-weight:700}
+  .plan-cta{margin-top:auto;justify-content:center;text-align:center;font-size:14px;white-space:normal;line-height:1.6;padding:13px 12px}
+  .pcard .plist,.pcard .desc,.pcard .pg-cond{margin-bottom:22px}
+  .lesson-essentials{margin:30px 0;border:1px solid var(--line);border-radius:12px;padding:24px;background:var(--bg-2)}
+  .lesson-essentials h3{font-size:19px;margin-bottom:18px}
+  .essentials-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 32px}
+  .essentials-grid dt{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:8px}
+  .essentials-grid dd{font-size:15px;line-height:1.8;color:var(--ink-dim)}
+  .refund h5{font-size:15px;color:var(--ink);margin:22px 0 12px}
+  .refund .policy-copy+.policy-copy{margin-top:12px}
+  .refund li,.refund .policy-copy{font-size:15px;color:var(--ink-dim);line-height:1.8}
+  .sticky-bar .sticky-price{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+  .sticky-bar a{min-width:0;font-size:14px;line-height:1.6;padding:12px 8px}
+  a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold-bright);outline-offset:4px}
+  .hero-grid>div,.gstep,.tc-col{min-width:0}
+  @media(max-width:1020px){.program-detail-body .gstep:nth-child(3){padding-left:0}}
+  @media(max-width:860px){.nav-links a.nav-price{display:inline-flex}}
+  @media(max-width:820px){
+    .hero-media{order:0}
+    .hero{padding-top:38px}
+    .hero-grid{gap:28px}
+    .sticky-bar{display:grid;grid-template-columns:1fr 1.4fr;gap:10px}
+    body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+  }
+  @media(max-width:640px){
+    .lesson-preview{padding:22px}.lesson-preview h2{font-size:23px}
+    .essentials-grid{grid-template-columns:1fr}
+    .lesson-essentials{padding:22px}
+    .program-detail-body{padding:0 18px 18px}
+    .program-detail-body .gstep{padding-left:0;padding-right:0}
+    .cp-tabs{gap:4px}.cp-tab{min-width:0;flex:1 1 0;font-size:12px;padding:12px 5px;line-height:1.6;overflow-wrap:anywhere}
+    .hero-cta{gap:10px}.hero-cta .btn{padding:14px 18px}
+    .nav{gap:12px}.nav-links{gap:10px}.brand{font-size:21px}
+  }
+  @media(max-width:370px){.brand{font-size:18px}.nav-links{gap:8px}.lang button{padding:6px 7px}.nav-price{font-size:12px}}
+  @media(prefers-reduced-motion:reduce){.cp-panel.on{animation:none}}
+
 </style>
 </head>
 <body>
@@ -529,7 +605,7 @@
     <nav class="nav-links">
       <a class="nlink" href="#strengths" data-ga="cta_nav_strengths" data-t="nav_str">強み</a>
       <a class="nlink" href="#coach" data-ga="cta_nav_coach" data-t="nav_coach">コーチ</a>
-      <a class="nlink" href="#pricing" data-ga="cta_nav_pricing" data-t="nav_price">料金</a>
+      <a class="nlink nav-price" href="#pricing" data-ga="cta_nav_pricing" data-t="nav_price">料金</a>
       <div class="lang">
         <button data-lang="ja" class="on" data-ga="cta_lang_ja">JP</button>
         <button data-lang="ko" data-ga="cta_lang_ko">KR</button>
@@ -550,6 +626,7 @@
         <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_hero" data-t="hero_apply">受講申請する →</a>
         <a class="btn btn-ghost" href="#pricing" data-ga="cta_view_pricing" data-t="hero_price">料金を見る</a>
       </div>
+<p class="signup-note" data-t="signup_note">フォーム送信後48時間以内にご連絡します。お申し込み時の決済はありません。</p>
       <div class="pills">
         <span class="pill" data-t="pill_1">リプレイ分析</span>
         <span class="pill" data-t="pill_2">ライブコーチング</span>
@@ -557,16 +634,11 @@
         <span class="pill" data-t="pill_4"><b>JP / KR</b> 対応</span>
       </div>
     </div>
-    <div class="hero-media">
-      <!-- ▼動画を使う場合: img/hero.mp4 (+webm) を置くだけで自動的に有効化。
-           未設置ならこのまま静止画が表示され、エラーにはなりません。
-           条件: 音声なし / 5MB以下 / 3〜6秒ループ / PCのみ再生(スマホは静止画) -->
-      <video class="hero-video" poster="img/hero.jpg" autoplay muted loop playsinline preload="none"
-             width="1176" height="672" aria-hidden="true">
-        <source src="img/hero.webm" type="video/webm">
-        <source src="img/hero.mp4" type="video/mp4">
-      </video>
-      <img class="hero-still" src="img/hero.jpg" alt="99DIVINE ACADEMY" width="1176" height="672" fetchpriority="high">
+    <div class="hero-media lesson-preview">
+      <div class="preview-top"><span class="preview-brand">99DIVINE ACADEMY</span><span class="preview-label" data-t="example_label">コーチングのイメージ</span></div>
+      <h2 data-t="example_h">「何が起きたか」から、<br>「次にどう動くか」へ。</h2>
+      <ol class="preview-steps"><li><span class="preview-step">01</span><div><h3 data-t="example_1h">場面を振り返る</h3><p data-t="example_1p">味方が復帰する前に、戦闘を始めた場面。</p></div></li><li><span class="preview-step">02</span><div><h3 data-t="example_2h">判断の理由を整理</h3><p data-t="example_2p">味方の人数と位置を確認できていたかを振り返る。</p></div></li><li><span class="preview-step">03</span><div><h3 data-t="example_3h">次の試合で試す</h3><p data-t="example_3p">仕掛ける前に、味方が合流できているかを確認する。</p></div></li></ol>
+      <p class="preview-note" data-t="example_note">説明用の例です。実際の受講生の記録ではありません。</p>
     </div>
   </div>
 </section>
@@ -583,7 +655,7 @@
       <div class="cell"><div class="ico">01</div><h3 data-t="str1_h">リプレイ分析</h3><p data-t="str1_p">プロ視点であなたのプレイを細かく分析し、弱点と改善策を明確に提示します。</p></div>
       <div class="cell"><div class="ico">02</div><h3 data-t="str2_h">ライブコーチング</h3><p data-t="str2_p">実戦中のリアルタイムフィードバック。判断の瞬間に指導が入ることで意思決定が変わります。</p></div>
       <div class="cell"><div class="ico">03</div><h3 data-t="str3_h">ロール別指導</h3><p data-t="str3_p">TANK / DPS / SUPPORT、各ロール専門のコーチングで適性に合わせて成長を加速。</p></div>
-      <div class="cell"><div class="ico">04</div><h3 data-t="str4_h">日本語・韓国語対応</h3><p data-t="str4_p">日本語・韓国語に対応。言語の壁なく海外連携スキルも同時に習得できます。</p></div>
+      <div class="cell"><div class="ico">04</div><h3 data-t="str4_h">日本語・韓国語対応</h3><p data-t="str4_p">日本語でのレッスンには通訳が同席し、コーチのフィードバックをお伝えします。韓国語での受講にも対応しています。</p></div>
       <div class="cell"><div class="ico">05</div><h3 data-t="str5_h">大会実績</h3><p data-t="str5_p">2025 OWCS Pacific Stage 1 優勝（創立初年度）など、結果を出すチームのノウハウを伝授。</p></div>
     </div>
   </div>
@@ -637,15 +709,15 @@
           <div class="rev-name" data-t="rev_name_h">Hさん</div>
           <span class="rev-q">&ldquo;</span>
         </div>
-        <div class="rev-summary" lang="ko">
-          <small data-t="rev_summary_label"></small>
-          <p data-t="rev_summary_h"></p>
-          <small class="rev-original-label" data-t="rev_original_label"></small>
+        <div class="rev-summary">
+          <small data-t="rev_summary_label">レビューの要点</small>
+          <p data-t="rev_summary_h">復習と次のレッスンでの確認を重ね、理解が深まり、プレイフィールの変化を実感。</p>
         </div>
-        <p lang="ja">自分の実力や理解力のせいもあるが、その場では理解が追いついていないときもある。 ただ内容をまとめてもらえるので、あとから理解が追いつき「こういうことか」と理解が進み、次のレッスンで答え合わせのような形ができて実力もあがるプログラムになっていると感じる。</p>
+<details class="review-details"><summary><span data-t="rev_more">全文を読む</span></summary><div class="review-original"><p class="original-label" data-t="rev_original_label">日本語原文</p>        <p lang="ja">自分の実力や理解力のせいもあるが、その場では理解が追いついていないときもある。 ただ内容をまとめてもらえるので、あとから理解が追いつき「こういうことか」と理解が進み、次のレッスンで答え合わせのような形ができて実力もあがるプログラムになっていると感じる。</p>
         <p lang="ja">マクロ視点が多いので、それは結構経験が必要な要素が多い部分だと思ってはいるので週1回の期間だと人によっては習得まで時間が足りないかも？とは思います。自分も今は時間がパツパツなので1日に3試合（30分は練習できるように）考えながらプレイしています。</p>
         <p lang="ja">ピークはM3で現在はD1までまた落ちてしまったのですが、直近のレッスンで言われた内容がやっと染み付いてきたのと、エイムの仕方や考えも一新したのも噛み合い、プレイフィールが向上していると感じています。 レッスンを受ける前と比べると天と地の差です。 最初のベンチャーは猪突猛進で突っ込んでチームを信用しない完全ソロなベンチャーだったとは思います。</p>
         <p lang="ja">今は判断力や経験を貯めている状態でまさに新しい壁に挑戦している状況です。ここを乗り越えてまたレッスンをお願いしたいと思います。ありがとうございました。</p>
+      </div></details>
       </article>
 
       <article class="rev-card">
@@ -654,15 +726,15 @@
           <div class="rev-name" data-t="rev_name_a">Aさん</div>
           <span class="rev-q">&ldquo;</span>
         </div>
-        <div class="rev-summary" lang="ko">
-          <small data-t="rev_summary_label"></small>
-          <p data-t="rev_summary_a"></p>
-          <small class="rev-original-label" data-t="rev_original_label"></small>
+        <div class="rev-summary">
+          <small data-t="rev_summary_label">レビューの要点</small>
+          <p data-t="rev_summary_a">アナの役割と状況判断を学び、周囲を見て「今すべきこと」を考える場面が増えた。</p>
         </div>
-        <p lang="ja">サポート（特にアナ）についてコーチングを受けました！ リプレイのフィードバックだけでなく、実際にGyominコーチのアナのプレイを見ながらさまざまな場面でアナが果たすべき役割を丁寧に教えていただきました。</p>
+<details class="review-details"><summary><span data-t="rev_more">全文を読む</span></summary><div class="review-original"><p class="original-label" data-t="rev_original_label">日本語原文</p>        <p lang="ja">サポート（特にアナ）についてコーチングを受けました！ リプレイのフィードバックだけでなく、実際にGyominコーチのアナのプレイを見ながらさまざまな場面でアナが果たすべき役割を丁寧に教えていただきました。</p>
         <p lang="ja">また、目まぐるしく変化する戦況の中で、味方にどう関われば戦いやすくなるのか、そして敵にどのような圧力をかければ味方が動きやすくなるのかを状況ごとに分かりやすく解説していただけたのがとても印象的でした。</p>
         <p lang="ja">教えていただいたことを実践するようになってからは、以前よりも周囲を見渡せるようになり、「今自分が何をするべきか」を考えながらプレイできる場面がかなり増えたと実感しています。</p>
         <p lang="ja">アナでもっと上達したい方はもちろん、サポート全体の考え方を学びたい方にも本当におすすめできるコーチングでした。ありがとうございました！！</p>
+      </div></details>
       </article>
 
       <article class="rev-card">
@@ -671,12 +743,12 @@
           <div class="rev-name" data-t="rev_name_s">Sさん</div>
           <span class="rev-q">&ldquo;</span>
         </div>
-        <div class="rev-summary" lang="ko">
-          <small data-t="rev_summary_label"></small>
-          <p data-t="rev_summary_s"></p>
-          <small class="rev-original-label" data-t="rev_original_label"></small>
+        <div class="rev-summary">
+          <small data-t="rev_summary_label">レビューの要点</small>
+          <p data-t="rev_summary_s">ポジショニングやスキル・ULTの選択肢を学び、自分で反省点や改善方法を考えられるように。</p>
         </div>
-        <p lang="ja">今までコーチングを受けさせていただいて、少しずつですが進歩しているように感じます。 ポジショニング、スキル、ULTタイミング等の選択肢を教えていただけるので、プレイ中に頭の中に入れながら動けるようになってきて自分の反省点や改善方法も考えられるようになりました！</p>
+<details class="review-details"><summary><span data-t="rev_more">全文を読む</span></summary><div class="review-original"><p class="original-label" data-t="rev_original_label">日本語原文</p>        <p lang="ja">今までコーチングを受けさせていただいて、少しずつですが進歩しているように感じます。 ポジショニング、スキル、ULTタイミング等の選択肢を教えていただけるので、プレイ中に頭の中に入れながら動けるようになってきて自分の反省点や改善方法も考えられるようになりました！</p>
+      </div></details>
       </article>
 
     </div>
@@ -699,7 +771,8 @@
       </div>
       <div>
         <p class="coach-bio" data-t="coach_bio">大会実績を持つGYOMINコーチが、一人ひとりのリプレイを分析し、実際のプレーにすぐ生かせる改善点を一緒に整理します。</p>
-        <p class="coach-quote" data-t="coach_quote">「VARRELが本大会以外を総なめにする中、栄冠を掴んだ唯一の指導者。」</p>
+        <h3 class="coach-subhead" data-t="coach_style_h">指導スタイル</h3><p class="coach-quote" data-t="coach_quote">リプレイ分析やライブコーチングを通じて、判断・ポジショニング・スキルの使い方を振り返り、次の試合で取り組む改善点を整理します。</p>
+<dl class="coach-fit"><dt data-t="coach_topics_h">指導内容</dt><dd data-t="coach_topics_p">ポジショニング・スキル／ULTの使用判断・ロール理解</dd><dt data-t="coach_fit_h">こんな方に</dt><dd data-t="coach_fit_p">自分のプレーを客観的に振り返り、何を優先して練習すべきか整理したい方に。</dd></dl>
         <ul class="ach-list">
           <li><b>2026</b><span>Saudi eLeague Woman <span class="ach-win" data-t="ach_win">優勝</span></span></li>
           <li><b>2025</b><span>OWCS Stage 2 Pacific <span class="ach-win" data-t="ach_runner_up">準優勝</span></span></li>
@@ -723,23 +796,45 @@
       <p data-t="cp_p">現在の実力や目標に合わせて、個人コーチング・チームコーチング・ロール別グループコーチングから選べます。各プランの進め方と料金をご確認ください。</p>
     </div>
 
-    <div class="flow rv">
-      <span class="fstep" data-t="cpf1">リプレイ分析</span><span class="farr">→</span>
-      <span class="fstep" data-t="cpf2">実戦・スクリム</span><span class="farr">→</span>
-      <span class="fstep" data-t="cpf3">フィードバック</span><span class="farr">→</span>
-      <span class="fstep" data-t="cpf4">次回の課題設定</span>
-    </div>
+
 
     <div class="cp-tabs" role="tablist">
-      <button class="cp-tab on" data-tab="personal" data-ga="cta_tab_personal" data-t="tab_personal">個人コーチング</button>
-      <button class="cp-tab" data-tab="team" data-ga="cta_tab_team" data-t="tab_team">チームコーチング</button>
-      <button class="cp-tab" data-tab="role" data-ga="cta_tab_role" data-t="tab_role">ロール別グループ</button>
+      <button class="cp-tab on" data-tab="personal" id="tab-personal" role="tab" aria-controls="panel-personal" aria-selected="true" tabindex="0" data-ga="cta_tab_personal" data-t="tab_personal">個人コーチング</button>
+      <button class="cp-tab" data-tab="team" id="tab-team" role="tab" aria-controls="panel-team" aria-selected="false" tabindex="-1" data-ga="cta_tab_team" data-t="tab_team">チームコーチング</button>
+      <button class="cp-tab" data-tab="role" id="tab-role" role="tab" aria-controls="panel-role" aria-selected="false" tabindex="-1" data-ga="cta_tab_role" data-t="tab_role">ロール別グループ</button>
     </div>
 
     <!-- PERSONAL -->
-    <div class="cp-panel on" data-panel="personal">
-      <p class="pc-intro" data-t="pc_intro">1対1で、一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。リプレイ分析またはライブコーチングを通じて、現在の問題点を明確にし、改善につなげます。</p>
-      <div class="ptag">CURRICULUM</div>
+    <div class="cp-panel on" data-panel="personal" id="panel-personal" role="tabpanel" aria-labelledby="tab-personal">
+      <p class="pc-intro" data-t="pc_intro">1対1で、一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。リプレイ分析またはライブコーチングを通じて、現在の問題点を明確にし、改善につなげます。</p><h3 class="ptag" data-t="plans_label">料金・プラン</h3>
+      <div class="price-row p3">
+          <div class="pcard">
+            <div class="pbadge" data-t="pp1_b">初めての方におすすめ</div>
+            <h4 data-t="pp1_h">1回コーチング</h4>
+            <div class="meta" data-t="pp1_m">1回 / 60分</div>
+            <div class="amt">11,000<small data-t="yen">円</small></div>
+            <div class="desc" data-t="pp1_d">まずは自分の課題を知りたい方や、特定の悩みを集中的に改善したい方向け。</div>
+            <ul class="plist" data-t="pp1_list"><li>リプレイ分析 または ライブコーチング</li><li>現在の課題分析</li><li>改善ポイントの提示</li><li>フィードバックメモ</li></ul>
+          <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_pp1" data-t="cta_pp1">個人1回で申し込む</a></div>
+          <div class="pcard feature"><span class="recommend-badge" data-t="recommended">おすすめ</span>
+            <h4 data-t="pp2_h">4回集中プログラム</h4>
+            <div class="meta" data-t="pp2_m">4回 / 1回60分（計240分）</div>
+            <div class="amt">39,800<small data-t="yen2">円</small></div>
+            <div class="psave" data-t="pp2_s">通常44,000円 → <b>4,200円お得</b></div>
+            <div class="desc" data-t="pp2_d">一度の分析で終わらず、コーチングと学んだことを実戦で試すサイクルを重ねながら、改善の方向性を確認します。</div>
+            <ul class="plist" data-t="pp2_list"><li>1対1コーチング × 4回</li><li>リプレイ分析</li><li>ライブコーチング</li><li>個人課題に合わせた指導</li><li>フィードバックメモ</li></ul>
+          <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_pp2" data-t="cta_pp2">個人4回で申し込む</a></div>
+          <div class="pcard">
+            <div class="pbadge" data-t="pp3_b">本気で継続的に成長したい方に</div>
+            <h4 data-t="pp3_h">12回継続プログラム</h4>
+            <div class="meta" data-t="pp3_m">12回 / 計720分</div>
+            <div class="amt">109,400<small data-t="yen3">円</small></div>
+            <div class="psave" data-t="pp3_s">1回コーチング × 12回 132,000円 → <b>22,600円お得</b></div>
+            <div class="desc" data-t="pp3_d">継続的な指導を通じて、基礎理解から個人課題の改善、実戦適応、自己分析力まで、長期的な成長を目指すプログラムです。</div>
+            <ul class="plist" data-t="pp3_list"><li>1対1コーチング × 12回</li><li>継続的なリプレイ分析</li><li>ライブコーチング</li><li>課題に応じた指導内容の調整</li><li>成長段階に応じた優先順位設定</li><li>フィードバックメモ</li></ul>
+          <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_pp3" data-t="cta_pp3">個人12回で申し込む</a></div>
+        </div><p class="plan-note" data-t="ref5">すべてのプランの受講有効期限は、お申し込み日から1年間です。</p><p class="plan-note" data-t="plan_note">申込フォーム内で、ご希望のプランを選択してください。</p><p class="signup-note" data-t="signup_note">フォーム送信後48時間以内にご連絡します。お申し込み時の決済はありません。</p><details class="program-details"><summary><span data-t="curriculum_personal">個人コーチングのカリキュラムを見る</span></summary><div class="program-detail-body">
+
       <div class="curri">
       <div class="gstep">
         <div class="gs-num">01<small>STEP</small></div>
@@ -771,45 +866,43 @@
       </div>
     </div>
       <p class="curri-note" data-t="curri_note">※ 受講生のランク・経験・課題・目標に応じて、各ステップの進行速度や指導内容は異なります。すべての受講生が同じ順序・期間で進むものではなく、一人ひとりの状況に合わせてカリキュラムを調整します。</p>
-      <div class="ptag">PLANS</div>
-      <div class="price-row p3">
-          <div class="pcard">
-            <div class="pbadge" data-t="pp1_b">初めての方におすすめ</div>
-            <h4 data-t="pp1_h">1回コーチング</h4>
-            <div class="meta" data-t="pp1_m">1回 / 60分</div>
-            <div class="amt">11,000<small data-t="yen">円</small></div>
-            <div class="desc" data-t="pp1_d">まずは自分の課題を知りたい方や、特定の悩みを集中的に改善したい方向け。</div>
-            <ul class="plist" data-t="pp1_list"><li>リプレイ分析 または ライブコーチング</li><li>現在の課題分析</li><li>改善ポイントの提示</li><li>フィードバックメモ</li></ul>
-          </div>
-          <div class="pcard feature">
-            <h4 data-t="pp2_h">4回集中プログラム</h4>
-            <div class="meta" data-t="pp2_m">4回 / 1回60分（計240分）</div>
-            <div class="amt">39,800<small data-t="yen2">円</small></div>
-            <div class="psave" data-t="pp2_s">通常44,000円 → <b>4,200円お得</b></div>
-            <div class="desc" data-t="pp2_d">一度の分析で終わらず、コーチングと学んだことを実戦で試すサイクルを重ねながら、改善の方向性を確認します。</div>
-            <ul class="plist" data-t="pp2_list"><li>1対1コーチング × 4回</li><li>リプレイ分析</li><li>ライブコーチング</li><li>個人課題に合わせた指導</li><li>フィードバックメモ</li></ul>
-          </div>
-          <div class="pcard">
-            <div class="pbadge" data-t="pp3_b">本気で継続的に成長したい方に</div>
-            <h4 data-t="pp3_h">12回継続プログラム</h4>
-            <div class="meta" data-t="pp3_m">12回 / 計720分</div>
-            <div class="amt">109,400<small data-t="yen3">円</small></div>
-            <div class="psave" data-t="pp3_s">1回コーチング × 12回 132,000円 → <b>22,600円お得</b></div>
-            <div class="desc" data-t="pp3_d">継続的な指導を通じて、基礎理解から個人課題の改善、実戦適応、自己分析力まで、長期的な成長を目指すプログラムです。</div>
-            <ul class="plist" data-t="pp3_list"><li>1対1コーチング × 12回</li><li>継続的なリプレイ分析</li><li>ライブコーチング</li><li>課題に応じた指導内容の調整</li><li>成長段階に応じた優先順位設定</li><li>フィードバックメモ</li></ul>
-          </div>
-        </div>
-    </div>
+
+    </div></details></div>
 
     <!-- TEAM -->
-    <div class="cp-panel" data-panel="team">
-      <p class="pc-intro" data-t="tc_intro">事前にリプレイを分析し、実際のスクリムを観戦した上で、チーム全体にフィードバックを行います。個人の技術だけでなく、連携・コール・ポジショニング・ULT管理・構成理解など、チームとして勝つために必要な部分を改善します。</p>
+    <div class="cp-panel" data-panel="team" id="panel-team" role="tabpanel" aria-labelledby="tab-team">
+      <p class="pc-intro" data-t="tc_intro">事前にリプレイを分析し、実際のスクリムを観戦した上で、チーム全体にフィードバックを行います。個人の技術だけでなく、連携・コール・ポジショニング・ULT管理・構成理解など、チームとして勝つために必要な部分を改善します。</p><h3 class="ptag" data-t="plans_label">料金・プラン</h3>
+      <div class="price-row p3">
+        <div class="pcard">
+          <div class="pbadge" data-t="tt1_b">まずは1回から</div>
+          <h4 data-t="tt1_h">1回プラン</h4>
+          <div class="amt">6,600<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1名あたり</span></div>
+          <div class="psave" data-t="tt1_note">5名参加の場合</div>
+          <div class="psave" data-t="tt1_team">チーム料金 <b>33,000円</b></div>
+          <div class="desc" data-t="tt1_d">事前リプレイ分析・スクリム観戦・チームフィードバック・次回練習に向けた目標設定を含みます。</div>
+        <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_tt1" data-t="cta_tt1">チーム1回で申し込む</a></div>
+        <div class="pcard feature"><span class="recommend-badge" data-t="recommended">おすすめ</span>
+          <h4 data-t="tt2_h">4回プラン</h4>
+          <div class="amt">23,000<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1名あたり</span></div>
+          <div class="psave" data-t="tt2_note">1回あたり 5,750円・5名参加の場合</div>
+          <div class="psave" data-t="tt2_team">チーム料金 <b>115,000円</b></div>
+          <div class="desc" data-t="tt2_d">毎週のコーチングで継続的に改善したいチームにおすすめ。</div>
+        <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_tt2" data-t="cta_tt2">チーム4回で申し込む</a></div>
+        <div class="pcard">
+          <div class="pbadge" data-t="tt3_b">大会に向けて</div>
+          <h4 data-t="tt3_h">8回集中プラン</h4>
+          <div class="amt">42,000<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1名あたり</span></div>
+          <div class="psave" data-t="tt3_note">1回あたり 5,250円・5名参加の場合</div>
+          <div class="psave" data-t="tt3_team">チーム料金 <b>210,000円</b></div>
+          <div class="desc" data-t="tt3_d">大会に向けた準備や、短期集中で改善したいチームにおすすめ。</div>
+        <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_tt3" data-t="cta_tt3">チーム8回で申し込む</a></div>
+      </div><p class="pg-cond" data-t="tc_note">※料金は5名参加の場合の1名あたりの金額です。お支払いはチーム単位となります。<br>※すべてのプランに、事前リプレイ分析、スクリム観戦、チームフィードバックが含まれます。</p><p class="plan-note" data-t="ref5">すべてのプランの受講有効期限は、お申し込み日から1年間です。</p><p class="plan-note" data-t="plan_note">申込フォーム内で、ご希望のプランを選択してください。</p><p class="signup-note" data-t="signup_note">フォーム送信後48時間以内にご連絡します。お申し込み時の決済はありません。</p><details class="program-details"><summary><span data-t="curriculum_team">チームコーチングの内容・所要時間を見る</span></summary><div class="program-detail-body">
       <div class="ts-time">
         <div class="ts-h" data-t="tc_time_h">1回のチームコーチングに含まれる目安時間</div>
-        <table class="ts-table" data-t="tc_time_tbl"><tr class="ts-hd"><th>内容</th><th class="ts-t">目安時間</th></tr><tr><td class="ts-l">事前リプレイ分析</td><td class="ts-t">30〜45分</td></tr><tr><td class="ts-l">スクリム観戦</td><td class="ts-t">90〜120分</td></tr><tr><td class="ts-l">スクリム終了後のフィードバック</td><td class="ts-t">45〜60分</td></tr><tr><td class="ts-l">フィードバックメモ・次回課題の整理</td><td class="ts-t">約15分</td></tr><tr class="ts-total"><td class="ts-l">合計対応時間</td><td class="ts-t">約3〜4時間</td></tr></table>
+        <table class="ts-table" data-t="tc_time_tbl"><tr class='ts-hd'><th>内容</th><th class='ts-t'>目安時間</th></tr><tr><td class='ts-l'>事前リプレイ分析</td><td class='ts-t'>30〜45分</td></tr><tr><td class='ts-l'>スクリム観戦</td><td class='ts-t'>90〜120分</td></tr><tr><td class='ts-l'>スクリム終了後のフィードバック</td><td class='ts-t'>45〜60分</td></tr><tr><td class='ts-l'>フィードバックメモ・次回課題の整理</td><td class='ts-t'>約15分</td></tr><tr class='ts-total'><td class='ts-l'>合計対応時間</td><td class='ts-t'>約3〜4時間</td></tr></table>
       </div>
-      <p class="ts-note" data-t="tc_time_note">1回のセッションでは、スクリム中の指導時間だけでなく、事前分析から終了後の課題整理までを一貫して行います。</p>
-      <div class="ptag">CURRICULUM</div>
+      <p class="ts-note" data-t="tc_time_note">合計時間には、受講生が同席しない事前分析やメモ作成も含まれます。スクリム観戦は90〜120分、その後のフィードバックは45〜60分が目安です。</p>
+
       <div class="tc-curri">
         <div class="tc-col">
           <div class="tc-label" data-t="tc4_label">4回プラン</div>
@@ -820,39 +913,24 @@
           <ol data-t="tc8_list"><li>チーム診断</li><li>役割とプレイスタイル整理</li><li>ポジショニングとセットアップ</li><li>エンゲージとターゲット選択</li><li>スキル・ULT管理</li><li>相手に合わせた試合中の修正</li><li>大会を想定した実戦練習</li><li>最終評価と今後の方針</li></ol>
         </div>
       </div>
-      <div class="ptag">PLANS</div>
-      <div class="price-row p3">
-        <div class="pcard">
-          <div class="pbadge" data-t="tt1_b">まずは1回から</div>
-          <h4 data-t="tt1_h">1回プラン</h4>
-          <div class="amt">6,600<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1名あたり</span></div>
-          <div class="psave" data-t="tt1_note">5名参加の場合</div>
-          <div class="psave" data-t="tt1_team">チーム料金 <b>33,000円</b></div>
-          <div class="desc" data-t="tt1_d">事前リプレイ分析・スクリム観戦・チームフィードバック・次回練習に向けた目標設定を含みます。</div>
-        </div>
-        <div class="pcard feature">
-          <h4 data-t="tt2_h">4回プラン</h4>
-          <div class="amt">23,000<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1名あたり</span></div>
-          <div class="psave" data-t="tt2_note">1回あたり 5,750円・5名参加の場合</div>
-          <div class="psave" data-t="tt2_team">チーム料金 <b>115,000円</b></div>
-          <div class="desc" data-t="tt2_d">毎週のコーチングで継続的に改善したいチームにおすすめ。</div>
-        </div>
-        <div class="pcard">
-          <div class="pbadge" data-t="tt3_b">大会に向けて</div>
-          <h4 data-t="tt3_h">8回集中プラン</h4>
-          <div class="amt">42,000<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1名あたり</span></div>
-          <div class="psave" data-t="tt3_note">1回あたり 5,250円・5名参加の場合</div>
-          <div class="psave" data-t="tt3_team">チーム料金 <b>210,000円</b></div>
-          <div class="desc" data-t="tt3_d">大会に向けた準備や、短期集中で改善したいチームにおすすめ。</div>
-        </div>
-      </div>
-      <p class="pg-cond" data-t="tc_note">※料金は5名参加の場合の1名あたりの金額です。お支払いはチーム単位となります。<br>※すべてのプランに、事前リプレイ分析、スクリム観戦、チームフィードバックが含まれます。</p>
-    </div>
+
+
+    </div></details></div>
 
     <!-- ROLE -->
-    <div class="cp-panel" data-panel="role">
-      <p class="pc-intro" data-t="role_p">ロールに特化した講座型クラス。定員10名、同程度のティア・ロール構成で開講します。</p>
-      <div class="ptag">CLASSES</div>
+    <div class="cp-panel" data-panel="role" id="panel-role" role="tabpanel" aria-labelledby="tab-role">
+      <p class="pc-intro" data-t="role_p">ロールに特化した講座型クラス。定員10名、同程度のティア・ロール構成で開講します。</p><h3 class="ptag" data-t="plans_label">料金・プラン</h3>
+      <div class="price-row">
+        <div class="pcard group">
+            <h4 data-t="pg_h">ロール別グループクラス</h4>
+            <div class="meta" data-t="pg_m">8回 / 計720分</div>
+            <div class="amt">28,000<small data-t="yen4">円</small><span class="per" data-t="pg_per">／ 1名あたり</span></div>
+            <div class="desc" data-t="pg_d">TANK / DPS / SUPPORT、それぞれのロールに特化した講座型グループクラスです。同程度のティア・ロール構成で学び、ロール理解と実戦判断力を深めます。</div>
+            <ul class="plist" data-t="pg_list"><li><b>TANK CLASS</b>｜スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。</li><li><b>DPS CLASS</b>｜ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略を通じて火力を最大化します。</li><li><b>SUPPORT CLASS</b>｜リソース管理・生存・ピールの優先順位。後方から試合を動かす判断力を養います。</li></ul>
+            <p class="pg-cond" data-t="pg_cond">同程度のティア・ロール構成が5名以上で開講／各クラス定員10名／表示価格は税込・1名あたり</p>
+          <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_pg" data-t="cta_pg">グループクラスに申し込む</a></div>
+      </div><p class="plan-note" data-t="ref5">すべてのプランの受講有効期限は、お申し込み日から1年間です。</p><p class="plan-note" data-t="plan_note">申込フォーム内で、ご希望のプランを選択してください。</p><p class="signup-note" data-t="signup_note">フォーム送信後48時間以内にご連絡します。お申し込み時の決済はありません。</p><details class="program-details"><summary><span data-t="curriculum_role">ロール別の内容・開講スケジュールを見る</span></summary><div class="program-detail-body">
+
       <div class="roles">
       <div class="role"><div class="rt">TANK</div><div class="rsub">FRONTLINE</div><p data-t="role_tank">スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。</p></div>
       <div class="role"><div class="rt">DPS</div><div class="rsub">DAMAGE</div><p data-t="role_dps">ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略で火力を最大化します。</p></div>
@@ -864,29 +942,20 @@
       <div class="slot"><div class="r">SUPPORT</div><div class="d" data-t="sl3_d">土・日</div><div class="t">20:00 – 21:30</div></div>
     </div>
       <p class="sched-note" data-t="sched_note">※ 開講スケジュールは参加人数・ティア構成により調整される場合があります。</p>
-      <div class="ptag">PLANS</div>
-      <div class="price-row">
-        <div class="pcard group">
-            <h4 data-t="pg_h">ロール別グループクラス</h4>
-            <div class="meta" data-t="pg_m">8回 / 計720分</div>
-            <div class="amt">28,000<small data-t="yen4">円</small><span class="per" data-t="pg_per">／ 1名あたり</span></div>
-            <div class="desc" data-t="pg_d">TANK / DPS / SUPPORT、それぞれのロールに特化した講座型グループクラスです。同程度のティア・ロール構成で学び、ロール理解と実戦判断力を深めます。</div>
-            <ul class="plist" data-t="pg_list"><li><b>TANK CLASS</b>｜スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。</li><li><b>DPS CLASS</b>｜ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略を通じて火力を最大化します。</li><li><b>SUPPORT CLASS</b>｜リソース管理・生存・ピールの優先順位。後方から試合を動かす判断力を養います。</li></ul>
-            <p class="pg-cond" data-t="pg_cond">同程度のティア・ロール構成が5名以上で開講／各クラス定員10名／表示価格は税込・1名あたり</p>
-          </div>
-      </div>
-    </div>
 
+    </div></details></div>
+
+<div class="lesson-essentials"><h3 data-t="essentials_h">受講前に知っておきたいこと</h3><dl class="essentials-grid"><div><dt data-t="venue_h">受講方法</dt><dd data-t="venue_p">Discordを使用したオンラインコーチングです。</dd></div><div><dt data-t="language_h">対応言語</dt><dd data-t="language_p">日本語・韓国語。日本語でのレッスンには通訳が同席します。</dd></div><div><dt data-t="prepare_h">準備しておくとよいもの</dt><dd data-t="prepare_p">相談したい悩みや目標、振り返りたい試合のリプレイコード。</dd></div><div><dt data-t="reply_h">お申し込みの後は</dt><dd data-t="reply_p">48時間以内にスタッフからご連絡し、プランと日程を調整します。お支払い方法は日程調整後にご案内します。</dd></div></dl></div>
     <ul class="price-notes" data-t="price_notes"><li>表示価格はすべて税込です。</li><li>ロール別グループクラスは1名あたりの料金です。</li><li>ロール別グループクラスは、同程度のティア・ロール構成が5名以上で開講します。</li><li>TANK / DPS / SUPPORTクラスは各定員10名です。</li><li>個人コーチングでは、受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。</li><li>受講生の課題・目標に応じて、指導内容やカリキュラムの進行速度は異なります。</li></ul>
     <div class="refund">
-        <h4 data-t="ref_h">返金・振替ポリシー</h4>
+        <h4 data-t="ref_h">キャンセル・返金・日程変更</h4><p class="policy-copy" data-t="policy_scope">こちらは新規お申し込みに適用する条件です。すでに受講中の方は、お申し込み時の条件をご確認ください。</p><h5 data-t="cancel_h">キャンセル・途中解約</h5><p class="policy-copy" data-t="cancel_before">初回授業の3日前までのキャンセルは、お支払い済みの受講料を全額返金します。初回授業日が未確定の場合も全額返金します。</p><p class="policy-copy" data-t="cancel_after">受講開始後も途中解約できます。割引適用後の購入プランの単価で消化分を計算し、お支払い済みの金額から差し引いた残額を返金します。通常の1回料金への変更や、別途の解約手数料はありません。</p><p class="policy-copy" data-t="cancel_late">授業予定日の3日前を過ぎた変更・キャンセル、または無断欠席は、原則として1回分消化となり、返金対象から除きます。初回授業前のキャンセルにも同じ基準を適用します。</p><p class="policy-copy" data-t="cancel_example">例：個人4回プラン39,800円を全額支払い、1回を消化した場合、残り3回分29,850円を返金します。</p><p class="policy-copy" data-t="cancel_calc">全額お支払い済みの場合：返金額＝購入プラン料金 × 未消化回数 ÷ 総回数（1円未満切り上げ）。分割払いの場合は、お支払い済みの金額から同じプラン単価で計算した消化分を差し引き、残額がある場合に返金します。チームプランはチーム単位の契約・お支払い金額で精算します。</p><p class="policy-copy" data-t="cancel_contact">キャンセル・途中解約をご希望の場合は、担当スタッフへご連絡ください。</p>
+<h5 data-t="reschedule_h">日程変更・欠席</h5>
         <ul>
           <li data-t="ref1">授業予定日の3日前まで：無料で日程変更可能</li>
           <li data-t="ref2">授業予定日の3日前を過ぎた変更：原則として1回分消化</li>
           <li data-t="ref3">無断欠席：1回分消化</li>
-          <li data-t="ref4">主催者・担当コーチ都合による変更：無料振替または代替授業を実施</li>
-          <li data-t="ref5">各プランには受講有効期限があります</li>
-        </ul>
+          <li data-t="ref4">運営側・担当コーチの都合による変更：無料で日程変更、または実施できなかった授業分を返金</li>
+        </ul><h5 data-t="expiry_h">受講有効期限</h5><p class="policy-copy" data-t="ref5">すべてのプランの受講有効期限は、お申し込み日から1年間です。</p><p class="policy-copy" data-t="expiry_extra">期限終了時に未消化分がある場合も、上記の基準で精算・返金します。運営側の都合で期限内に受講できない場合は、期限延長または未消化分の返金で対応します。</p>
       </div>
   </div>
 </section>
@@ -901,7 +970,7 @@
     </div>
     <div class="steps">
       <div class="step"><div class="sn">01</div><h4 data-t="st1_h">申請フォーム記入</h4><p data-t="st1_p">ニックネーム・バトルタグ・ティア・希望ロール・希望プランなどの基本情報を入力。</p></div>
-      <div class="step"><div class="sn">02</div><h4 data-t="st2_h">スケジュール調整</h4><p data-t="st2_p">提出情報をもとにスタッフが個別に日程・時間を調整します。</p></div>
+      <div class="step"><div class="sn">02</div><h4 data-t="st2_h">スケジュール調整</h4><p data-t="st2_p">48時間以内にスタッフからご連絡し、プランと日程を調整します。お支払い方法は日程調整後にご案内します。</p></div>
       <div class="step"><div class="sn">03</div><h4 data-t="st3_h">受講料の支払い</h4><p data-t="st3_p">日程確定後、案内された方法で受講料をお支払いください。</p></div>
       <div class="step"><div class="sn">04</div><h4 data-t="st4_h">授業確定</h4><p data-t="st4_p">入金確認後、授業の日程と時間が最終確定します（先着順で締切）。</p></div>
     </div>
@@ -916,13 +985,14 @@
       <h2 data-t="faq_h">よくある質問</h2>
     </div>
     <div class="faq-list">
+<details class="faq-item"><summary data-t="faq_expiry_q">受講有効期限はありますか？</summary><p data-t="faq_expiry_a">すべてのプランの受講有効期限は、お申し込み日から1年間です。</p></details>
       <details class="faq-item"><summary data-t="faq_q1">個人コーチングとロール別グループクラスの違いは？</summary><p data-t="faq_a1">個人コーチングは1対1で、受講生一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。1回・4回・12回のプランから選択できます。ロール別グループクラスは、TANK / DPS / SUPPORTそれぞれに特化した講座型クラスで、同程度のティア・ロール構成で学びます。</p></details>
       <details class="faq-item"><summary data-t="faq_q7">カリキュラムは全員同じですか？</summary><p data-t="faq_a7">いいえ。受講生のランク・経験・課題・目標に応じて、進行速度や指導内容を調整します。掲載しているカリキュラムは成長の方向性を示すものであり、一人ひとりに合わせて最適化します。</p></details>
       <details class="faq-item"><summary data-t="faq_q8">どの個人コーチングプランを選べばいいですか？</summary><p data-t="faq_a8">まず自分の課題を知りたい方や、特定の悩みを相談したい方には1回コーチングがおすすめです。継続的に課題を改善したい方には4回集中プログラム、本気で長期的な成長を目指したい方には12回継続プログラムをおすすめしています。</p></details>
       <details class="faq-item"><summary data-t="faq_q2">スケジュールは選べますか？</summary><p data-t="faq_a2">個人コーチングは、お申し込み後に担当スタッフと個別で日程を調整します。ロール別グループクラスは固定枠での開講となり、参加人数・ティア構成により調整される場合があります。</p></details>
-      <details class="faq-item"><summary data-t="faq_q3">支払いのタイミングは？</summary><p data-t="faq_a3">お申し込み後、受講日程が確定した段階でご案内します。</p></details>
-      <details class="faq-item"><summary data-t="faq_q4">キャンセル・返金はできますか？</summary><p data-t="faq_a4">返金・振替ポリシーに準じます。授業予定日の3日前までは無料で日程変更が可能です。3日前を過ぎた変更や無断欠席は、原則として1回分消化となります。</p></details>
-      <details class="faq-item"><summary data-t="faq_q5">対応言語は？</summary><p data-t="faq_a5">日本語・韓国語に対応しています。</p></details>
+      <details class="faq-item"><summary data-t="faq_q3">支払いのタイミングは？</summary><p data-t="faq_a3">お申し込み時の決済はありません。受講日程を調整した後に、お支払い方法をご案内します。</p></details>
+      <details class="faq-item"><summary data-t="faq_q4">キャンセル・返金はできますか？</summary><p data-t="faq_a4">初回授業の3日前までのキャンセルは全額返金します。受講開始後は、購入プランの単価で未消化分を精算します。授業予定日の3日前を過ぎた変更・キャンセルや無断欠席は、原則として1回分消化となります。詳しくは料金欄のキャンセル・返金案内をご確認ください。</p></details>
+      <details class="faq-item"><summary data-t="faq_q5">対応言語は？</summary><p data-t="faq_a5">日本語・韓国語。日本語でのレッスンには通訳が同席します。</p></details>
       <details class="faq-item"><summary data-t="faq_q6">受講後に残るものはありますか？</summary><p data-t="faq_a6">個人コーチングでは、受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。復習や今後の練習方針の整理に活用できます。</p></details>
     </div>
   </div>
@@ -936,8 +1006,8 @@
       <h2 data-t="msg_h">代表の言葉</h2>
     </div>
     <div class="mission" style="text-align:left;max-width:none;margin:0">
-      <p data-t="msg_p1">こんにちは、<b style="color:var(--gold)">99DIVINE代表のSupreme</b>です。99DIVINEアカデミーは、単に「ゲームを上手くする場所」ではありません。ゲームを通じた“本物の成長”を日本のプレイヤーに届けるために立ち上げました。</p>
-      <p data-t="msg_p2" style="margin-top:14px">コミュニケーション・チームワーク・高速な判断力・マルチタスク・メンタルマネジメント。これらはゲームの中だけで終わらず、私自身、UC Irvineでコンピュータサイエンス学士号を取得し、Utah Valley Universityで民間航空免許（PPL）も取得する力になりました。<b style="color:var(--gold)">ゲームは、人生全体を通して成長を促す挑戦と学びの場です。</b></p>
+      <p data-t="msg_p1">こんにちは、<b style='color:var(--gold)'>99DIVINE代表のSupreme</b>です。99DIVINEアカデミーは、単に「ゲームを上手くする場所」ではありません。ゲームを通じた“本物の成長”を日本のプレイヤーに届けるために立ち上げました。</p>
+      <p data-t="msg_p2" style="margin-top:14px">コミュニケーション・チームワーク・高速な判断力・マルチタスク・メンタルマネジメント。これらはゲームの中だけで終わらず、私自身、UC Irvineでコンピュータサイエンス学士号を取得し、Utah Valley Universityで民間航空免許（PPL）も取得する力になりました。<b style='color:var(--gold)'>ゲームは、人生全体を通して成長を促す挑戦と学びの場です。</b></p>
     </div>
   </div>
 </section>
@@ -949,7 +1019,7 @@
       <div class="sec-num">11 / MISSION</div>
       <p class="slogan">LUCE IN ALTIS</p>
       <p data-t="mis_p1">最も低い場所から高く昇り、光り輝く。99DIVINEアカデミーは、単に「ランクを上げる講座」ではありません。受講生がゲームの中で自分の潜在能力を発見し、その可能性を現実へ広げていく過程を共に歩みます。</p>
-      <p data-t="mis_p2"><b style="color:var(--gold)">学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは、単なるランクアップだけでなく、実力向上を通じて、判断力・継続力・挑戦する力を育てる教育です。</p>
+      <p data-t="mis_p2"><b style='color:var(--gold)'>学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは、単なるランクアップだけでなく、実力向上を通じて、判断力・継続力・挑戦する力を育てる教育です。</p>
     </div>
   </div>
 </section>
@@ -959,7 +1029,7 @@
   <div class="wrap">
     <h2 class="display" data-t="fin_h">READY TO <span>RISE?</span></h2>
     <p data-t="fin_p">あなたの成長の旅は、今ここから始まります。先着順で締め切られます。</p>
-    <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_final" data-t="fin_btn">受講申請する →</a>
+    <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_final" data-t="fin_btn">受講申請する →</a><p class="signup-note" data-t="signup_note">フォーム送信後48時間以内にご連絡します。お申し込み時の決済はありません。</p>
   </div>
 </section>
 
@@ -973,198 +1043,517 @@
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-bar">
+<a class="sticky-price" href="#pricing" data-ga="cta_pricing_sticky" data-t="hero_price">料金を見る</a>
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_sticky" data-t="sticky">受講申請する</a>
 </div>
 
 <script>
 const I18N = {
-  ja:{
-    rev_name_h:"Hさん",
-    rev_name_a:"Aさん",
-    rev_name_s:"Sさん",
-    rev_summary_label:"",
-    rev_original_label:"",
-    rev_summary_h:"",
-    rev_summary_a:"",
-    rev_summary_s:"",
-    ach_win:"優勝",
-    ach_runner_up:"準優勝",
-    meta_title:"99DIVINE ACADEMY — Overwatch Coaching",
-    meta_description:"OWCS実績を持つコーチが、あなたのプレイを直接分析。ランクアップだけでなく判断力・ポジショニング・チーム理解まで伸ばすオーバーウォッチ専門オンラインコーチング。日本語・韓国語対応。",
-    meta_social_description:"OWCS実績コーチによるオーバーウォッチ専門オンラインコーチング。日本語・韓国語対応。",
-
-    nav_str:"強み",nav_coach:"コーチ",nav_curri:"カリキュラム",nav_price:"料金",nav_apply:"受講申請",
-    hero_eyebrow:"Overwatch Coaching — JP / KR",
-    hero_h1a:"PLAY",hero_h1b:"LIKE PRO.",
-    hero_lead:"ランクが伸び悩む原因を、プロの視点から明らかにします。リプレイ分析とリアルタイムのフィードバックを通じて、次の試合で何を変えるべきかを具体的にします。",
-    hero_apply:"受講申請する →",hero_price:"料金を見る",
-    pill_1:"リプレイ分析",pill_2:"ライブコーチング",pill_3:"ロール別指導",pill_4:"<b>JP / KR</b> 対応",
-    msg_h:"代表の言葉",
-    msg_p1:"こんにちは、<b style='color:var(--gold)'>99DIVINE代表のSupreme</b>です。99DIVINEアカデミーは、単に「ゲームを上手くする場所」ではありません。ゲームを通じた“本物の成長”を日本のプレイヤーに届けるために立ち上げました。",
-    msg_p2:"コミュニケーション・チームワーク・高速な判断力・マルチタスク・メンタルマネジメント。これらはゲームの中だけで終わらず、私自身、UC Irvineでコンピュータサイエンス学士号を取得し、Utah Valley Universityで民間航空免許（PPL）も取得する力になりました。<b style='color:var(--gold)'>ゲームは、人生全体を通して成長を促す挑戦と学びの場です。</b>",
-    str_h:"99DIVINEの強み",str_p:"競技シーンで培った経験をもとに、リプレイ分析から実戦での活用まで、一人ひとりに合った改善課題を提示します。",
-    str1_h:"リプレイ分析",str1_p:"プロ視点であなたのプレイを細かく分析し、弱点と改善策を明確に提示します。",
-    str2_h:"ライブコーチング",str2_p:"実戦中のリアルタイムフィードバック。判断の瞬間に指導が入ることで意思決定が変わります。",
-    str3_h:"ロール別指導",str3_p:"TANK / DPS / SUPPORT、各ロール専門のコーチングで適性に合わせて成長を加速。",
-    str4_h:"日本語・韓国語対応",str4_p:"日本語・韓国語に対応。言語の壁なく海外連携スキルも同時に習得できます。",
-    str5_h:"大会実績",str5_p:"2025 OWCS Pacific Stage 1 優勝（創立初年度）など、結果を出すチームのノウハウを伝授。",
-    coach_h:"コーチ紹介",coach_tag:"HEAD COACH",
-    coach_quote:"「VARRELが本大会以外を総なめにする中、栄冠を掴んだ唯一の指導者。」",
-    curri_h:"個人成長カリキュラム",
-    gs1_h:"基礎理解・現状分析",gs1_goal:"現在のプレイを客観的に分析し、成長の土台となる基本的な判断基準を整理します。",gs1_list:"<li>現在のプレイと課題の分析</li><li>ロールごとの役割理解</li><li>基本的なポジショニング</li><li>視野・情報認識</li><li>状況に応じた基本判断</li><li>個別リプレイ分析</li>",
-    gs2_h:"個人課題の改善",gs2_goal:"一人ひとりの弱点やプレイ傾向に合わせて、必要な部分を重点的に改善します。",gs2_list:"<li>個人の弱点改善</li><li>ヒーロー別の応用理解</li><li>リプレイ分析</li><li>ライブコーチング</li><li>スキル・ULT使用判断</li><li>自分に合ったプレイスタイルの確立</li>",
-    gs3_h:"実戦への適応",gs3_goal:"学んだ内容を、異なる構成・マップ・試合状況でも再現できるようにします。",gs3_list:"<li>構成や状況に応じた役割理解</li><li>Dive / Brawl / Pokeへの適応</li><li>プレッシャー下での判断</li><li>味方との連携</li><li>有利・不利状況の判断</li><li>実戦での再現性向上</li>",
-    gs4_h:"継続的な成長",gs4_goal:"コーチング後も、自分自身で課題を発見し、成長を続けられる力を身につけます。",gs4_list:"<li>自己リプレイ分析</li><li>繰り返すミスの発見</li><li>練習優先順位の設定</li><li>自分のプレイを言語化する力</li><li>改善サイクルの構築</li><li>自ら成長し続ける力</li>",
-    curri_note:"※ 受講生のランク・経験・課題・目標に応じて、各ステップの進行速度や指導内容は異なります。すべての受講生が同じ順序・期間で進むものではなく、一人ひとりの状況に合わせてカリキュラムを調整します。",
-    role_h:"ロール別カリキュラム",role_p:"ロールに特化した講座型クラス。定員10名、同程度のティア・ロール構成で開講します。",
-    role_tank:"スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。",
-    role_dps:"ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略で火力を最大化します。",
-    role_sup:"リソース管理・生存・ピールの優先順位。後方からチームを支える判断力を養います。",
-    sl1_d:"火・木",sl2_d:"水・金",sl3_d:"土・日",
-    sched_note:"※ 開講スケジュールは参加人数・ティア構成により調整される場合があります。",
-    coach_bio:"大会実績を持つGYOMINコーチが、一人ひとりのリプレイを分析し、実際のプレーにすぐ生かせる改善点を一緒に整理します。",
-    price_notes:"<li>表示価格はすべて税込です。</li><li>ロール別グループクラスは1名あたりの料金です。</li><li>ロール別グループクラスは、同程度のティア・ロール構成が5名以上で開講します。</li><li>TANK / DPS / SUPPORTクラスは各定員10名です。</li><li>個人コーチングでは、受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。</li><li>受講生の課題・目標に応じて、指導内容やカリキュラムの進行速度は異なります。</li>",
-    fy_h:"こんな方におすすめ",fy_1:"今のランク帯で伸び悩みを感じているプレイヤー",fy_2:"自分のクセや弱点を客観的に把握したい方",fy_3:"独学に限界を感じ、効率的に上達したい方",fy_4:"自分のロール理解や実戦での判断力をさらに深めたい方",fy_5:"上位・海外シーンを本気で目指したい方",
-    out_h:"受講から得られるもの",out_1h:"明確になった弱点と改善点",out_1p:"感覚ではなく、言語化された課題と次にやるべきことが手元に残ります。",out_2h:"ロール別の判断基準",out_2p:"立ち回り・ポジショニング・コールの優先順位を、状況ごとに判断できる力。",out_3h:"フィードバックメモ",out_3p:"受講内容と改善ポイントをまとめたメモをお渡しします。復習と継続的な成長に活用できます。",out_4h:"成長し続ける自己分析力",out_4p:"コーチング後も、自分でリプレイを振り返り、課題を発見し、改善の優先順位を考えられる視点を身につけます。",
-    faq_h:"よくある質問",faq_q1:"個人コーチングとロール別グループクラスの違いは？",faq_a1:"個人コーチングは1対1で、受講生一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。1回・4回・12回のプランから選択できます。ロール別グループクラスは、TANK / DPS / SUPPORTそれぞれに特化した講座型クラスで、同程度のティア・ロール構成で学びます。",faq_q7:"カリキュラムは全員同じですか？",faq_a7:"いいえ。受講生のランク・経験・課題・目標に応じて、進行速度や指導内容を調整します。掲載しているカリキュラムは成長の方向性を示すものであり、一人ひとりに合わせて最適化します。",faq_q8:"どの個人コーチングプランを選べばいいですか？",faq_a8:"まず自分の課題を知りたい方や、特定の悩みを相談したい方には1回コーチングがおすすめです。継続的に課題を改善したい方には4回集中プログラム、本気で長期的な成長を目指したい方には12回継続プログラムをおすすめしています。",faq_q2:"スケジュールは選べますか？",faq_a2:"個人コーチングは、お申し込み後に担当スタッフと個別で日程を調整します。ロール別グループクラスは固定枠での開講となり、参加人数・ティア構成により調整される場合があります。",faq_q3:"支払いのタイミングは？",faq_a3:"お申し込み後、受講日程が確定した段階でご案内します。",faq_q4:"キャンセル・返金はできますか？",faq_a4:"返金・振替ポリシーに準じます。授業予定日の3日前までは無料で日程変更が可能です。3日前を過ぎた変更や無断欠席は、原則として1回分消化となります。",faq_q5:"対応言語は？",faq_a5:"日本語・韓国語に対応しています。",faq_q6:"受講後に残るものはありますか？",faq_a6:"個人コーチングでは、受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。復習や今後の練習方針の整理に活用できます。",
-    rev_h:"受講者の声",rev_p:"受講生の声をここに掲載予定。集まり次第、順次反映します。",
-    rev_slot:"投稿枠（準備中）",rev_note:"※ 各枠はX投稿の埋め込み／スクリーンショットに差し替え可能です。",
-    price_h:"料金・受講プラン",price_p:"個人コーチングは1回・4回・12回から選択できます。ロール別グループクラスは、同程度のティア・ロール構成が5名以上集まった場合に開講されます。",
-    pg_h:"ロール別グループクラス",pg_m:"8回 / 計720分",pg_per:"／ 1名あたり",pg_d:"TANK / DPS / SUPPORT、それぞれのロールに特化した講座型グループクラスです。同程度のティア・ロール構成で学び、ロール理解と実戦判断力を深めます。",pg_list:"<li><b>TANK CLASS</b>｜スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。</li><li><b>DPS CLASS</b>｜ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略を通じて火力を最大化します。</li><li><b>SUPPORT CLASS</b>｜リソース管理・生存・ピールの優先順位。後方から試合を動かす判断力を養います。</li>",pg_cond:"同程度のティア・ロール構成が5名以上で開講／各クラス定員10名／表示価格は税込・1名あたり",rev_soon:"準備中…",
-    pc_intro:"1対1で、一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。リプレイ分析またはライブコーチングを通じて、現在の問題点を明確にし、改善につなげます。",
-    pp1_b:"初めての方におすすめ",pp1_h:"1回コーチング",pp1_m:"1回 / 60分",pp1_d:"まずは自分の課題を知りたい方や、特定の悩みを集中的に改善したい方向け。",pp1_list:"<li>リプレイ分析 または ライブコーチング</li><li>現在の課題分析</li><li>改善ポイントの提示</li><li>フィードバックメモ</li>",
-    pp2_h:"4回集中プログラム",pp2_m:"4回 / 1回60分（計240分）",pp2_s:"通常44,000円 → <b>4,200円お得</b>",pp2_d:"一度の分析で終わらず、コーチングと学んだことを実戦で試すサイクルを重ねながら、改善の方向性を確認します。",pp2_list:"<li>1対1コーチング × 4回</li><li>リプレイ分析</li><li>ライブコーチング</li><li>個人課題に合わせた指導</li><li>フィードバックメモ</li>",
-    pp3_b:"本気で継続的に成長したい方に",pp3_h:"12回継続プログラム",pp3_m:"12回 / 計720分",pp3_s:"1回コーチング × 12回 132,000円 → <b>22,600円お得</b>",pp3_d:"継続的な指導を通じて、基礎理解から個人課題の改善、実戦適応、自己分析力まで、長期的な成長を目指すプログラムです。",pp3_list:"<li>1対1コーチング × 12回</li><li>継続的なリプレイ分析</li><li>ライブコーチング</li><li>課題に応じた指導内容の調整</li><li>成長段階に応じた優先順位設定</li><li>フィードバックメモ</li>",
-    yen:"円",yen2:"円",yen3:"円",yen4:"円",yen5:"円",
-    ref_h:"返金・振替ポリシー",
-    ref1:"授業予定日の3日前まで：無料で日程変更可能",
-    ref2:"授業予定日の3日前を過ぎた変更：原則として1回分消化",
-    ref3:"無断欠席：1回分消化",
-    ref4:"主催者・担当コーチ都合による変更：無料振替または代替授業を実施",
-    ref5:"各プランには受講有効期限があります",
-    step_h:"受講申請の流れ",step_p:"すべてオンライン、先着順で進行します。",
-    st1_h:"申請フォーム記入",st1_p:"ニックネーム・バトルタグ・ティア・希望ロール・希望プランなどの基本情報を入力。",
-    st2_h:"スケジュール調整",st2_p:"提出情報をもとにスタッフが個別に日程・時間を調整します。",
-    st3_h:"受講料の支払い",st3_p:"日程確定後、案内された方法で受講料をお支払いください。",
-    st4_h:"授業確定",st4_p:"入金確認後、授業の日程と時間が最終確定します（先着順で締切）。",
-    mis_p1:"最も低い場所から高く昇り、光り輝く。99DIVINEアカデミーは、単に「ランクを上げる講座」ではありません。受講生がゲームの中で自分の潜在能力を発見し、その可能性を現実へ広げていく過程を共に歩みます。",
-    mis_p2:"<b style='color:var(--gold)'>学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは、単なるランクアップだけでなく、実力向上を通じて、判断力・継続力・挑戦する力を育てる教育です。",
-    fin_h:"READY TO <span>RISE?</span>",fin_p:"あなたの成長の旅は、今ここから始まります。先着順で締め切られます。",fin_btn:"受講申請する →",
-    foot:"© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
-    cp_h:"コーチングプログラム",
-    cp_p:"現在の実力や目標に合わせて、個人コーチング・チームコーチング・ロール別グループコーチングから選べます。各プランの進め方と料金をご確認ください。",
-    cpf1:"リプレイ分析",cpf2:"実戦・スクリム",cpf3:"フィードバック",cpf4:"次回の課題設定",
-    tab_personal:"個人コーチング",tab_team:"チームコーチング",tab_role:"ロール別グループ",
-    tc_intro:"事前にリプレイを分析し、実際のスクリムを観戦した上で、チーム全体にフィードバックを行います。個人の技術だけでなく、連携・コール・ポジショニング・ULT管理・構成理解など、チームとして勝つために必要な部分を改善します。",
-    tc4_label:"4回プラン",
-    tc4_list:"<li>チームの現状分析</li><li>コール・フォーカス・連携改善</li><li>スキル・ULT・構成理解</li><li>総合評価と今後の練習方針</li>",
-    tc8_label:"8回集中プラン",
-    tc8_list:"<li>チーム診断</li><li>役割とプレイスタイル整理</li><li>ポジショニングとセットアップ</li><li>エンゲージとターゲット選択</li><li>スキル・ULT管理</li><li>相手に合わせた試合中の修正</li><li>大会を想定した実戦練習</li><li>最終評価と今後の方針</li>",
-    tt_per:"／ 1名あたり",
-    tt1_note:"5名参加の場合",tt2_note:"1回あたり 5,750円・5名参加の場合",tt3_note:"1回あたり 5,250円・5名参加の場合",
-    tt1_team:"チーム料金 <b>33,000円</b>",tt2_team:"チーム料金 <b>115,000円</b>",tt3_team:"チーム料金 <b>210,000円</b>",
-    tc_time_h:"1回のチームコーチングに含まれる目安時間",
-    tc_time_tbl:"<tr class='ts-hd'><th>内容</th><th class='ts-t'>目安時間</th></tr><tr><td class='ts-l'>事前リプレイ分析</td><td class='ts-t'>30〜45分</td></tr><tr><td class='ts-l'>スクリム観戦</td><td class='ts-t'>90〜120分</td></tr><tr><td class='ts-l'>スクリム終了後のフィードバック</td><td class='ts-t'>45〜60分</td></tr><tr><td class='ts-l'>フィードバックメモ・次回課題の整理</td><td class='ts-t'>約15分</td></tr><tr class='ts-total'><td class='ts-l'>合計対応時間</td><td class='ts-t'>約3〜4時間</td></tr>",
-    tc_time_note:"1回のセッションでは、スクリム中の指導時間だけでなく、事前分析から終了後の課題整理までを一貫して行います。",
-    tt1_b:"まずは1回から",tt1_h:"1回プラン",tt1_m:"1回 / 1チーム",tt1_d:"事前リプレイ分析・スクリム観戦・チームフィードバック・次回練習に向けた目標設定を含みます。",tt1_list:"<li>事前リプレイ分析</li><li>スクリム観戦</li><li>スクリム後のフィードバック</li><li>次回までの課題設定</li>",
-    tt2_h:"4回プラン",tt2_m:"4回 / 週1回目安",tt2_d:"毎週のコーチングで継続的に改善したいチームにおすすめ。",tt2_list:"<li>毎回：リプレイ分析＋スクリム観戦</li><li>コール・フォーカス・連携改善</li><li>スキル・ULT・構成理解</li><li>総合評価と今後の練習方針</li>",
-    tt3_b:"大会に向けて",tt3_h:"8回集中プラン",tt3_m:"8回 / 週2回目安",tt3_d:"大会に向けた準備や、短期集中で改善したいチームにおすすめ。",tt3_list:"<li>毎回：リプレイ分析＋スクリム観戦</li><li>ポジショニング・セットアップ</li><li>エンゲージとターゲット選択</li><li>試合中の修正・ULT管理</li><li>大会想定の実戦練習と最終評価</li>",
-    tc_note:"※料金は5名参加の場合の1名あたりの金額です。お支払いはチーム単位となります。<br>※すべてのプランに、事前リプレイ分析、スクリム観戦、チームフィードバックが含まれます。",
-    sticky:"受講申請する"
+  "ja": {
+    "rev_name_h": "Hさん",
+    "rev_name_a": "Aさん",
+    "rev_name_s": "Sさん",
+    "rev_summary_label": "レビューの要点",
+    "rev_original_label": "日本語原文",
+    "rev_summary_h": "復習と次のレッスンでの確認を重ね、理解が深まり、プレイフィールの変化を実感。",
+    "rev_summary_a": "アナの役割と状況判断を学び、周囲を見て「今すべきこと」を考える場面が増えた。",
+    "rev_summary_s": "ポジショニングやスキル・ULTの選択肢を学び、自分で反省点や改善方法を考えられるように。",
+    "ach_win": "優勝",
+    "ach_runner_up": "準優勝",
+    "meta_title": "99DIVINE ACADEMY — Overwatch Coaching",
+    "meta_description": "OWCS実績を持つコーチが、あなたのプレイを直接分析。ランクアップだけでなく判断力・ポジショニング・チーム理解まで伸ばすオーバーウォッチ専門オンラインコーチング。日本語・韓国語対応。",
+    "meta_social_description": "OWCS実績コーチによるオーバーウォッチ専門オンラインコーチング。日本語・韓国語対応。",
+    "nav_str": "強み",
+    "nav_coach": "コーチ",
+    "nav_curri": "カリキュラム",
+    "nav_price": "料金",
+    "nav_apply": "受講申請",
+    "hero_eyebrow": "Overwatch Coaching — JP / KR",
+    "hero_h1a": "PLAY",
+    "hero_h1b": "LIKE PRO.",
+    "hero_lead": "ランクが伸び悩む原因を、プロの視点から明らかにします。リプレイ分析とリアルタイムのフィードバックを通じて、次の試合で何を変えるべきかを具体的にします。",
+    "hero_apply": "受講申請する →",
+    "hero_price": "料金を見る",
+    "pill_1": "リプレイ分析",
+    "pill_2": "ライブコーチング",
+    "pill_3": "ロール別指導",
+    "pill_4": "<b>JP / KR</b> 対応",
+    "msg_h": "代表の言葉",
+    "msg_p1": "こんにちは、<b style='color:var(--gold)'>99DIVINE代表のSupreme</b>です。99DIVINEアカデミーは、単に「ゲームを上手くする場所」ではありません。ゲームを通じた“本物の成長”を日本のプレイヤーに届けるために立ち上げました。",
+    "msg_p2": "コミュニケーション・チームワーク・高速な判断力・マルチタスク・メンタルマネジメント。これらはゲームの中だけで終わらず、私自身、UC Irvineでコンピュータサイエンス学士号を取得し、Utah Valley Universityで民間航空免許（PPL）も取得する力になりました。<b style='color:var(--gold)'>ゲームは、人生全体を通して成長を促す挑戦と学びの場です。</b>",
+    "str_h": "99DIVINEの強み",
+    "str_p": "競技シーンで培った経験をもとに、リプレイ分析から実戦での活用まで、一人ひとりに合った改善課題を提示します。",
+    "str1_h": "リプレイ分析",
+    "str1_p": "プロ視点であなたのプレイを細かく分析し、弱点と改善策を明確に提示します。",
+    "str2_h": "ライブコーチング",
+    "str2_p": "実戦中のリアルタイムフィードバック。判断の瞬間に指導が入ることで意思決定が変わります。",
+    "str3_h": "ロール別指導",
+    "str3_p": "TANK / DPS / SUPPORT、各ロール専門のコーチングで適性に合わせて成長を加速。",
+    "str4_h": "日本語・韓国語対応",
+    "str4_p": "日本語でのレッスンには通訳が同席し、コーチのフィードバックをお伝えします。韓国語での受講にも対応しています。",
+    "str5_h": "大会実績",
+    "str5_p": "2025 OWCS Pacific Stage 1 優勝（創立初年度）など、結果を出すチームのノウハウを伝授。",
+    "coach_h": "コーチ紹介",
+    "coach_tag": "HEAD COACH",
+    "coach_quote": "リプレイ分析やライブコーチングを通じて、判断・ポジショニング・スキルの使い方を振り返り、次の試合で取り組む改善点を整理します。",
+    "curri_h": "個人成長カリキュラム",
+    "gs1_h": "基礎理解・現状分析",
+    "gs1_goal": "現在のプレイを客観的に分析し、成長の土台となる基本的な判断基準を整理します。",
+    "gs1_list": "<li>現在のプレイと課題の分析</li><li>ロールごとの役割理解</li><li>基本的なポジショニング</li><li>視野・情報認識</li><li>状況に応じた基本判断</li><li>個別リプレイ分析</li>",
+    "gs2_h": "個人課題の改善",
+    "gs2_goal": "一人ひとりの弱点やプレイ傾向に合わせて、必要な部分を重点的に改善します。",
+    "gs2_list": "<li>個人の弱点改善</li><li>ヒーロー別の応用理解</li><li>リプレイ分析</li><li>ライブコーチング</li><li>スキル・ULT使用判断</li><li>自分に合ったプレイスタイルの確立</li>",
+    "gs3_h": "実戦への適応",
+    "gs3_goal": "学んだ内容を、異なる構成・マップ・試合状況でも再現できるようにします。",
+    "gs3_list": "<li>構成や状況に応じた役割理解</li><li>Dive / Brawl / Pokeへの適応</li><li>プレッシャー下での判断</li><li>味方との連携</li><li>有利・不利状況の判断</li><li>実戦での再現性向上</li>",
+    "gs4_h": "継続的な成長",
+    "gs4_goal": "コーチング後も、自分自身で課題を発見し、成長を続けられる力を身につけます。",
+    "gs4_list": "<li>自己リプレイ分析</li><li>繰り返すミスの発見</li><li>練習優先順位の設定</li><li>自分のプレイを言語化する力</li><li>改善サイクルの構築</li><li>自ら成長し続ける力</li>",
+    "curri_note": "※ 受講生のランク・経験・課題・目標に応じて、各ステップの進行速度や指導内容は異なります。すべての受講生が同じ順序・期間で進むものではなく、一人ひとりの状況に合わせてカリキュラムを調整します。",
+    "role_h": "ロール別カリキュラム",
+    "role_p": "ロールに特化した講座型クラス。定員10名、同程度のティア・ロール構成で開講します。",
+    "role_tank": "スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。",
+    "role_dps": "ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略で火力を最大化します。",
+    "role_sup": "リソース管理・生存・ピールの優先順位。後方からチームを支える判断力を養います。",
+    "sl1_d": "火・木",
+    "sl2_d": "水・金",
+    "sl3_d": "土・日",
+    "sched_note": "※ 開講スケジュールは参加人数・ティア構成により調整される場合があります。",
+    "coach_bio": "大会実績を持つGYOMINコーチが、一人ひとりのリプレイを分析し、実際のプレーにすぐ生かせる改善点を一緒に整理します。",
+    "price_notes": "<li>表示価格はすべて税込です。</li><li>ロール別グループクラスは1名あたりの料金です。</li><li>ロール別グループクラスは、同程度のティア・ロール構成が5名以上で開講します。</li><li>TANK / DPS / SUPPORTクラスは各定員10名です。</li><li>個人コーチングでは、受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。</li><li>受講生の課題・目標に応じて、指導内容やカリキュラムの進行速度は異なります。</li>",
+    "fy_h": "こんな方におすすめ",
+    "fy_1": "今のランク帯で伸び悩みを感じているプレイヤー",
+    "fy_2": "自分のクセや弱点を客観的に把握したい方",
+    "fy_3": "独学に限界を感じ、効率的に上達したい方",
+    "fy_4": "自分のロール理解や実戦での判断力をさらに深めたい方",
+    "fy_5": "上位・海外シーンを本気で目指したい方",
+    "out_h": "受講から得られるもの",
+    "out_1h": "明確になった弱点と改善点",
+    "out_1p": "感覚ではなく、言語化された課題と次にやるべきことが手元に残ります。",
+    "out_2h": "ロール別の判断基準",
+    "out_2p": "立ち回り・ポジショニング・コールの優先順位を、状況ごとに判断できる力。",
+    "out_3h": "フィードバックメモ",
+    "out_3p": "受講内容と改善ポイントをまとめたメモをお渡しします。復習と継続的な成長に活用できます。",
+    "out_4h": "成長し続ける自己分析力",
+    "out_4p": "コーチング後も、自分でリプレイを振り返り、課題を発見し、改善の優先順位を考えられる視点を身につけます。",
+    "faq_h": "よくある質問",
+    "faq_q1": "個人コーチングとロール別グループクラスの違いは？",
+    "faq_a1": "個人コーチングは1対1で、受講生一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。1回・4回・12回のプランから選択できます。ロール別グループクラスは、TANK / DPS / SUPPORTそれぞれに特化した講座型クラスで、同程度のティア・ロール構成で学びます。",
+    "faq_q7": "カリキュラムは全員同じですか？",
+    "faq_a7": "いいえ。受講生のランク・経験・課題・目標に応じて、進行速度や指導内容を調整します。掲載しているカリキュラムは成長の方向性を示すものであり、一人ひとりに合わせて最適化します。",
+    "faq_q8": "どの個人コーチングプランを選べばいいですか？",
+    "faq_a8": "まず自分の課題を知りたい方や、特定の悩みを相談したい方には1回コーチングがおすすめです。継続的に課題を改善したい方には4回集中プログラム、本気で長期的な成長を目指したい方には12回継続プログラムをおすすめしています。",
+    "faq_q2": "スケジュールは選べますか？",
+    "faq_a2": "個人コーチングは、お申し込み後に担当スタッフと個別で日程を調整します。ロール別グループクラスは固定枠での開講となり、参加人数・ティア構成により調整される場合があります。",
+    "faq_q3": "支払いのタイミングは？",
+    "faq_a3": "お申し込み時の決済はありません。受講日程を調整した後に、お支払い方法をご案内します。",
+    "faq_q4": "キャンセル・返金はできますか？",
+    "faq_a4": "初回授業の3日前までのキャンセルは全額返金します。受講開始後は、購入プランの単価で未消化分を精算します。授業予定日の3日前を過ぎた変更・キャンセルや無断欠席は、原則として1回分消化となります。詳しくは料金欄のキャンセル・返金案内をご確認ください。",
+    "faq_q5": "対応言語は？",
+    "faq_a5": "日本語・韓国語。日本語でのレッスンには通訳が同席します。",
+    "faq_q6": "受講後に残るものはありますか？",
+    "faq_a6": "個人コーチングでは、受講内容と改善ポイントをまとめたフィードバックメモをお渡しします。復習や今後の練習方針の整理に活用できます。",
+    "rev_h": "受講者の声",
+    "rev_p": "受講生の声をここに掲載予定。集まり次第、順次反映します。",
+    "rev_slot": "投稿枠（準備中）",
+    "rev_note": "※ 各枠はX投稿の埋め込み／スクリーンショットに差し替え可能です。",
+    "price_h": "料金・受講プラン",
+    "price_p": "個人コーチングは1回・4回・12回から選択できます。ロール別グループクラスは、同程度のティア・ロール構成が5名以上集まった場合に開講されます。",
+    "pg_h": "ロール別グループクラス",
+    "pg_m": "8回 / 計720分",
+    "pg_per": "／ 1名あたり",
+    "pg_d": "TANK / DPS / SUPPORT、それぞれのロールに特化した講座型グループクラスです。同程度のティア・ロール構成で学び、ロール理解と実戦判断力を深めます。",
+    "pg_list": "<li><b>TANK CLASS</b>｜スペース管理とエンゲージ判断。チームの起点となる立ち回りを徹底的に磨きます。</li><li><b>DPS CLASS</b>｜ポジショニングとキル獲得の再現性。ヒーロー別の応用戦略を通じて火力を最大化します。</li><li><b>SUPPORT CLASS</b>｜リソース管理・生存・ピールの優先順位。後方から試合を動かす判断力を養います。</li>",
+    "pg_cond": "同程度のティア・ロール構成が5名以上で開講／各クラス定員10名／表示価格は税込・1名あたり",
+    "rev_soon": "準備中…",
+    "pc_intro": "1対1で、一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。リプレイ分析またはライブコーチングを通じて、現在の問題点を明確にし、改善につなげます。",
+    "pp1_b": "初めての方におすすめ",
+    "pp1_h": "1回コーチング",
+    "pp1_m": "1回 / 60分",
+    "pp1_d": "まずは自分の課題を知りたい方や、特定の悩みを集中的に改善したい方向け。",
+    "pp1_list": "<li>リプレイ分析 または ライブコーチング</li><li>現在の課題分析</li><li>改善ポイントの提示</li><li>フィードバックメモ</li>",
+    "pp2_h": "4回集中プログラム",
+    "pp2_m": "4回 / 1回60分（計240分）",
+    "pp2_s": "通常44,000円 → <b>4,200円お得</b>",
+    "pp2_d": "一度の分析で終わらず、コーチングと学んだことを実戦で試すサイクルを重ねながら、改善の方向性を確認します。",
+    "pp2_list": "<li>1対1コーチング × 4回</li><li>リプレイ分析</li><li>ライブコーチング</li><li>個人課題に合わせた指導</li><li>フィードバックメモ</li>",
+    "pp3_b": "本気で継続的に成長したい方に",
+    "pp3_h": "12回継続プログラム",
+    "pp3_m": "12回 / 計720分",
+    "pp3_s": "1回コーチング × 12回 132,000円 → <b>22,600円お得</b>",
+    "pp3_d": "継続的な指導を通じて、基礎理解から個人課題の改善、実戦適応、自己分析力まで、長期的な成長を目指すプログラムです。",
+    "pp3_list": "<li>1対1コーチング × 12回</li><li>継続的なリプレイ分析</li><li>ライブコーチング</li><li>課題に応じた指導内容の調整</li><li>成長段階に応じた優先順位設定</li><li>フィードバックメモ</li>",
+    "yen": "円",
+    "yen2": "円",
+    "yen3": "円",
+    "yen4": "円",
+    "yen5": "円",
+    "ref_h": "キャンセル・返金・日程変更",
+    "ref1": "授業予定日の3日前まで：無料で日程変更可能",
+    "ref2": "授業予定日の3日前を過ぎた変更：原則として1回分消化",
+    "ref3": "無断欠席：1回分消化",
+    "ref4": "運営側・担当コーチの都合による変更：無料で日程変更、または実施できなかった授業分を返金",
+    "ref5": "すべてのプランの受講有効期限は、お申し込み日から1年間です。",
+    "step_h": "受講申請の流れ",
+    "step_p": "すべてオンライン、先着順で進行します。",
+    "st1_h": "申請フォーム記入",
+    "st1_p": "ニックネーム・バトルタグ・ティア・希望ロール・希望プランなどの基本情報を入力。",
+    "st2_h": "スケジュール調整",
+    "st2_p": "48時間以内にスタッフからご連絡し、プランと日程を調整します。お支払い方法は日程調整後にご案内します。",
+    "st3_h": "受講料の支払い",
+    "st3_p": "日程確定後、案内された方法で受講料をお支払いください。",
+    "st4_h": "授業確定",
+    "st4_p": "入金確認後、授業の日程と時間が最終確定します（先着順で締切）。",
+    "mis_p1": "最も低い場所から高く昇り、光り輝く。99DIVINEアカデミーは、単に「ランクを上げる講座」ではありません。受講生がゲームの中で自分の潜在能力を発見し、その可能性を現実へ広げていく過程を共に歩みます。",
+    "mis_p2": "<b style='color:var(--gold)'>学びの目標は“勝利そのもの”ではなく“成長”。</b>99DIVINEのコーチングは、単なるランクアップだけでなく、実力向上を通じて、判断力・継続力・挑戦する力を育てる教育です。",
+    "fin_h": "READY TO <span>RISE?</span>",
+    "fin_p": "あなたの成長の旅は、今ここから始まります。先着順で締め切られます。",
+    "fin_btn": "受講申請する →",
+    "foot": "© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
+    "cp_h": "コーチングプログラム",
+    "cp_p": "現在の実力や目標に合わせて、個人コーチング・チームコーチング・ロール別グループコーチングから選べます。各プランの進め方と料金をご確認ください。",
+    "cpf1": "リプレイ分析",
+    "cpf2": "実戦・スクリム",
+    "cpf3": "フィードバック",
+    "cpf4": "次回の課題設定",
+    "tab_personal": "個人コーチング",
+    "tab_team": "チームコーチング",
+    "tab_role": "ロール別グループ",
+    "tc_intro": "事前にリプレイを分析し、実際のスクリムを観戦した上で、チーム全体にフィードバックを行います。個人の技術だけでなく、連携・コール・ポジショニング・ULT管理・構成理解など、チームとして勝つために必要な部分を改善します。",
+    "tc4_label": "4回プラン",
+    "tc4_list": "<li>チームの現状分析</li><li>コール・フォーカス・連携改善</li><li>スキル・ULT・構成理解</li><li>総合評価と今後の練習方針</li>",
+    "tc8_label": "8回集中プラン",
+    "tc8_list": "<li>チーム診断</li><li>役割とプレイスタイル整理</li><li>ポジショニングとセットアップ</li><li>エンゲージとターゲット選択</li><li>スキル・ULT管理</li><li>相手に合わせた試合中の修正</li><li>大会を想定した実戦練習</li><li>最終評価と今後の方針</li>",
+    "tt_per": "／ 1名あたり",
+    "tt1_note": "5名参加の場合",
+    "tt2_note": "1回あたり 5,750円・5名参加の場合",
+    "tt3_note": "1回あたり 5,250円・5名参加の場合",
+    "tt1_team": "チーム料金 <b>33,000円</b>",
+    "tt2_team": "チーム料金 <b>115,000円</b>",
+    "tt3_team": "チーム料金 <b>210,000円</b>",
+    "tc_time_h": "1回のチームコーチングに含まれる目安時間",
+    "tc_time_tbl": "<tr class='ts-hd'><th>内容</th><th class='ts-t'>目安時間</th></tr><tr><td class='ts-l'>事前リプレイ分析</td><td class='ts-t'>30〜45分</td></tr><tr><td class='ts-l'>スクリム観戦</td><td class='ts-t'>90〜120分</td></tr><tr><td class='ts-l'>スクリム終了後のフィードバック</td><td class='ts-t'>45〜60分</td></tr><tr><td class='ts-l'>フィードバックメモ・次回課題の整理</td><td class='ts-t'>約15分</td></tr><tr class='ts-total'><td class='ts-l'>合計対応時間</td><td class='ts-t'>約3〜4時間</td></tr>",
+    "tc_time_note": "合計時間には、受講生が同席しない事前分析やメモ作成も含まれます。スクリム観戦は90〜120分、その後のフィードバックは45〜60分が目安です。",
+    "tt1_b": "まずは1回から",
+    "tt1_h": "1回プラン",
+    "tt1_m": "1回 / 1チーム",
+    "tt1_d": "事前リプレイ分析・スクリム観戦・チームフィードバック・次回練習に向けた目標設定を含みます。",
+    "tt1_list": "<li>事前リプレイ分析</li><li>スクリム観戦</li><li>スクリム後のフィードバック</li><li>次回までの課題設定</li>",
+    "tt2_h": "4回プラン",
+    "tt2_m": "4回 / 週1回目安",
+    "tt2_d": "毎週のコーチングで継続的に改善したいチームにおすすめ。",
+    "tt2_list": "<li>毎回：リプレイ分析＋スクリム観戦</li><li>コール・フォーカス・連携改善</li><li>スキル・ULT・構成理解</li><li>総合評価と今後の練習方針</li>",
+    "tt3_b": "大会に向けて",
+    "tt3_h": "8回集中プラン",
+    "tt3_m": "8回 / 週2回目安",
+    "tt3_d": "大会に向けた準備や、短期集中で改善したいチームにおすすめ。",
+    "tt3_list": "<li>毎回：リプレイ分析＋スクリム観戦</li><li>ポジショニング・セットアップ</li><li>エンゲージとターゲット選択</li><li>試合中の修正・ULT管理</li><li>大会想定の実戦練習と最終評価</li>",
+    "tc_note": "※料金は5名参加の場合の1名あたりの金額です。お支払いはチーム単位となります。<br>※すべてのプランに、事前リプレイ分析、スクリム観戦、チームフィードバックが含まれます。",
+    "sticky": "受講申請する",
+    "signup_note": "フォーム送信後48時間以内にご連絡します。お申し込み時の決済はありません。",
+    "plan_note": "申込フォーム内で、ご希望のプランを選択してください。",
+    "plans_label": "料金・プラン",
+    "curriculum_personal": "個人コーチングのカリキュラムを見る",
+    "curriculum_team": "チームコーチングの内容・所要時間を見る",
+    "curriculum_role": "ロール別の内容・開講スケジュールを見る",
+    "recommended": "おすすめ",
+    "rev_more": "全文を読む",
+    "coach_style_h": "指導スタイル",
+    "coach_topics_h": "指導内容",
+    "coach_topics_p": "ポジショニング・スキル／ULTの使用判断・ロール理解",
+    "coach_fit_h": "こんな方に",
+    "coach_fit_p": "自分のプレーを客観的に振り返り、何を優先して練習すべきか整理したい方に。",
+    "essentials_h": "受講前に知っておきたいこと",
+    "venue_h": "受講方法",
+    "venue_p": "Discordを使用したオンラインコーチングです。",
+    "language_h": "対応言語",
+    "language_p": "日本語・韓国語。日本語でのレッスンには通訳が同席します。",
+    "prepare_h": "準備しておくとよいもの",
+    "prepare_p": "相談したい悩みや目標、振り返りたい試合のリプレイコード。",
+    "reply_h": "お申し込みの後は",
+    "reply_p": "48時間以内にスタッフからご連絡し、プランと日程を調整します。お支払い方法は日程調整後にご案内します。",
+    "example_label": "コーチングのイメージ",
+    "example_h": "「何が起きたか」から、<br>「次にどう動くか」へ。",
+    "example_1h": "場面を振り返る",
+    "example_1p": "味方が復帰する前に、戦闘を始めた場面。",
+    "example_2h": "判断の理由を整理",
+    "example_2p": "味方の人数と位置を確認できていたかを振り返る。",
+    "example_3h": "次の試合で試す",
+    "example_3p": "仕掛ける前に、味方が合流できているかを確認する。",
+    "example_note": "説明用の例です。実際の受講生の記録ではありません。",
+    "expiry_h": "受講有効期限",
+    "faq_expiry_q": "受講有効期限はありますか？",
+    "faq_expiry_a": "すべてのプランの受講有効期限は、お申し込み日から1年間です。",
+    "reschedule_h": "日程変更・欠席",
+    "cta_pp3": "個人12回で申し込む",
+    "cta_pp2": "個人4回で申し込む",
+    "cta_pp1": "個人1回で申し込む",
+    "cta_tt3": "チーム8回で申し込む",
+    "cta_tt2": "チーム4回で申し込む",
+    "cta_tt1": "チーム1回で申し込む",
+    "cta_pg": "グループクラスに申し込む",
+    "cancel_h": "キャンセル・途中解約",
+    "cancel_before": "初回授業の3日前までのキャンセルは、お支払い済みの受講料を全額返金します。初回授業日が未確定の場合も全額返金します。",
+    "cancel_after": "受講開始後も途中解約できます。割引適用後の購入プランの単価で消化分を計算し、お支払い済みの金額から差し引いた残額を返金します。通常の1回料金への変更や、別途の解約手数料はありません。",
+    "cancel_late": "授業予定日の3日前を過ぎた変更・キャンセル、または無断欠席は、原則として1回分消化となり、返金対象から除きます。初回授業前のキャンセルにも同じ基準を適用します。",
+    "cancel_example": "例：個人4回プラン39,800円を全額支払い、1回を消化した場合、残り3回分29,850円を返金します。",
+    "cancel_calc": "全額お支払い済みの場合：返金額＝購入プラン料金 × 未消化回数 ÷ 総回数（1円未満切り上げ）。分割払いの場合は、お支払い済みの金額から同じプラン単価で計算した消化分を差し引き、残額がある場合に返金します。チームプランはチーム単位の契約・お支払い金額で精算します。",
+    "cancel_contact": "キャンセル・途中解約をご希望の場合は、担当スタッフへご連絡ください。",
+    "expiry_extra": "期限終了時に未消化分がある場合も、上記の基準で精算・返金します。運営側の都合で期限内に受講できない場合は、期限延長または未消化分の返金で対応します。",
+    "policy_scope": "こちらは新規お申し込みに適用する条件です。すでに受講中の方は、お申し込み時の条件をご確認ください。"
   },
-  ko:{
-    rev_name_h:"H 수강생",
-    rev_name_a:"A 수강생",
-    rev_name_s:"S 수강생",
-    rev_summary_label:"후기 핵심 요약",
-    rev_original_label:"일본어 원문",
-    rev_summary_h:"수업 내용을 정리한 메모로 복습하고 다음 수업에서 확인하며 이해를 넓혔고, 플레이 감각의 변화를 느꼈습니다.",
-    rev_summary_a:"아나의 역할과 상황별 판단을 배우고 실천하면서, 주변을 살피고 지금 해야 할 일을 생각하며 플레이하는 순간이 늘었습니다.",
-    rev_summary_s:"포지셔닝·스킬·궁극기 타이밍의 선택지를 배우면서, 자신의 플레이를 돌아보고 개선 방법을 생각할 수 있게 됐습니다.",
-    ach_win:"우승",
-    ach_runner_up:"준우승",
-    meta_title:"99DIVINE ACADEMY — 오버워치 코칭",
-    meta_description:"OWCS 실적을 보유한 코치가 플레이를 직접 분석합니다. 랭크 상승뿐 아니라 판단력·포지셔닝·팀 이해까지 키우는 오버워치 전문 온라인 코칭. 일본어·한국어 지원.",
-    meta_social_description:"OWCS 실적 코치의 오버워치 전문 온라인 코칭. 일본어·한국어 지원.",
-
-    nav_str:"강점",nav_coach:"코치",nav_curri:"커리큘럼",nav_price:"요금",nav_apply:"수강 신청",
-    hero_eyebrow:"Overwatch Coaching — JP / KR",
-    hero_h1a:"PLAY",hero_h1b:"LIKE PRO.",
-    hero_lead:"랭크가 막힌 이유를 프로의 시선으로 짚어드립니다. 리플레이 분석과 실시간 피드백으로, 다음 경기에서 무엇을 바꿀지 구체화합니다.",
-    hero_apply:"수강 신청하기 →",hero_price:"요금 보기",
-    pill_1:"리플레이 분석",pill_2:"라이브 코칭",pill_3:"롤별 지도",pill_4:"<b>JP / KR</b> 지원",
-    msg_h:"대표의 말",
-    msg_p1:"안녕하세요, <b style='color:var(--gold)'>99DIVINE 대표 Supreme</b>입니다. 99DIVINE 아카데미는 단순히 '게임을 잘하게 만드는 곳'이 아닙니다. 게임을 통한 '진짜 성장'을 일본 플레이어에게 전하기 위해 시작했습니다.",
-    msg_p2:"커뮤니케이션·팀워크·빠른 판단력·멀티태스킹·멘탈 관리. 이것들은 게임 안에서만 끝나지 않고, 저 또한 UC Irvine에서 컴퓨터과학 학사를, Utah Valley University에서 민간 항공 면허(PPL)를 취득하는 힘이 되었습니다. <b style='color:var(--gold)'>게임은 인생 전체의 성장을 이끄는 도전과 배움의 장입니다.</b>",
-    str_h:"99DIVINE의 강점",str_p:"프로 무대에서 쌓은 경험을 바탕으로, 리플레이 분석부터 실전 적용까지 개인별 개선 과제를 제시합니다.",
-    str1_h:"리플레이 분석",str1_p:"프로 관점으로 당신의 플레이를 세밀하게 분석하고, 약점과 개선책을 명확히 제시합니다.",
-    str2_h:"라이브 코칭",str2_p:"실전 중 실시간 피드백. 판단의 순간에 지도가 들어가 의사결정이 달라집니다.",
-    str3_h:"롤별 지도",str3_p:"TANK / DPS / SUPPORT 전문 코칭으로 적성에 맞춘 성장 가속.",
-    str4_h:"일본어·한국어 지원",str4_p:"일본어·한국어 지원. 언어 장벽 없이 해외 연계 스킬도 함께 습득.",
-    str5_h:"대회 실적",str5_p:"2025 OWCS Pacific Stage 1 우승(창립 첫 해) 등 결과를 내는 팀의 노하우 전수.",
-    coach_h:"코치 소개",coach_tag:"HEAD COACH",
-    coach_quote:"\"VARREL이 본대회 외 모든 것을 휩쓰는 가운데, 영광을 거머쥔 유일한 지도자.\"",
-    curri_h:"개인 성장 커리큘럼",
-    gs1_h:"기초 이해·현상 분석",gs1_goal:"현재 플레이를 객관적으로 분석하고, 성장의 토대가 되는 기본 판단 기준을 정리합니다.",gs1_list:"<li>현재 플레이와 과제 분석</li><li>롤별 역할 이해</li><li>기본 포지셔닝</li><li>시야·정보 인식</li><li>상황에 따른 기본 판단</li><li>개별 리플레이 분석</li>",
-    gs2_h:"개인 과제 개선",gs2_goal:"한 사람 한 사람의 약점과 플레이 성향에 맞춰 필요한 부분을 중점적으로 개선합니다.",gs2_list:"<li>개인 약점 개선</li><li>영웅별 응용 이해</li><li>리플레이 분석</li><li>라이브 코칭</li><li>스킬·궁극기 사용 판단</li><li>자신에게 맞는 플레이 스타일 확립</li>",
-    gs3_h:"실전 적응",gs3_goal:"배운 내용을 다른 조합·맵·경기 상황에서도 재현할 수 있게 합니다.",gs3_list:"<li>조합·상황에 따른 역할 이해</li><li>Dive / Brawl / Poke 적응</li><li>압박 상황에서의 판단</li><li>아군과의 연계</li><li>유리·불리 상황 판단</li><li>실전 재현성 향상</li>",
-    gs4_h:"지속적인 성장",gs4_goal:"코칭 이후에도 스스로 과제를 발견하고 성장을 이어갈 수 있는 힘을 기릅니다.",gs4_list:"<li>셀프 리플레이 분석</li><li>반복되는 실수 발견</li><li>연습 우선순위 설정</li><li>자신의 플레이를 언어화하는 힘</li><li>개선 사이클 구축</li><li>스스로 성장을 이어가는 힘</li>",
-    curri_note:"※ 수강생의 랭크·경험·과제·목표에 따라 각 스텝의 진행 속도와 지도 내용이 다릅니다. 모든 수강생이 같은 순서·기간으로 진행하는 것이 아니라, 한 사람 한 사람의 상황에 맞춰 커리큘럼을 조정합니다.",
-    role_h:"롤별 커리큘럼",role_p:"롤에 특화된 강의형 클래스. 정원 10명, 비슷한 티어·롤 구성으로 개강.",
-    role_tank:"스페이스 관리와 엔게이지 판단. 팀의 기점이 되는 무빙을 철저히 연마.",
-    role_dps:"포지셔닝과 킬 획득의 재현성. 영웅별 응용 전략으로 화력 극대화.",
-    role_sup:"리소스 관리·생존·필 우선순위. 후방에서 팀을 받치는 판단력 양성.",
-    sl1_d:"화 · 목",sl2_d:"수 · 금",sl3_d:"토 · 일",
-    sched_note:"※ 개강 스케줄은 참가 인원·티어 구성에 따라 조정될 수 있습니다.",
-    coach_bio:"대회 실적을 보유한 GYOMIN 코치가 개인별 리플레이를 분석하고, 플레이에 바로 적용할 수 있는 개선 과제를 함께 정리합니다.",
-    price_notes:"<li>표시 가격은 모두 부가세 포함입니다.</li><li>롤별 그룹 클래스는 1인당 요금입니다.</li><li>롤별 그룹 클래스는 비슷한 티어·롤 구성 5명 이상이면 개강합니다.</li><li>TANK / DPS / SUPPORT 클래스는 각 정원 10명입니다.</li><li>개인 코칭에서는 수강 내용과 개선 포인트를 정리한 피드백 메모를 드립니다.</li><li>수강생의 과제·목표에 따라 지도 내용과 커리큘럼 진행 속도가 다릅니다.</li>",
-    fy_h:"이런 분께 추천",fy_1:"현재 랭크대에서 성장 정체를 느끼는 플레이어",fy_2:"자신의 습관·약점을 객관적으로 파악하고 싶은 분",fy_3:"독학의 한계를 느끼고 효율적으로 실력을 올리고 싶은 분",fy_4:"자신의 롤 이해와 실전 판단력을 더 깊게 다지고 싶은 분",fy_5:"상위·해외 씬을 진지하게 목표로 하는 분",
-    out_h:"수강을 통해 얻을 수 있는 것",out_1h:"명확해진 약점과 개선점",out_1p:"감각이 아니라, 언어화된 과제와 다음에 해야 할 일이 손에 남습니다.",out_2h:"롤별 판단 기준",out_2p:"무브·포지셔닝·콜의 우선순위를 상황별로 판단하는 힘.",out_3h:"피드백 메모",out_3p:"수강 내용과 개선 포인트를 정리한 메모를 드립니다. 복습과 지속적인 성장에 활용할 수 있습니다.",out_4h:"계속 성장하는 자기 분석력",out_4p:"코칭 이후에도 스스로 리플레이를 돌아보고, 과제를 발견하고, 개선 우선순위를 생각할 수 있는 시각을 기릅니다.",
-    faq_h:"자주 묻는 질문",faq_q1:"개인 코칭과 롤별 그룹 클래스의 차이는?",faq_a1:"개인 코칭은 1대1로, 수강생 한 사람 한 사람의 과제·목표·플레이 스타일에 맞춰 지도 내용을 조정합니다. 1회·4회·12회 플랜에서 선택할 수 있습니다. 롤별 그룹 클래스는 TANK / DPS / SUPPORT 각각에 특화된 강의형 클래스로, 비슷한 티어·롤 구성으로 배웁니다.",faq_q7:"커리큘럼은 모두 동일한가요?",faq_a7:"아니요. 수강생의 랭크·경험·과제·목표에 따라 진행 속도와 지도 내용을 조정합니다. 게재된 커리큘럼은 성장 방향성을 보여주는 것이며, 한 사람 한 사람에 맞춰 최적화합니다.",faq_q8:"어떤 개인 코칭 플랜을 선택하면 좋을까요?",faq_a8:"먼저 자신의 과제를 알고 싶은 분이나 특정 고민을 상담하고 싶은 분께는 1회 코칭을 추천합니다. 지속적으로 과제를 개선하고 싶은 분께는 4회 집중 프로그램, 장기적인 성장을 진지하게 목표로 하는 분께는 12회 지속 프로그램을 추천합니다.",faq_q2:"스케줄은 선택할 수 있나요?",faq_a2:"개인 코칭은 신청 후 담당 스태프와 개별로 일정을 조정합니다. 롤별 그룹 클래스는 고정 시간대로 개강하며, 참가 인원·티어 구성에 따라 조정될 수 있습니다.",faq_q3:"결제 시점은?",faq_a3:"신청 후 수강 일정이 확정된 단계에서 안내드립니다.",faq_q4:"취소·환불이 가능한가요?",faq_a4:"환불·변경 정책에 따릅니다. 수업 예정일 3일 전까지는 무료로 일정 변경이 가능합니다. 3일 전을 지난 변경이나 무단 결석은 원칙적으로 1회분 소진됩니다.",faq_q5:"지원 언어는?",faq_a5:"일본어·한국어를 지원합니다.",faq_q6:"수강 후 남는 것이 있나요?",faq_a6:"개인 코칭에서는 수강 내용과 개선 포인트를 정리한 피드백 메모를 드립니다. 복습과 향후 연습 방향 정리에 활용할 수 있습니다.",
-    rev_h:"수강생 후기",rev_p:"수강생의 후기를 이곳에 게재 예정. 모이는 대로 반영합니다.",
-    rev_slot:"게시 슬롯 (준비 중)",rev_note:"※ 각 슬롯은 X 임베드/스크린샷으로 교체 가능합니다.",
-    price_h:"요금 · 수강 플랜",price_p:"개인 코칭은 1회·4회·12회 중에서 선택할 수 있습니다. 롤별 그룹 클래스는 비슷한 티어·롤 구성 5명 이상 모이면 개강합니다.",
-    pg_h:"롤별 그룹 클래스",pg_m:"8회 / 총 720분",pg_per:"／ 1인당",pg_d:"TANK / DPS / SUPPORT 각 롤에 특화된 강의형 그룹 클래스입니다. 비슷한 티어·롤 구성으로 배우며, 롤 이해와 실전 판단력을 다집니다.",pg_list:"<li><b>TANK CLASS</b> &mdash; 스페이스 관리와 인게이지 판단. 팀의 기점이 되는 무빙을 철저히 다듬습니다.</li><li><b>DPS CLASS</b> &mdash; 포지셔닝과 킬 획득의 재현성. 영웅별 응용 전략으로 화력을 극대화합니다.</li><li><b>SUPPORT CLASS</b> &mdash; 리소스 관리·생존·필의 우선순위. 후방에서 경기를 움직이는 판단력을 기릅니다.</li>",pg_cond:"비슷한 티어·롤 구성 5명 이상 개강／각 클래스 정원 10명／표시 가격은 부가세 포함·1인당",rev_soon:"준비 중…",
-    pc_intro:"1대1로, 한 사람 한 사람의 과제·목표·플레이 스타일에 맞춰 지도 내용을 조정합니다. 리플레이 분석 또는 라이브 코칭을 통해 현재 문제점을 명확히 하고 개선으로 이어갑니다.",
-    pp1_b:"처음이신 분께 추천",pp1_h:"1회 코칭",pp1_m:"1회 / 60분",pp1_d:"먼저 자신의 과제를 알고 싶은 분, 특정 고민을 집중적으로 개선하고 싶은 분께.",pp1_list:"<li>리플레이 분석 또는 라이브 코칭</li><li>현재 과제 분석</li><li>개선 포인트 제시</li><li>피드백 메모</li>",
-    pp2_h:"4회 집중 프로그램",pp2_m:"4회 / 회당 60분 (총 240분)",pp2_s:"정가 44,000엔 → <b>4,200엔 할인</b>",pp2_d:"한 번의 진단으로 끝나지 않고, 코칭과 실전 적용을 반복하며 개선 방향을 점검합니다.",pp2_list:"<li>1대1 코칭 × 4회</li><li>리플레이 분석</li><li>라이브 코칭</li><li>개인 과제에 맞춘 지도</li><li>피드백 메모</li>",
-    pp3_b:"진지하게 꾸준히 성장하고 싶은 분께",pp3_h:"12회 지속 프로그램",pp3_m:"12회 / 총 720분",pp3_s:"1회 코칭 × 12회 132,000엔 → <b>22,600엔 할인</b>",pp3_d:"지속적인 지도를 통해 기초 이해부터 개인 과제 개선, 실전 적응, 자기 분석력까지 장기적인 성장을 목표로 하는 프로그램입니다.",pp3_list:"<li>1대1 코칭 × 12회</li><li>지속적인 리플레이 분석</li><li>라이브 코칭</li><li>과제에 따른 지도 내용 조정</li><li>성장 단계에 따른 우선순위 설정</li><li>피드백 메모</li>",
-    yen:" 엔",yen2:" 엔",yen3:" 엔",yen4:" 엔",yen5:" 엔",
-    ref_h:"환불 · 변경 정책",
-    ref1:"수업 예정일 3일 전까지: 무료로 일정 변경 가능",
-    ref2:"수업 예정일 3일 전을 지난 변경: 원칙적으로 1회분 소진",
-    ref3:"무단 결석: 1회분 소진",
-    ref4:"주최 측·담당 코치 사정에 의한 변경: 무료 변경 또는 대체 수업 진행",
-    ref5:"각 플랜에는 수강 유효기간이 있습니다",
-    step_h:"수강 신청 절차",step_p:"모두 온라인, 선착순으로 진행됩니다.",
-    st1_h:"신청 폼 작성",st1_p:"닉네임·배틀태그·티어·희망 롤·희망 플랜 등 기본 정보 입력.",
-    st2_h:"일정 조정",st2_p:"제출 정보를 바탕으로 스태프가 개별 일정·시간을 조정.",
-    st3_h:"수강료 결제",st3_p:"일정 확정 후 안내된 방법으로 수강료를 결제.",
-    st4_h:"수업 확정",st4_p:"입금 확인 후 수업 일정·시간이 최종 확정(선착순 마감).",
-    mis_p1:"가장 낮은 곳에서 높이 올라 빛난다. 99DIVINE 아카데미는 단순한 '랭크 올리기 강좌'가 아닙니다. 수강생이 게임 속에서 자신의 잠재력을 발견하고, 그 가능성을 현실로 넓혀가는 과정을 함께합니다.",
-    mis_p2:"<b style='color:var(--gold)'>배움의 목표는 '승리 그 자체'가 아니라 '성장'.</b> 99DIVINE 코칭은 단순한 랭크 업뿐만 아니라, 실력 향상을 통해 판단력·지속력·도전하는 힘을 기르는 교육입니다.",
-    fin_h:"READY TO <span>RISE?</span>",fin_p:"당신의 성장 여정은 지금 여기서 시작됩니다. 선착순으로 마감됩니다.",fin_btn:"수강 신청하기 →",
-    foot:"© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
-    cp_h:"코칭 프로그램",
-    cp_p:"현재 실력과 목표에 맞춰 개인 코칭, 팀 코칭, 롤별 그룹 중 선택할 수 있습니다. 각 플랜별 진행 방식과 비용을 확인하세요.",
-    cpf1:"리플레이 분석",cpf2:"실전·스크림",cpf3:"피드백",cpf4:"다음 과제 설정",
-    tab_personal:"개인 코칭",tab_team:"팀 코칭",tab_role:"롤별 그룹",
-    tc_intro:"사전에 리플레이를 분석하고, 실제 스크림을 관전한 뒤 팀 전체에 피드백을 진행합니다. 개인 기량뿐 아니라 연계·콜·포지셔닝·궁극기 관리·조합 이해 등 팀으로서 이기기 위해 필요한 부분을 개선합니다.",
-    tc4_label:"4회 플랜",
-    tc4_list:"<li>팀 현황 분석</li><li>콜·포커스·연계 개선</li><li>스킬·궁극기·조합 이해</li><li>종합 평가와 향후 연습 방침</li>",
-    tc8_label:"8회 집중 플랜",
-    tc8_list:"<li>팀 진단</li><li>역할과 플레이 스타일 정리</li><li>포지셔닝과 셋업</li><li>인게이지와 타겟 선택</li><li>스킬·궁극기 관리</li><li>상대에 맞춘 경기 중 수정</li><li>대회를 상정한 실전 연습</li><li>최종 평가와 향후 방침</li>",
-    tt_per:"／ 1인당",
-    tt1_note:"5명 참가 시",tt2_note:"1회당 5,750엔・5명 참가 시",tt3_note:"1회당 5,250엔・5명 참가 시",
-    tt1_team:"팀 요금 <b>33,000엔</b>",tt2_team:"팀 요금 <b>115,000엔</b>",tt3_team:"팀 요금 <b>210,000엔</b>",
-    tc_time_h:"1회 팀 코칭에 포함되는 예상 시간",
-    tc_time_tbl:"<tr class='ts-hd'><th>내용</th><th class='ts-t'>예상 시간</th></tr><tr><td class='ts-l'>사전 리플레이 분석</td><td class='ts-t'>30〜45분</td></tr><tr><td class='ts-l'>스크림 관전</td><td class='ts-t'>90〜120분</td></tr><tr><td class='ts-l'>스크림 종료 후 피드백</td><td class='ts-t'>45〜60분</td></tr><tr><td class='ts-l'>피드백 메모・다음 과제 정리</td><td class='ts-t'>약 15분</td></tr><tr class='ts-total'><td class='ts-l'>총 대응 시간</td><td class='ts-t'>약 3〜4시간</td></tr>",
-    tc_time_note:"1회 세션에서는 스크림 중 지도 시간뿐 아니라, 사전 분석부터 종료 후 과제 정리까지 일관되게 진행합니다.",
-    tt1_b:"우선 1회부터",tt1_h:"1회 플랜",tt1_m:"1회 / 1팀",tt1_d:"사전 리플레이 분석・스크림 관전・팀 피드백・다음 연습을 위한 목표 설정을 포함합니다.",tt1_list:"<li>사전 리플레이 분석</li><li>스크림 관전</li><li>스크림 후 피드백</li><li>다음까지의 과제 설정</li>",
-    tt2_h:"4회 플랜",tt2_m:"4회 / 주 1회 기준",tt2_d:"매주 코칭으로 꾸준히 개선하고 싶은 팀에게 추천.",tt2_list:"<li>매회: 리플레이 분석＋스크림 관전</li><li>콜·포커스·연계 개선</li><li>스킬·궁극기·조합 이해</li><li>종합 평가와 향후 연습 방침</li>",
-    tt3_b:"대회를 향해",tt3_h:"8회 집중 플랜",tt3_m:"8회 / 주 2회 기준",tt3_d:"대회 준비나 단기 집중으로 개선하고 싶은 팀에게 추천.",tt3_list:"<li>매회: 리플레이 분석＋스크림 관전</li><li>포지셔닝·셋업</li><li>인게이지와 타겟 선택</li><li>경기 중 수정·궁극기 관리</li><li>대회 상정 실전 연습과 최종 평가</li>",
-    tc_note:"※ 요금은 5명 참가 시 1인당 금액입니다. 결제는 팀 단위로 진행됩니다.<br>※ 모든 플랜에 사전 리플레이 분석, 스크림 관전, 팀 피드백이 포함됩니다.",
-    sticky:"수강 신청하기"
+  "ko": {
+    "rev_name_h": "H 수강생",
+    "rev_name_a": "A 수강생",
+    "rev_name_s": "S 수강생",
+    "rev_summary_label": "후기 핵심 요약",
+    "rev_original_label": "일본어 원문",
+    "rev_summary_h": "수업 내용을 정리한 메모로 복습하고 다음 수업에서 확인하며 이해를 넓혔고, 플레이 감각의 변화를 느꼈습니다.",
+    "rev_summary_a": "아나의 역할과 상황별 판단을 배우고 실천하면서, 주변을 살피고 지금 해야 할 일을 생각하며 플레이하는 순간이 늘었습니다.",
+    "rev_summary_s": "포지셔닝·스킬·궁극기 타이밍의 선택지를 배우면서, 자신의 플레이를 돌아보고 개선 방법을 생각할 수 있게 됐습니다.",
+    "ach_win": "우승",
+    "ach_runner_up": "준우승",
+    "meta_title": "99DIVINE ACADEMY — 오버워치 코칭",
+    "meta_description": "OWCS 실적을 보유한 코치가 플레이를 직접 분석합니다. 랭크 상승뿐 아니라 판단력·포지셔닝·팀 이해까지 키우는 오버워치 전문 온라인 코칭. 일본어·한국어 지원.",
+    "meta_social_description": "OWCS 실적 코치의 오버워치 전문 온라인 코칭. 일본어·한국어 지원.",
+    "nav_str": "강점",
+    "nav_coach": "코치",
+    "nav_curri": "커리큘럼",
+    "nav_price": "요금",
+    "nav_apply": "수강 신청",
+    "hero_eyebrow": "Overwatch Coaching — JP / KR",
+    "hero_h1a": "PLAY",
+    "hero_h1b": "LIKE PRO.",
+    "hero_lead": "랭크가 막힌 이유를 프로의 시선으로 짚어드립니다. 리플레이 분석과 실시간 피드백으로, 다음 경기에서 무엇을 바꿀지 구체화합니다.",
+    "hero_apply": "수강 신청하기 →",
+    "hero_price": "요금 보기",
+    "pill_1": "리플레이 분석",
+    "pill_2": "라이브 코칭",
+    "pill_3": "롤별 지도",
+    "pill_4": "<b>JP / KR</b> 지원",
+    "msg_h": "대표의 말",
+    "msg_p1": "안녕하세요, <b style='color:var(--gold)'>99DIVINE 대표 Supreme</b>입니다. 99DIVINE 아카데미는 단순히 '게임을 잘하게 만드는 곳'이 아닙니다. 게임을 통한 '진짜 성장'을 일본 플레이어에게 전하기 위해 시작했습니다.",
+    "msg_p2": "커뮤니케이션·팀워크·빠른 판단력·멀티태스킹·멘탈 관리. 이것들은 게임 안에서만 끝나지 않고, 저 또한 UC Irvine에서 컴퓨터과학 학사를, Utah Valley University에서 민간 항공 면허(PPL)를 취득하는 힘이 되었습니다. <b style='color:var(--gold)'>게임은 인생 전체의 성장을 이끄는 도전과 배움의 장입니다.</b>",
+    "str_h": "99DIVINE의 강점",
+    "str_p": "프로 무대에서 쌓은 경험을 바탕으로, 리플레이 분석부터 실전 적용까지 개인별 개선 과제를 제시합니다.",
+    "str1_h": "리플레이 분석",
+    "str1_p": "프로 관점으로 당신의 플레이를 세밀하게 분석하고, 약점과 개선책을 명확히 제시합니다.",
+    "str2_h": "라이브 코칭",
+    "str2_p": "실전 중 실시간 피드백. 판단의 순간에 지도가 들어가 의사결정이 달라집니다.",
+    "str3_h": "롤별 지도",
+    "str3_p": "TANK / DPS / SUPPORT 전문 코칭으로 적성에 맞춘 성장 가속.",
+    "str4_h": "일본어·한국어 지원",
+    "str4_p": "일본어 수업에는 통역이 동석해 코치의 피드백을 전달합니다. 한국어 수강도 지원합니다.",
+    "str5_h": "대회 실적",
+    "str5_p": "2025 OWCS Pacific Stage 1 우승(창립 첫 해) 등 결과를 내는 팀의 노하우 전수.",
+    "coach_h": "코치 소개",
+    "coach_tag": "HEAD COACH",
+    "coach_quote": "리플레이 분석과 라이브 코칭을 통해 판단·포지셔닝·스킬 사용을 돌아보고, 다음 경기에서 실천할 개선점을 정리합니다.",
+    "curri_h": "개인 성장 커리큘럼",
+    "gs1_h": "기초 이해·현상 분석",
+    "gs1_goal": "현재 플레이를 객관적으로 분석하고, 성장의 토대가 되는 기본 판단 기준을 정리합니다.",
+    "gs1_list": "<li>현재 플레이와 과제 분석</li><li>롤별 역할 이해</li><li>기본 포지셔닝</li><li>시야·정보 인식</li><li>상황에 따른 기본 판단</li><li>개별 리플레이 분석</li>",
+    "gs2_h": "개인 과제 개선",
+    "gs2_goal": "한 사람 한 사람의 약점과 플레이 성향에 맞춰 필요한 부분을 중점적으로 개선합니다.",
+    "gs2_list": "<li>개인 약점 개선</li><li>영웅별 응용 이해</li><li>리플레이 분석</li><li>라이브 코칭</li><li>스킬·궁극기 사용 판단</li><li>자신에게 맞는 플레이 스타일 확립</li>",
+    "gs3_h": "실전 적응",
+    "gs3_goal": "배운 내용을 다른 조합·맵·경기 상황에서도 재현할 수 있게 합니다.",
+    "gs3_list": "<li>조합·상황에 따른 역할 이해</li><li>Dive / Brawl / Poke 적응</li><li>압박 상황에서의 판단</li><li>아군과의 연계</li><li>유리·불리 상황 판단</li><li>실전 재현성 향상</li>",
+    "gs4_h": "지속적인 성장",
+    "gs4_goal": "코칭 이후에도 스스로 과제를 발견하고 성장을 이어갈 수 있는 힘을 기릅니다.",
+    "gs4_list": "<li>셀프 리플레이 분석</li><li>반복되는 실수 발견</li><li>연습 우선순위 설정</li><li>자신의 플레이를 언어화하는 힘</li><li>개선 사이클 구축</li><li>스스로 성장을 이어가는 힘</li>",
+    "curri_note": "※ 수강생의 랭크·경험·과제·목표에 따라 각 스텝의 진행 속도와 지도 내용이 다릅니다. 모든 수강생이 같은 순서·기간으로 진행하는 것이 아니라, 한 사람 한 사람의 상황에 맞춰 커리큘럼을 조정합니다.",
+    "role_h": "롤별 커리큘럼",
+    "role_p": "롤에 특화된 강의형 클래스. 정원 10명, 비슷한 티어·롤 구성으로 개강.",
+    "role_tank": "스페이스 관리와 엔게이지 판단. 팀의 기점이 되는 무빙을 철저히 연마.",
+    "role_dps": "포지셔닝과 킬 획득의 재현성. 영웅별 응용 전략으로 화력 극대화.",
+    "role_sup": "리소스 관리·생존·필 우선순위. 후방에서 팀을 받치는 판단력 양성.",
+    "sl1_d": "화 · 목",
+    "sl2_d": "수 · 금",
+    "sl3_d": "토 · 일",
+    "sched_note": "※ 개강 스케줄은 참가 인원·티어 구성에 따라 조정될 수 있습니다.",
+    "coach_bio": "대회 실적을 보유한 GYOMIN 코치가 개인별 리플레이를 분석하고, 플레이에 바로 적용할 수 있는 개선 과제를 함께 정리합니다.",
+    "price_notes": "<li>표시 가격은 모두 부가세 포함입니다.</li><li>롤별 그룹 클래스는 1인당 요금입니다.</li><li>롤별 그룹 클래스는 비슷한 티어·롤 구성 5명 이상이면 개강합니다.</li><li>TANK / DPS / SUPPORT 클래스는 각 정원 10명입니다.</li><li>개인 코칭에서는 수강 내용과 개선 포인트를 정리한 피드백 메모를 드립니다.</li><li>수강생의 과제·목표에 따라 지도 내용과 커리큘럼 진행 속도가 다릅니다.</li>",
+    "fy_h": "이런 분께 추천",
+    "fy_1": "현재 랭크대에서 성장 정체를 느끼는 플레이어",
+    "fy_2": "자신의 습관·약점을 객관적으로 파악하고 싶은 분",
+    "fy_3": "독학의 한계를 느끼고 효율적으로 실력을 올리고 싶은 분",
+    "fy_4": "자신의 롤 이해와 실전 판단력을 더 깊게 다지고 싶은 분",
+    "fy_5": "상위·해외 씬을 진지하게 목표로 하는 분",
+    "out_h": "수강을 통해 얻을 수 있는 것",
+    "out_1h": "명확해진 약점과 개선점",
+    "out_1p": "감각이 아니라, 언어화된 과제와 다음에 해야 할 일이 손에 남습니다.",
+    "out_2h": "롤별 판단 기준",
+    "out_2p": "무브·포지셔닝·콜의 우선순위를 상황별로 판단하는 힘.",
+    "out_3h": "피드백 메모",
+    "out_3p": "수강 내용과 개선 포인트를 정리한 메모를 드립니다. 복습과 지속적인 성장에 활용할 수 있습니다.",
+    "out_4h": "계속 성장하는 자기 분석력",
+    "out_4p": "코칭 이후에도 스스로 리플레이를 돌아보고, 과제를 발견하고, 개선 우선순위를 생각할 수 있는 시각을 기릅니다.",
+    "faq_h": "자주 묻는 질문",
+    "faq_q1": "개인 코칭과 롤별 그룹 클래스의 차이는?",
+    "faq_a1": "개인 코칭은 1대1로, 수강생 한 사람 한 사람의 과제·목표·플레이 스타일에 맞춰 지도 내용을 조정합니다. 1회·4회·12회 플랜에서 선택할 수 있습니다. 롤별 그룹 클래스는 TANK / DPS / SUPPORT 각각에 특화된 강의형 클래스로, 비슷한 티어·롤 구성으로 배웁니다.",
+    "faq_q7": "커리큘럼은 모두 동일한가요?",
+    "faq_a7": "아니요. 수강생의 랭크·경험·과제·목표에 따라 진행 속도와 지도 내용을 조정합니다. 게재된 커리큘럼은 성장 방향성을 보여주는 것이며, 한 사람 한 사람에 맞춰 최적화합니다.",
+    "faq_q8": "어떤 개인 코칭 플랜을 선택하면 좋을까요?",
+    "faq_a8": "먼저 자신의 과제를 알고 싶은 분이나 특정 고민을 상담하고 싶은 분께는 1회 코칭을 추천합니다. 지속적으로 과제를 개선하고 싶은 분께는 4회 집중 프로그램, 장기적인 성장을 진지하게 목표로 하는 분께는 12회 지속 프로그램을 추천합니다.",
+    "faq_q2": "스케줄은 선택할 수 있나요?",
+    "faq_a2": "개인 코칭은 신청 후 담당 스태프와 개별로 일정을 조정합니다. 롤별 그룹 클래스는 고정 시간대로 개강하며, 참가 인원·티어 구성에 따라 조정될 수 있습니다.",
+    "faq_q3": "결제 시점은?",
+    "faq_a3": "신청 시 바로 결제하지 않습니다. 수강 일정을 조율한 뒤 결제 방법을 안내드립니다.",
+    "faq_q4": "취소·환불이 가능한가요?",
+    "faq_a4": "첫 수업 3일 전까지 취소하면 전액 환불합니다. 수강 시작 후에는 구매 플랜 단가로 미소진분을 정산합니다. 수업 예정일 3일 전을 지난 변경·취소나 무단결석은 원칙적으로 1회분 소진됩니다. 자세한 내용은 요금 영역의 취소·환불 안내를 확인해주세요.",
+    "faq_q5": "지원 언어는?",
+    "faq_a5": "일본어·한국어를 지원하며, 일본어 수업에는 통역이 동석합니다.",
+    "faq_q6": "수강 후 남는 것이 있나요?",
+    "faq_a6": "개인 코칭에서는 수강 내용과 개선 포인트를 정리한 피드백 메모를 드립니다. 복습과 향후 연습 방향 정리에 활용할 수 있습니다.",
+    "rev_h": "수강생 후기",
+    "rev_p": "수강생의 후기를 이곳에 게재 예정. 모이는 대로 반영합니다.",
+    "rev_slot": "게시 슬롯 (준비 중)",
+    "rev_note": "※ 각 슬롯은 X 임베드/스크린샷으로 교체 가능합니다.",
+    "price_h": "요금 · 수강 플랜",
+    "price_p": "개인 코칭은 1회·4회·12회 중에서 선택할 수 있습니다. 롤별 그룹 클래스는 비슷한 티어·롤 구성 5명 이상 모이면 개강합니다.",
+    "pg_h": "롤별 그룹 클래스",
+    "pg_m": "8회 / 총 720분",
+    "pg_per": "／ 1인당",
+    "pg_d": "TANK / DPS / SUPPORT 각 롤에 특화된 강의형 그룹 클래스입니다. 비슷한 티어·롤 구성으로 배우며, 롤 이해와 실전 판단력을 다집니다.",
+    "pg_list": "<li><b>TANK CLASS</b> &mdash; 스페이스 관리와 인게이지 판단. 팀의 기점이 되는 무빙을 철저히 다듬습니다.</li><li><b>DPS CLASS</b> &mdash; 포지셔닝과 킬 획득의 재현성. 영웅별 응용 전략으로 화력을 극대화합니다.</li><li><b>SUPPORT CLASS</b> &mdash; 리소스 관리·생존·필의 우선순위. 후방에서 경기를 움직이는 판단력을 기릅니다.</li>",
+    "pg_cond": "비슷한 티어·롤 구성 5명 이상 개강／각 클래스 정원 10명／표시 가격은 부가세 포함·1인당",
+    "rev_soon": "준비 중…",
+    "pc_intro": "1대1로, 한 사람 한 사람의 과제·목표·플레이 스타일에 맞춰 지도 내용을 조정합니다. 리플레이 분석 또는 라이브 코칭을 통해 현재 문제점을 명확히 하고 개선으로 이어갑니다.",
+    "pp1_b": "처음이신 분께 추천",
+    "pp1_h": "1회 코칭",
+    "pp1_m": "1회 / 60분",
+    "pp1_d": "먼저 자신의 과제를 알고 싶은 분, 특정 고민을 집중적으로 개선하고 싶은 분께.",
+    "pp1_list": "<li>리플레이 분석 또는 라이브 코칭</li><li>현재 과제 분석</li><li>개선 포인트 제시</li><li>피드백 메모</li>",
+    "pp2_h": "4회 집중 프로그램",
+    "pp2_m": "4회 / 회당 60분 (총 240분)",
+    "pp2_s": "정가 44,000엔 → <b>4,200엔 할인</b>",
+    "pp2_d": "한 번의 진단으로 끝나지 않고, 코칭과 실전 적용을 반복하며 개선 방향을 점검합니다.",
+    "pp2_list": "<li>1대1 코칭 × 4회</li><li>리플레이 분석</li><li>라이브 코칭</li><li>개인 과제에 맞춘 지도</li><li>피드백 메모</li>",
+    "pp3_b": "진지하게 꾸준히 성장하고 싶은 분께",
+    "pp3_h": "12회 지속 프로그램",
+    "pp3_m": "12회 / 총 720분",
+    "pp3_s": "1회 코칭 × 12회 132,000엔 → <b>22,600엔 할인</b>",
+    "pp3_d": "지속적인 지도를 통해 기초 이해부터 개인 과제 개선, 실전 적응, 자기 분석력까지 장기적인 성장을 목표로 하는 프로그램입니다.",
+    "pp3_list": "<li>1대1 코칭 × 12회</li><li>지속적인 리플레이 분석</li><li>라이브 코칭</li><li>과제에 따른 지도 내용 조정</li><li>성장 단계에 따른 우선순위 설정</li><li>피드백 메모</li>",
+    "yen": " 엔",
+    "yen2": " 엔",
+    "yen3": " 엔",
+    "yen4": " 엔",
+    "yen5": " 엔",
+    "ref_h": "취소·환불·일정 변경",
+    "ref1": "수업 예정일 3일 전까지: 무료로 일정 변경 가능",
+    "ref2": "수업 예정일 3일 전을 지난 변경: 원칙적으로 1회분 소진",
+    "ref3": "무단 결석: 1회분 소진",
+    "ref4": "운영 측·담당 코치 사정으로 변경되는 경우: 무료 일정 변경 또는 진행하지 못한 수업분 환불",
+    "ref5": "모든 플랜의 수강 유효기간은 신청일로부터 1년입니다.",
+    "step_h": "수강 신청 절차",
+    "step_p": "모두 온라인, 선착순으로 진행됩니다.",
+    "st1_h": "신청 폼 작성",
+    "st1_p": "닉네임·배틀태그·티어·희망 롤·희망 플랜 등 기본 정보 입력.",
+    "st2_h": "일정 조정",
+    "st2_p": "48시간 이내에 스태프가 연락해 플랜과 일정을 조율합니다. 결제 방법은 일정 조율 후 안내드립니다.",
+    "st3_h": "수강료 결제",
+    "st3_p": "일정 확정 후 안내된 방법으로 수강료를 결제.",
+    "st4_h": "수업 확정",
+    "st4_p": "입금 확인 후 수업 일정·시간이 최종 확정(선착순 마감).",
+    "mis_p1": "가장 낮은 곳에서 높이 올라 빛난다. 99DIVINE 아카데미는 단순한 '랭크 올리기 강좌'가 아닙니다. 수강생이 게임 속에서 자신의 잠재력을 발견하고, 그 가능성을 현실로 넓혀가는 과정을 함께합니다.",
+    "mis_p2": "<b style='color:var(--gold)'>배움의 목표는 '승리 그 자체'가 아니라 '성장'.</b> 99DIVINE 코칭은 단순한 랭크 업뿐만 아니라, 실력 향상을 통해 판단력·지속력·도전하는 힘을 기르는 교육입니다.",
+    "fin_h": "READY TO <span>RISE?</span>",
+    "fin_p": "당신의 성장 여정은 지금 여기서 시작됩니다. 선착순으로 마감됩니다.",
+    "fin_btn": "수강 신청하기 →",
+    "foot": "© 99DIVINE / 9ND — Overwatch Online Coaching. Luce In Altis.",
+    "cp_h": "코칭 프로그램",
+    "cp_p": "현재 실력과 목표에 맞춰 개인 코칭, 팀 코칭, 롤별 그룹 중 선택할 수 있습니다. 각 플랜별 진행 방식과 비용을 확인하세요.",
+    "cpf1": "리플레이 분석",
+    "cpf2": "실전·스크림",
+    "cpf3": "피드백",
+    "cpf4": "다음 과제 설정",
+    "tab_personal": "개인 코칭",
+    "tab_team": "팀 코칭",
+    "tab_role": "롤별 그룹",
+    "tc_intro": "사전에 리플레이를 분석하고, 실제 스크림을 관전한 뒤 팀 전체에 피드백을 진행합니다. 개인 기량뿐 아니라 연계·콜·포지셔닝·궁극기 관리·조합 이해 등 팀으로서 이기기 위해 필요한 부분을 개선합니다.",
+    "tc4_label": "4회 플랜",
+    "tc4_list": "<li>팀 현황 분석</li><li>콜·포커스·연계 개선</li><li>스킬·궁극기·조합 이해</li><li>종합 평가와 향후 연습 방침</li>",
+    "tc8_label": "8회 집중 플랜",
+    "tc8_list": "<li>팀 진단</li><li>역할과 플레이 스타일 정리</li><li>포지셔닝과 셋업</li><li>인게이지와 타겟 선택</li><li>스킬·궁극기 관리</li><li>상대에 맞춘 경기 중 수정</li><li>대회를 상정한 실전 연습</li><li>최종 평가와 향후 방침</li>",
+    "tt_per": "／ 1인당",
+    "tt1_note": "5명 참가 시",
+    "tt2_note": "1회당 5,750엔・5명 참가 시",
+    "tt3_note": "1회당 5,250엔・5명 참가 시",
+    "tt1_team": "팀 요금 <b>33,000엔</b>",
+    "tt2_team": "팀 요금 <b>115,000엔</b>",
+    "tt3_team": "팀 요금 <b>210,000엔</b>",
+    "tc_time_h": "1회 팀 코칭에 포함되는 예상 시간",
+    "tc_time_tbl": "<tr class='ts-hd'><th>내용</th><th class='ts-t'>예상 시간</th></tr><tr><td class='ts-l'>사전 리플레이 분석</td><td class='ts-t'>30〜45분</td></tr><tr><td class='ts-l'>스크림 관전</td><td class='ts-t'>90〜120분</td></tr><tr><td class='ts-l'>스크림 종료 후 피드백</td><td class='ts-t'>45〜60분</td></tr><tr><td class='ts-l'>피드백 메모・다음 과제 정리</td><td class='ts-t'>약 15분</td></tr><tr class='ts-total'><td class='ts-l'>총 대응 시간</td><td class='ts-t'>약 3〜4시간</td></tr>",
+    "tc_time_note": "총 대응 시간에는 수강생이 함께하지 않는 사전 분석과 메모 작성도 포함됩니다. 스크림 관전은 90~120분, 이후 피드백은 45~60분이 기준입니다.",
+    "tt1_b": "우선 1회부터",
+    "tt1_h": "1회 플랜",
+    "tt1_m": "1회 / 1팀",
+    "tt1_d": "사전 리플레이 분석・스크림 관전・팀 피드백・다음 연습을 위한 목표 설정을 포함합니다.",
+    "tt1_list": "<li>사전 리플레이 분석</li><li>스크림 관전</li><li>스크림 후 피드백</li><li>다음까지의 과제 설정</li>",
+    "tt2_h": "4회 플랜",
+    "tt2_m": "4회 / 주 1회 기준",
+    "tt2_d": "매주 코칭으로 꾸준히 개선하고 싶은 팀에게 추천.",
+    "tt2_list": "<li>매회: 리플레이 분석＋스크림 관전</li><li>콜·포커스·연계 개선</li><li>스킬·궁극기·조합 이해</li><li>종합 평가와 향후 연습 방침</li>",
+    "tt3_b": "대회를 향해",
+    "tt3_h": "8회 집중 플랜",
+    "tt3_m": "8회 / 주 2회 기준",
+    "tt3_d": "대회 준비나 단기 집중으로 개선하고 싶은 팀에게 추천.",
+    "tt3_list": "<li>매회: 리플레이 분석＋스크림 관전</li><li>포지셔닝·셋업</li><li>인게이지와 타겟 선택</li><li>경기 중 수정·궁극기 관리</li><li>대회 상정 실전 연습과 최종 평가</li>",
+    "tc_note": "※ 요금은 5명 참가 시 1인당 금액입니다. 결제는 팀 단위로 진행됩니다.<br>※ 모든 플랜에 사전 리플레이 분석, 스크림 관전, 팀 피드백이 포함됩니다.",
+    "sticky": "수강 신청하기",
+    "signup_note": "폼 제출 후 48시간 이내에 연락드립니다. 신청 시 바로 결제하지 않습니다.",
+    "plan_note": "신청 폼에서 희망 플랜을 선택해주세요.",
+    "plans_label": "요금·플랜",
+    "curriculum_personal": "개인 코칭 커리큘럼 보기",
+    "curriculum_team": "팀 코칭 내용·소요시간 보기",
+    "curriculum_role": "롤별 수업 내용·개강 일정 보기",
+    "recommended": "추천",
+    "rev_more": "후기 전문 보기",
+    "coach_style_h": "지도 방식",
+    "coach_topics_h": "지도 내용",
+    "coach_topics_p": "포지셔닝·스킬/궁극기 사용 판단·롤 이해",
+    "coach_fit_h": "이런 분께 추천",
+    "coach_fit_p": "자신의 플레이를 객관적으로 돌아보고, 무엇부터 연습해야 할지 정리하고 싶은 분께.",
+    "essentials_h": "수강 전에 알아두세요",
+    "venue_h": "수업 진행",
+    "venue_p": "Discord로 진행하는 온라인 코칭입니다.",
+    "language_h": "수업 언어",
+    "language_p": "일본어·한국어를 지원하며, 일본어 수업에는 통역이 동석합니다.",
+    "prepare_h": "미리 준비하면 좋은 것",
+    "prepare_p": "상담하고 싶은 고민과 목표, 돌아보고 싶은 경기의 리플레이 코드.",
+    "reply_h": "신청 후 안내",
+    "reply_p": "48시간 이내에 스태프가 연락해 플랜과 일정을 조율합니다. 결제 방법은 일정 조율 후 안내드립니다.",
+    "example_label": "코칭 진행 예시",
+    "example_h": "“무슨 일이 있었나”에서<br>“다음에 어떻게 움직일까”로.",
+    "example_1h": "장면 돌아보기",
+    "example_1p": "아군이 복귀하기 전에 교전을 시작한 장면.",
+    "example_2h": "판단의 이유 정리",
+    "example_2p": "아군의 인원과 위치를 확인했는지 돌아봅니다.",
+    "example_3h": "다음 경기에서 실천",
+    "example_3p": "교전을 시작하기 전, 아군이 합류했는지 확인합니다.",
+    "example_note": "수업 이해를 돕기 위한 예시이며, 실제 수강생 기록은 아닙니다.",
+    "expiry_h": "수강 유효기간",
+    "faq_expiry_q": "수강 유효기간이 있나요?",
+    "faq_expiry_a": "모든 플랜의 수강 유효기간은 신청일로부터 1년입니다.",
+    "reschedule_h": "일정 변경·결석",
+    "cta_pp3": "개인 12회 신청하기",
+    "cta_pp2": "개인 4회 신청하기",
+    "cta_pp1": "개인 1회 신청하기",
+    "cta_tt3": "팀 8회 신청하기",
+    "cta_tt2": "팀 4회 신청하기",
+    "cta_tt1": "팀 1회 신청하기",
+    "cta_pg": "그룹 클래스 신청하기",
+    "cancel_h": "취소·중도 해지",
+    "cancel_before": "첫 수업 3일 전까지 취소하면 납부한 수강료를 전액 환불합니다. 첫 수업 일정이 확정되지 않은 경우에도 전액 환불합니다.",
+    "cancel_after": "수강 시작 후에도 중도 해지가 가능합니다. 할인 적용된 구매 플랜 단가로 소진분을 계산하고, 납부액에서 이를 차감한 잔액을 환불합니다. 일반 1회 요금으로 재계산하거나 별도의 해지 위약금을 부과하지 않습니다.",
+    "cancel_late": "수업 예정일 3일 전을 지난 변경·취소 또는 무단결석은 원칙적으로 1회분 소진으로 처리하며 환불 대상에서 제외합니다. 첫 수업 전 취소에도 같은 기준을 적용합니다.",
+    "cancel_example": "예: 개인 4회 플랜 39,800엔을 전액 납부하고 1회를 소진했다면, 남은 3회분 29,850엔을 환불합니다.",
+    "cancel_calc": "전액 납부 시: 환불액 = 구매 플랜 금액 × 미소진 회차 ÷ 총 회차(1엔 미만 올림). 분할 납부 시에는 실제 납부액에서 같은 플랜 단가로 계산한 소진분을 차감하고 잔액이 있는 경우 환불합니다. 팀 플랜은 팀 단위 계약·결제 금액을 기준으로 정산합니다.",
+    "cancel_contact": "취소·중도 해지를 원하는 경우 담당 스태프에게 연락해주세요.",
+    "expiry_extra": "유효기간이 끝났을 때 남은 미소진분도 위 기준으로 정산·환불합니다. 운영 측 사정으로 기한 내 수강이 어려운 경우에는 기간 연장 또는 미소진분 환불로 대응합니다.",
+    "policy_scope": "이 조건은 신규 신청에 적용됩니다. 기존 수강생은 신청 당시 안내받은 조건을 확인해주세요."
   }
 };
 
@@ -1250,14 +1639,28 @@ initLang();
   const panels=[...document.querySelectorAll('.cp-panel')];
   if(!tabs.length) return;
   function activate(name){
-    tabs.forEach(t=>t.classList.toggle('on', t.dataset.tab===name));
+    tabs.forEach(t=>{
+      const on = t.dataset.tab===name;
+      t.classList.toggle('on', on);
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+    });
     panels.forEach(p=>{
       const on = p.dataset.panel===name;
       p.classList.toggle('on', on);
       if(on) p.querySelectorAll('.rv,.rv-stagger').forEach(el=>el.classList.add('in'));
     });
   }
-  tabs.forEach(t=>t.addEventListener('click',()=>activate(t.dataset.tab)));
+  tabs.forEach((t,index)=>{
+    t.addEventListener('click',()=>activate(t.dataset.tab));
+    t.addEventListener('keydown',event=>{
+      const next = event.key==='ArrowRight' ? (index+1)%tabs.length : event.key==='ArrowLeft' ? (index+tabs.length-1)%tabs.length : event.key==='Home' ? 0 : event.key==='End' ? tabs.length-1 : null;
+      if(next===null) return;
+      event.preventDefault();
+      activate(tabs[next].dataset.tab);
+      tabs[next].focus();
+    });
+  });
 })();
 </script>
 <!-- GA4 クリック計測: data-ga を持つ要素のクリックをイベント送信 -->

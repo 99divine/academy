@@ -673,6 +673,34 @@
     .diagnosis-actions .btn{min-width:0}
   }
 
+
+  /* Visible coaching value and illustrative feedback */
+  .learning-value{margin:0 0 36px;padding:28px;border:1px solid var(--line);border-radius:12px;background:var(--bg-2)}
+  .learning-value h3,.feedback-example h3{font-size:26px;line-height:1.5;margin-bottom:12px}
+  .value-intro{font-size:16px;line-height:1.8;color:var(--ink-dim);max-width:850px}
+  .value-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:24px}
+  .value-grid article{border-top:2px solid var(--gold);padding-top:16px}
+  .value-grid h4{font-size:18px;margin-bottom:10px}
+  .value-grid p{font-size:16px;line-height:1.8;color:var(--ink-dim)}
+  .coach-proof{font-size:14px;line-height:1.7;color:var(--gold);margin-top:12px}
+  .plan-purpose{font-size:17px;line-height:1.7;color:var(--gold);margin:10px 0 16px;font-weight:700}
+  .feedback-example{margin:32px 0;padding:28px;border:1px solid var(--line);border-radius:12px;background:var(--bg-2)}
+  .sample-note{font-size:14px;line-height:1.8;color:var(--ink-dim);margin-bottom:24px}
+  .sample-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+  .sample-grid article{border-top:2px solid var(--gold);padding-top:18px;min-width:0}
+  .sample-grid h4{font-size:18px;line-height:1.6;margin-bottom:18px}
+  .sample-grid dt{font-size:14px;color:var(--gold);margin-bottom:5px}
+  .sample-grid dd{font-size:16px;color:var(--ink-dim);line-height:1.8;margin:0 0 18px}
+  .memo-link{font-size:16px;line-height:1.8;border-top:1px solid var(--line);padding-top:20px;margin-top:10px}
+  .team-included{margin:0 0 32px;padding:24px;border:1px solid var(--line);border-radius:12px;background:var(--bg-2)}
+  .team-included .ts-time{margin-top:0}
+  .team-included .ts-note{font-size:14px;line-height:1.8;margin-bottom:0}
+  @media(max-width:700px){
+    .learning-value,.feedback-example,.team-included{padding:20px}
+    .value-grid,.sample-grid{grid-template-columns:1fr;gap:20px}
+    .learning-value h3,.feedback-example h3{font-size:23px}
+    .coach-proof{font-size:14px;overflow-wrap:anywhere}
+  }
 </style>
 </head>
 <body>
@@ -700,7 +728,7 @@
     <div>
       <span class="eyebrow" data-t="hero_eyebrow">99DIVINE ACADEMY / OVERWATCH COACHING</span>
       <h1 class="display"><span data-t="hero_h1a">PLAY</span><span class="l2" data-t="hero_h1b">LIKE PRO.</span></h1>
-      <p class="lead" data-t="hero_lead">競技の現場を知るコーチと、次の一歩を明確に。実戦技術から目標設定・練習習慣まで、プレーと向き合い方の両面から成長を支えます。</p>
+      <p class="lead" data-t="hero_lead">現役OWCSコーチの実戦指導と、目標を練習につなぐコーチング。自分の課題、その理由、次に試す行動を明確にします。</p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="#diagnosis" data-ga="cta_view_diagnosis" data-t="hero_apply">30分診断から始める</a>
         <a class="btn btn-ghost" href="#pricing" data-ga="cta_view_pricing" data-t="hero_price">料金を見る</a>
@@ -715,7 +743,7 @@
       </div>
     </div>
     <div class="hero-media diagnosis-preview" id="diagnosis">
-<p class="diag-label" data-t="diag_eyebrow">初めての方へ</p><h2 data-t="diag_h">30分で、課題と次の一手を。</h2><p class="diag-price" data-t="diag_price">30分・5,000円（税込）</p><p class="diag-scope" data-t="diag_scope">個人は1名、チームは1チームの総額。各個人・各チームにつき初回1回限定です。</p><ol class="diagnosis-steps"><li><span class="diag-duration" data-t="diag_minutes5">5分</span><div><h3 data-t="diag_step1_h">目標を確認</h3><p data-t="diag_step1_p">相談したいことと、目指す状態を共有。</p></div></li><li><span class="diag-duration" data-t="diag_minutes20">20分</span><div><h3 data-t="diag_step2_h">重要な課題を診断</h3><p data-t="diag_step2_p">リプレイ、または目標・練習の方向性から、優先する課題を確認。</p></div></li><li><span class="diag-duration" data-t="diag_minutes5">5分</span><div><h3 data-t="diag_step3_h">次の行動を整理</h3><p data-t="diag_step3_p">次の練習で取り組むことを明確にします。</p></div></li></ol><p class="diag-result" data-t="diag_result">診断だけの受講も歓迎。課題と次の練習で試すことを持ち帰れます。</p><div class="diagnosis-actions"><a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_diag_personal_hero" data-plan="diagnosis-personal" data-t="diag_personal_cta">個人診断を申し込む</a><a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_diag_team_hero" data-plan="diagnosis-team" data-t="diag_team_cta">チーム診断を申し込む</a></div><p class="diag-credit-short" data-t="diag_credit_short">診断後30日以内に対象プランへ進むと、診断料5,000円をプラン料金から差し引きます。</p></div>
+<p class="diag-label" data-t="diag_eyebrow">初めての方へ</p><h2 data-t="diag_h">30分で、課題と次の一手を。</h2><p class="diag-price" data-t="diag_price">30分・5,000円（税込）</p><p class="diag-scope" data-t="diag_scope">個人は1名、チームは1チームの総額。各個人・各チームにつき初回1回限定です。</p><ol class="diagnosis-steps"><li><span class="diag-duration" data-t="diag_minutes5">5分</span><div><h3 data-t="diag_step1_h">目標を確認</h3><p data-t="diag_step1_p">相談したいことと、目指す状態を共有。</p></div></li><li><span class="diag-duration" data-t="diag_minutes20">20分</span><div><h3 data-t="diag_step2_h">重要な課題を診断</h3><p data-t="diag_step2_p">リプレイ、または目標・練習の方向性から、優先する課題を確認。</p></div></li><li><span class="diag-duration" data-t="diag_minutes5">5分</span><div><h3 data-t="diag_step3_h">次の行動を整理</h3><p data-t="diag_step3_p">次の練習で取り組むことを明確にします。</p></div></li></ol><p class="diag-result" data-t="diag_result">診断で整理するのは、優先する課題・その理由・次の練習で試すこと。診断だけの受講も歓迎です。</p><div class="diagnosis-actions"><a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_diag_personal_hero" data-plan="diagnosis-personal" data-t="diag_personal_cta">個人診断を申し込む</a><a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_diag_team_hero" data-plan="diagnosis-team" data-t="diag_team_cta">チーム診断を申し込む</a></div><p class="diag-credit-short" data-t="diag_credit_short">診断後30日以内に対象プランへ進むと、診断料5,000円をプラン料金から差し引きます。</p></div>
   </div>
 </section>
 
@@ -838,7 +866,7 @@
       <div class="sec-num">06 / COACH</div>
       <h2 data-t="coach_h">専門性から選ぶ、2人のコーチ</h2>
     </div>
-<p class="coach-intro" data-t="coach_intro">プレーの精度を高めたいときも、目標や練習の方向性を整えたいときも。今の課題に合うコーチを選べます。</p><div class="coach-compare"><article class="coach-profile" data-coach-profile="gyomin"><div class="coach-portrait"><img src="img/coach-gyomin.png" alt="GYOMIN" loading="lazy" decoding="async" width="354" height="472"></div><div class="coach-summary"><p class="coach-role" data-t="coach_gyomin_role">現役OWCSコーチ</p><h3>GYOMIN</h3><p class="coach-focus" data-t="coach_gyomin_focus">実戦技術を磨く</p><dl><dt><span data-t="coach_strength_label">得意なテーマ</span></dt><dd data-t="coach_gyomin_strength">ポジショニング、スキル・ULT判断、リプレイ分析。</dd><dt><span data-t="coach_fit_label">こんな悩みなら</span></dt><dd data-t="coach_gyomin_fit">「この場面で、どう動けばよかった？」</dd></dl><a class="btn btn-ghost coach-select" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_choose_gyomin" data-coach="gyomin" data-t="coach_choose_gyomin">GYOMINを希望する</a></div></article><article class="coach-profile" data-coach-profile="supreme"><div class="coach-portrait"><img src="img/coach-supreme.jpg" alt="Supreme" loading="lazy" decoding="async" width="354" height="472"></div><div class="coach-summary"><p class="coach-role" data-t="coach_supreme_role">FOUNDER / COACH</p><h3>Supreme</h3><p class="coach-focus" data-t="coach_supreme_focus">考え方と習慣を整える</p><dl><dt><span data-t="coach_strength_label">得意なテーマ</span></dt><dd data-t="coach_supreme_strength">コンセプトと目標、チームの判断軸、成長・立て直しの習慣。</dd><dt><span data-t="coach_fit_label">こんな悩みなら</span></dt><dd data-t="coach_supreme_fit">「何を目指し、どう練習を続ければいい？」</dd></dl><a class="btn btn-ghost coach-select" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_choose_supreme" data-coach="supreme" data-t="coach_choose_supreme">Supremeを希望する</a></div></article></div><details class="coach-details"><summary><span data-t="coach_details_label">指導スタイル・経歴を見る</span></summary><div class="coach-detail-grid"><div><h3>GYOMIN</h3><p data-t="coach_gyomin_detail">リプレイ分析とライブコーチングで、位置取りやスキル・ULTの使い方を具体的に確認。次の試合で試す改善点を整理します。</p><ul class="ach-list">
+<p class="coach-intro" data-t="coach_intro">プレーの精度を高めたいときも、目標や練習の方向性を整えたいときも。今の課題に合うコーチを選べます。</p><div class="coach-compare"><article class="coach-profile" data-coach-profile="gyomin"><div class="coach-portrait"><img src="img/coach-gyomin.png" alt="GYOMIN" loading="lazy" decoding="async" width="354" height="472"></div><div class="coach-summary"><p class="coach-role" data-t="coach_gyomin_role">現役OWCSコーチ</p><h3>GYOMIN</h3><p class="coach-focus" data-t="coach_gyomin_focus">実戦技術を磨く</p><p class="coach-proof" data-t="coach_gyomin_proof">2024 OWCS JP Stage 2 優勝の指導経験</p><dl><dt><span data-t="coach_strength_label">得意なテーマ</span></dt><dd data-t="coach_gyomin_strength">ポジショニング、スキル・ULT判断、リプレイ分析。</dd><dt><span data-t="coach_fit_label">こんな悩みなら</span></dt><dd data-t="coach_gyomin_fit">「この場面で、どう動けばよかった？」</dd><dt data-t="coach_output_label">授業で具体化すること</dt><dd data-t="coach_gyomin_output">その場面での判断理由と、次の試合で試す位置取り・スキルの選択。</dd></dl><a class="btn btn-ghost coach-select" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_choose_gyomin" data-coach="gyomin" data-t="coach_choose_gyomin">GYOMINを希望する</a></div></article><article class="coach-profile" data-coach-profile="supreme"><div class="coach-portrait"><img src="img/coach-supreme.jpg" alt="Supreme" loading="lazy" decoding="async" width="354" height="472"></div><div class="coach-summary"><p class="coach-role" data-t="coach_supreme_role">FOUNDER / COACH</p><h3>Supreme</h3><p class="coach-focus" data-t="coach_supreme_focus">目標を、練習の指針へ</p><p class="coach-proof" data-t="coach_supreme_proof">UC Irvine OWチーム 主将・アシスタントコーチ経験</p><dl><dt><span data-t="coach_strength_label">得意なテーマ</span></dt><dd data-t="coach_supreme_strength">コンセプトと目標、チームの判断軸、成長・立て直しの習慣。</dd><dt><span data-t="coach_fit_label">こんな悩みなら</span></dt><dd data-t="coach_supreme_fit">「何を目指し、どう練習を続ければいい？」</dd><dt data-t="coach_output_label">授業で具体化すること</dt><dd data-t="coach_supreme_output">目指すコンセプトと、今の自分・チームが練習で優先する行動。</dd></dl><a class="btn btn-ghost coach-select" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_choose_supreme" data-coach="supreme" data-t="coach_choose_supreme">Supremeを希望する</a></div></article></div><details class="coach-details"><summary><span data-t="coach_details_label">指導スタイル・経歴を見る</span></summary><div class="coach-detail-grid"><div><h3>GYOMIN</h3><p data-t="coach_gyomin_detail">リプレイ分析とライブコーチングで、位置取りやスキル・ULTの使い方を具体的に確認。次の試合で試す改善点を整理します。</p><ul class="ach-list">
           <li><b>2026</b><span>Saudi eLeague Woman <span class="ach-win" data-t="ach_win">優勝</span></span></li>
           <li><b>2025</b><span>OWCS Stage 2 Pacific <span class="ach-win" data-t="ach_runner_up">準優勝</span></span></li>
           <li><b>2025</b><span>OWCS Stage 1 Japan 3rd</span></li>
@@ -861,6 +889,7 @@
 
 
 
+<div class="learning-value" id="learning-value"><h3 data-t="value_h">授業の学びを、次の練習へ。</h3><p class="value-intro" data-t="value_p">個人・チームコーチングでは、競技経験のあるコーチが課題を整理。理由を理解し、実戦で試し、振り返るための指針をつくります。</p><div class="value-grid"><article><h4 data-t="value_1_h">課題と理由を知る</h4><p data-t="value_1_p">プレーや練習の悩みを整理し、何が判断に影響しているかを確認します。</p></article><article><h4 data-t="value_2_h">次の行動を決める</h4><p data-t="value_2_p">今の目標に合わせて、優先して試すプレーや練習の取り組み方を具体化します。</p></article><article><h4 data-t="value_3_h">実践から見直す</h4><p data-t="value_3_p">継続プランでは、試した結果を次の授業で振り返り、残った課題や練習方針を調整します。</p></article></div></div>
     <div class="cp-tabs" role="tablist">
       <button class="cp-tab on" data-tab="personal" id="tab-personal" role="tab" aria-controls="panel-personal" aria-selected="true" tabindex="0" data-ga="cta_tab_personal" data-t="tab_personal">個人コーチング</button>
       <button class="cp-tab" data-tab="team" id="tab-team" role="tab" aria-controls="panel-team" aria-selected="false" tabindex="-1" data-ga="cta_tab_team" data-t="tab_team">チームコーチング</button>
@@ -869,34 +898,34 @@
 
     <!-- PERSONAL -->
     <div class="cp-panel on" data-panel="personal" id="panel-personal" role="tabpanel" aria-labelledby="tab-personal">
-      <p class="pc-intro" data-t="pc_intro">1対1で、一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。リプレイ分析またはライブコーチングを通じて、現在の問題点を明確にし、改善につなげます。</p><article class="diagnosis-offer" data-diagnosis="personal"><div><p class="diag-label" data-t="diag_eyebrow">初めての方へ</p><h3 data-t="diag_personal_h">個人向け・初回30分診断</h3><p data-t="diag_personal_desc">目標確認5分、重要な課題の診断20分、改善の方向性の整理5分。リプレイ、または目標・練習の方向性を確認し、まず何に取り組むかを明確にします。</p><p class="diag-result" data-t="diag_result">診断だけの受講も歓迎。課題と次の練習で試すことを持ち帰れます。</p></div><div class="diagnosis-offer-action"><p class="diag-offer-price" data-t="diag_personal_price">5,000円 / 1名・30分（税込）</p><a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_diag_personal" data-plan="diagnosis-personal" data-t="diag_personal_cta">個人診断を申し込む</a></div><div class="diagnosis-credit"><h4 data-t="diag_credit_h">継続する場合の料金</h4><p data-t="diag_credit_short">診断後30日以内に対象プランへ進むと、診断料5,000円をプラン料金から差し引きます。</p><p data-t="diag_personal_credit">個人4回プランは追加34,800円、12回プランは追加104,400円。診断料を含めた総額は、それぞれ39,800円・109,400円です。</p></div></article><h3 class="ptag" data-t="plans_label">料金・プラン</h3>
+      <p class="pc-intro" data-t="pc_intro">1対1で、一人ひとりの課題・目標・プレイスタイルに合わせて指導内容を調整します。リプレイ分析またはライブコーチングを通じて、現在の問題点を明確にし、改善につなげます。</p><article class="diagnosis-offer" data-diagnosis="personal"><div><p class="diag-label" data-t="diag_eyebrow">初めての方へ</p><h3 data-t="diag_personal_h">個人向け・初回30分診断</h3><p data-t="diag_personal_desc">目標確認5分、重要な課題の診断20分、改善の方向性の整理5分。リプレイ、または目標・練習の方向性を確認し、まず何に取り組むかを明確にします。</p><p class="diag-result" data-t="diag_result">診断で整理するのは、優先する課題・その理由・次の練習で試すこと。診断だけの受講も歓迎です。</p></div><div class="diagnosis-offer-action"><p class="diag-offer-price" data-t="diag_personal_price">5,000円 / 1名・30分（税込）</p><a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_diag_personal" data-plan="diagnosis-personal" data-t="diag_personal_cta">個人診断を申し込む</a></div><div class="diagnosis-credit"><h4 data-t="diag_credit_h">継続する場合の料金</h4><p data-t="diag_credit_short">診断後30日以内に対象プランへ進むと、診断料5,000円をプラン料金から差し引きます。</p><p data-t="diag_personal_credit">個人4回プランは追加34,800円、12回プランは追加104,400円。診断料を含めた総額は、それぞれ39,800円・109,400円です。</p></div></article><h3 class="ptag" data-t="plans_label">料金・プラン</h3>
       <div class="price-row p3">
           <div class="pcard">
             <div class="pbadge" data-t="pp1_b">初めての方におすすめ</div>
-            <h4 data-t="pp1_h">1回コーチング</h4>
+            <h4 data-t="pp1_h">1回コーチング</h4><p class="plan-purpose" data-t="pp1_focus">課題を深く理解する</p>
             <div class="meta" data-t="pp1_m">1回 / 60分</div>
             <div class="amt">11,000<small data-t="yen">円</small></div>
-            <div class="desc" data-t="pp1_d">まずは自分の課題を知りたい方や、特定の悩みを集中的に改善したい方向け。</div>
+            <div class="desc" data-t="pp1_d">気になるプレーや練習の悩みを掘り下げ、改善する理由と次の練習課題を整理します。フィードバックメモで受講内容を振り返れます。</div>
             <ul class="plist" data-t="pp1_list"><li>リプレイ分析 または ライブコーチング</li><li>現在の課題分析</li><li>改善ポイントの提示</li><li>フィードバックメモ</li></ul>
           <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_pp1" data-plan="personal-1" data-t="cta_pp1">個人1回で申し込む</a></div>
           <div class="pcard feature"><span class="recommend-badge" data-t="recommended">おすすめ</span>
-            <h4 data-t="pp2_h">4回集中プログラム</h4>
+            <h4 data-t="pp2_h">4回集中プログラム</h4><p class="plan-purpose" data-t="pp2_focus">試して、振り返り、調整する</p>
             <div class="meta" data-t="pp2_m">4回 / 1回60分（計240分）</div>
             <div class="amt">39,800<small data-t="yen2">円</small></div>
             <div class="psave" data-t="pp2_s">通常44,000円 → <b>4,200円お得</b></div>
-            <div class="desc" data-t="pp2_d">一度の分析で終わらず、コーチングと学んだことを実戦で試すサイクルを重ねながら、改善の方向性を確認します。</div>
+            <div class="desc" data-t="pp2_d">学んだことを実戦で試し、次のコーチングで振り返る。4回を通じて、実行できたことと残った課題を確認し、改善の優先順位を調整します。</div>
             <ul class="plist" data-t="pp2_list"><li>1対1コーチング × 4回</li><li>リプレイ分析</li><li>ライブコーチング</li><li>個人課題に合わせた指導</li><li>フィードバックメモ</li></ul>
           <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_pp2" data-plan="personal-4" data-t="cta_pp2">個人4回で申し込む</a></div>
           <div class="pcard">
             <div class="pbadge" data-t="pp3_b">本気で継続的に成長したい方に</div>
-            <h4 data-t="pp3_h">12回継続プログラム</h4>
+            <h4 data-t="pp3_h">12回継続プログラム</h4><p class="plan-purpose" data-t="pp3_focus">自分で改善を続ける土台をつくる</p>
             <div class="meta" data-t="pp3_m">12回 / 計720分</div>
             <div class="amt">109,400<small data-t="yen3">円</small></div>
             <div class="psave" data-t="pp3_s">1回コーチング × 12回 132,000円 → <b>22,600円お得</b></div>
-            <div class="desc" data-t="pp3_d">継続的な指導を通じて、基礎理解から個人課題の改善、実戦適応、自己分析力まで、長期的な成長を目指すプログラムです。</div>
+            <div class="desc" data-t="pp3_d">基礎・個人課題・実戦での判断を継続して見直します。状況の変化に合わせて練習方針を調整し、自分で課題を見つけ、改善を続けるための判断軸を育てます。</div>
             <ul class="plist" data-t="pp3_list"><li>1対1コーチング × 12回</li><li>継続的なリプレイ分析</li><li>ライブコーチング</li><li>課題に応じた指導内容の調整</li><li>成長段階に応じた優先順位設定</li><li>フィードバックメモ</li></ul>
           <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_pp3" data-plan="personal-12" data-t="cta_pp3">個人12回で申し込む</a></div>
-        </div><p class="plan-note" data-t="ref5">すべてのプランの受講有効期限は、お申し込み日から1年間です。</p><p class="plan-note" data-t="plan_note">申込フォーム内で、ご希望のプランを選択してください。</p><p class="signup-note" data-t="signup_note">フォーム送信後48時間以内にご連絡します。お申し込み時の決済はありません。</p><details class="program-details"><summary><span data-t="curriculum_personal">個人コーチングのカリキュラムを見る</span></summary><div class="program-detail-body">
+        </div><p class="plan-note" data-t="ref5">すべてのプランの受講有効期限は、お申し込み日から1年間です。</p><p class="plan-note" data-t="plan_note">申込フォーム内で、ご希望のプランを選択してください。</p><p class="signup-note" data-t="signup_note">フォーム送信後48時間以内にご連絡します。お申し込み時の決済はありません。</p><aside class="feedback-example" id="feedback-example"><h3 data-t="sample_h">コーチングで整理する内容の例</h3><p class="sample-note" data-t="sample_note">指導内容を説明するための例です。実際の受講生の記録・成果や、配布メモそのものではありません。</p><div class="sample-grid"><article><h4 data-t="sample_tech_h">GYOMIN / プレーの判断</h4><dl><dt data-t="sample_scene">相談する場面</dt><dd data-t="sample_t1">味方が合流する前に仕掛け、孤立してしまう。</dd><dt data-t="sample_reason">確認すること</dt><dd data-t="sample_t2">仕掛ける前に、味方の人数・位置・合流までの時間を確認できていたか。</dd><dt data-t="sample_action">次の練習で試すこと</dt><dd data-t="sample_t3">味方が参加できる状態か確認し、待つか仕掛けるかを判断する。</dd><dt data-t="sample_review">振り返るポイント</dt><dd data-t="sample_t4">孤立した場面と合流を待てた場面で、判断に使った情報を比べる。</dd></dl></article><article><h4 data-t="sample_direction_h">Supreme / 練習の方向性</h4><dl><dt data-t="sample_scene">相談する場面</dt><dd data-t="sample_s1">負けるたびに練習方針を変え、何を改善しているか分からなくなる。</dd><dt data-t="sample_reason">確認すること</dt><dd data-t="sample_s2">目指すプレースタイルと今の課題、結果だけで練習を評価していないか。</dd><dt data-t="sample_action">次の練習で試すこと</dt><dd data-t="sample_s3">今優先する行動を決め、勝敗と分けて実行できたかを振り返る。</dd><dt data-t="sample_review">振り返るポイント</dt><dd data-t="sample_s4">実行できた条件・難しかった条件を整理し、次の練習方針につなげる。</dd></dl></article></div><p class="memo-link" data-t="memo_link">個人の通常プランには、受講内容と改善ポイントを振り返るフィードバックメモが含まれます。内容は課題・担当コーチに応じて調整します。</p></aside><details class="program-details"><summary><span data-t="curriculum_personal">個人コーチングのカリキュラムを見る</span></summary><div class="program-detail-body">
 
       <div class="curri">
       <div class="gstep">
@@ -934,7 +963,11 @@
 
     <!-- TEAM -->
     <div class="cp-panel" data-panel="team" id="panel-team" role="tabpanel" aria-labelledby="tab-team">
-      <p class="pc-intro" data-t="tc_intro">事前にリプレイを分析し、実際のスクリムを観戦した上で、チーム全体にフィードバックを行います。個人の技術だけでなく、連携・コール・ポジショニング・ULT管理・構成理解など、チームとして勝つために必要な部分を改善します。</p><article class="diagnosis-offer" data-diagnosis="team"><div><p class="diag-label" data-t="diag_eyebrow">初めての方へ</p><h3 data-t="diag_team_h">チーム向け・初回30分診断</h3><p data-t="diag_team_desc">代表者を中心に、チーム共通の課題を1〜2点に絞って診断。目標確認5分、リプレイまたは目標・練習方針をもとにした課題診断20分、改善の方向性の整理5分で進めます。</p><p class="diag-result" data-t="diag_result">診断だけの受講も歓迎。課題と次の練習で試すことを持ち帰れます。</p></div><div class="diagnosis-offer-action"><p class="diag-offer-price" data-t="diag_team_price">5,000円 / 1チーム・30分（税込）</p><a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_diag_team" data-plan="diagnosis-team" data-t="diag_team_cta">チーム診断を申し込む</a></div><div class="diagnosis-credit"><h4 data-t="diag_credit_h">継続する場合の料金</h4><p data-t="diag_credit_short">診断後30日以内に対象プランへ進むと、診断料5,000円をプラン料金から差し引きます。</p><p data-t="diag_team_credit">チーム4回プランは追加110,000円、8回プランは追加205,000円。診断料を含めたチーム総額は、それぞれ115,000円・210,000円です。</p></div></article><h3 class="ptag" data-t="plans_label">料金・プラン</h3>
+      <p class="pc-intro" data-t="tc_intro">事前にリプレイを分析し、実際のスクリムを観戦した上で、チーム全体にフィードバックを行います。個人の技術だけでなく、連携・コール・ポジショニング・ULT管理・構成理解など、チームとして勝つために必要な部分を改善します。</p><article class="diagnosis-offer" data-diagnosis="team"><div><p class="diag-label" data-t="diag_eyebrow">初めての方へ</p><h3 data-t="diag_team_h">チーム向け・初回30分診断</h3><p data-t="diag_team_desc">代表者を中心に、チーム共通の課題を1〜2点に絞って診断。目標確認5分、リプレイまたは目標・練習方針をもとにした課題診断20分、改善の方向性の整理5分で進めます。</p><p class="diag-result" data-t="diag_result">診断で整理するのは、優先する課題・その理由・次の練習で試すこと。診断だけの受講も歓迎です。</p></div><div class="diagnosis-offer-action"><p class="diag-offer-price" data-t="diag_team_price">5,000円 / 1チーム・30分（税込）</p><a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_diag_team" data-plan="diagnosis-team" data-t="diag_team_cta">チーム診断を申し込む</a></div><div class="diagnosis-credit"><h4 data-t="diag_credit_h">継続する場合の料金</h4><p data-t="diag_credit_short">診断後30日以内に対象プランへ進むと、診断料5,000円をプラン料金から差し引きます。</p><p data-t="diag_team_credit">チーム4回プランは追加110,000円、8回プランは追加205,000円。診断料を含めたチーム総額は、それぞれ115,000円・210,000円です。</p></div></article><div class="team-included">      <div class="ts-time">
+        <div class="ts-h" data-t="tc_time_h">通常のチームプラン：1回の料金に含まれる内容</div>
+        <table class="ts-table" data-t="tc_time_tbl"><tr class='ts-hd'><th>内容</th><th class='ts-t'>目安時間</th></tr><tr><td class='ts-l'>事前リプレイ分析</td><td class='ts-t'>30〜45分</td></tr><tr><td class='ts-l'>スクリム観戦</td><td class='ts-t'>90〜120分</td></tr><tr><td class='ts-l'>スクリム終了後のフィードバック</td><td class='ts-t'>45〜60分</td></tr><tr><td class='ts-l'>フィードバックメモ・次回課題の整理</td><td class='ts-t'>約15分</td></tr><tr class='ts-total'><td class='ts-l'>合計対応時間</td><td class='ts-t'>約3〜4時間</td></tr></table>
+      </div>
+      <p class="ts-note" data-t="tc_time_note">合計時間には、受講生が同席しない事前分析やメモ作成も含まれます。スクリム観戦は90〜120分、その後のフィードバックは45〜60分が目安です。</p></div><h3 class="ptag" data-t="plans_label">料金・プラン</h3>
       <div class="price-row p3">
         <div class="pcard">
           <div class="pbadge" data-t="tt1_b">まずは1回から</div>
@@ -942,14 +975,14 @@
           <div class="amt">6,600<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1名あたり</span></div>
           <div class="psave" data-t="tt1_note">5名参加の場合</div>
           <div class="psave" data-t="tt1_team">チーム料金 <b>33,000円</b></div>
-          <div class="desc" data-t="tt1_d">事前リプレイ分析・スクリム観戦・チームフィードバック・次回練習に向けた目標設定を含みます。</div>
+          <div class="desc" data-t="tt1_d">事前分析とスクリム観戦をもとに、チーム共通の課題を確認。フィードバックと次回練習の目標設定まで含みます。</div>
         <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_tt1" data-plan="team-1" data-t="cta_tt1">チーム1回で申し込む</a></div>
         <div class="pcard feature"><span class="recommend-badge" data-t="recommended">おすすめ</span>
           <h4 data-t="tt2_h">4回プラン</h4>
           <div class="amt">23,000<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1名あたり</span></div>
           <div class="psave" data-t="tt2_note">1回あたり 5,750円・5名参加の場合</div>
           <div class="psave" data-t="tt2_team">チーム料金 <b>115,000円</b></div>
-          <div class="desc" data-t="tt2_d">毎週のコーチングで継続的に改善したいチームにおすすめ。</div>
+          <div class="desc" data-t="tt2_d">コール・フォーカス・連携の課題を実戦で試し、次の授業で確認。4回を通じてチームの判断基準と練習方針を整理します。</div>
         <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_tt2" data-plan="team-4" data-t="cta_tt2">チーム4回で申し込む</a></div>
         <div class="pcard">
           <div class="pbadge" data-t="tt3_b">大会に向けて</div>
@@ -957,14 +990,10 @@
           <div class="amt">42,000<small data-t="yen">円</small><span class="per" data-t="tt_per">／ 1名あたり</span></div>
           <div class="psave" data-t="tt3_note">1回あたり 5,250円・5名参加の場合</div>
           <div class="psave" data-t="tt3_team">チーム料金 <b>210,000円</b></div>
-          <div class="desc" data-t="tt3_d">大会に向けた準備や、短期集中で改善したいチームにおすすめ。</div>
+          <div class="desc" data-t="tt3_d">役割とコンセプトを整理し、セットアップやULT管理、相手に応じた修正まで継続して確認。大会を想定した実戦と振り返りを重ねます。</div>
         <a class="btn btn-gold plan-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSd738PNvQuBUKwyvN-IblDNBwb-klqbaFOfXgGxkTiOFucQGQ/viewform" target="_blank" rel="noopener" data-ga="cta_signup_tt3" data-plan="team-8" data-t="cta_tt3">チーム8回で申し込む</a></div>
-      </div><p class="pg-cond" data-t="tc_note">※通常のチームプランは5名参加の場合の1名あたりの金額です。お支払いはチーム単位です。通常プランには事前リプレイ分析、スクリム観戦、チームフィードバックが含まれます。30分診断の内容は上記の診断欄をご確認ください。</p><p class="plan-note" data-t="ref5">すべてのプランの受講有効期限は、お申し込み日から1年間です。</p><p class="plan-note" data-t="plan_note">申込フォーム内で、ご希望のプランを選択してください。</p><p class="signup-note" data-t="signup_note">フォーム送信後48時間以内にご連絡します。お申し込み時の決済はありません。</p><details class="program-details"><summary><span data-t="curriculum_team">チームコーチングの内容・所要時間を見る</span></summary><div class="program-detail-body">
-      <div class="ts-time">
-        <div class="ts-h" data-t="tc_time_h">1回のチームコーチングに含まれる目安時間</div>
-        <table class="ts-table" data-t="tc_time_tbl"><tr class='ts-hd'><th>内容</th><th class='ts-t'>目安時間</th></tr><tr><td class='ts-l'>事前リプレイ分析</td><td class='ts-t'>30〜45分</td></tr><tr><td class='ts-l'>スクリム観戦</td><td class='ts-t'>90〜120分</td></tr><tr><td class='ts-l'>スクリム終了後のフィードバック</td><td class='ts-t'>45〜60分</td></tr><tr><td class='ts-l'>フィードバックメモ・次回課題の整理</td><td class='ts-t'>約15分</td></tr><tr class='ts-total'><td class='ts-l'>合計対応時間</td><td class='ts-t'>約3〜4時間</td></tr></table>
-      </div>
-      <p class="ts-note" data-t="tc_time_note">合計時間には、受講生が同席しない事前分析やメモ作成も含まれます。スクリム観戦は90〜120分、その後のフィードバックは45〜60分が目安です。</p>
+      </div><p class="pg-cond" data-t="tc_note">※通常のチームプランは5名参加の場合の1名あたりの金額です。お支払いはチーム単位です。通常プランには事前リプレイ分析、スクリム観戦、チームフィードバックが含まれます。30分診断の内容は上記の診断欄をご確認ください。</p><p class="plan-note" data-t="ref5">すべてのプランの受講有効期限は、お申し込み日から1年間です。</p><p class="plan-note" data-t="plan_note">申込フォーム内で、ご希望のプランを選択してください。</p><p class="signup-note" data-t="signup_note">フォーム送信後48時間以内にご連絡します。お申し込み時の決済はありません。</p><details class="program-details"><summary><span data-t="curriculum_team">チームプランのカリキュラムを見る</span></summary><div class="program-detail-body">
+
 
       <div class="tc-curri">
         <div class="tc-col">
@@ -1135,7 +1164,7 @@ const I18N = {
     "hero_eyebrow": "99DIVINE ACADEMY / OVERWATCH COACHING",
     "hero_h1a": "PLAY",
     "hero_h1b": "LIKE PRO.",
-    "hero_lead": "競技の現場を知るコーチと、次の一歩を明確に。実戦技術から目標設定・練習習慣まで、プレーと向き合い方の両面から成長を支えます。",
+    "hero_lead": "現役OWCSコーチの実戦指導と、目標を練習につなぐコーチング。自分の課題、その理由、次に試す行動を明確にします。",
     "hero_apply": "30分診断から始める",
     "hero_price": "料金を見る",
     "pill_1": "リプレイ分析",
@@ -1234,18 +1263,18 @@ const I18N = {
     "pp1_b": "初めての方におすすめ",
     "pp1_h": "1回コーチング",
     "pp1_m": "1回 / 60分",
-    "pp1_d": "まずは自分の課題を知りたい方や、特定の悩みを集中的に改善したい方向け。",
+    "pp1_d": "気になるプレーや練習の悩みを掘り下げ、改善する理由と次の練習課題を整理します。フィードバックメモで受講内容を振り返れます。",
     "pp1_list": "<li>リプレイ分析 または ライブコーチング</li><li>現在の課題分析</li><li>改善ポイントの提示</li><li>フィードバックメモ</li>",
     "pp2_h": "4回集中プログラム",
     "pp2_m": "4回 / 1回60分（計240分）",
     "pp2_s": "通常44,000円 → <b>4,200円お得</b>",
-    "pp2_d": "一度の分析で終わらず、コーチングと学んだことを実戦で試すサイクルを重ねながら、改善の方向性を確認します。",
+    "pp2_d": "学んだことを実戦で試し、次のコーチングで振り返る。4回を通じて、実行できたことと残った課題を確認し、改善の優先順位を調整します。",
     "pp2_list": "<li>1対1コーチング × 4回</li><li>リプレイ分析</li><li>ライブコーチング</li><li>個人課題に合わせた指導</li><li>フィードバックメモ</li>",
     "pp3_b": "本気で継続的に成長したい方に",
     "pp3_h": "12回継続プログラム",
     "pp3_m": "12回 / 計720分",
     "pp3_s": "1回コーチング × 12回 132,000円 → <b>22,600円お得</b>",
-    "pp3_d": "継続的な指導を通じて、基礎理解から個人課題の改善、実戦適応、自己分析力まで、長期的な成長を目指すプログラムです。",
+    "pp3_d": "基礎・個人課題・実戦での判断を継続して見直します。状況の変化に合わせて練習方針を調整し、自分で課題を見つけ、改善を続けるための判断軸を育てます。",
     "pp3_list": "<li>1対1コーチング × 12回</li><li>継続的なリプレイ分析</li><li>ライブコーチング</li><li>課題に応じた指導内容の調整</li><li>成長段階に応じた優先順位設定</li><li>フィードバックメモ</li>",
     "yen": "円",
     "yen2": "円",
@@ -1295,22 +1324,22 @@ const I18N = {
     "tt1_team": "チーム料金 <b>33,000円</b>",
     "tt2_team": "チーム料金 <b>115,000円</b>",
     "tt3_team": "チーム料金 <b>210,000円</b>",
-    "tc_time_h": "1回のチームコーチングに含まれる目安時間",
+    "tc_time_h": "通常のチームプラン：1回の料金に含まれる内容",
     "tc_time_tbl": "<tr class='ts-hd'><th>内容</th><th class='ts-t'>目安時間</th></tr><tr><td class='ts-l'>事前リプレイ分析</td><td class='ts-t'>30〜45分</td></tr><tr><td class='ts-l'>スクリム観戦</td><td class='ts-t'>90〜120分</td></tr><tr><td class='ts-l'>スクリム終了後のフィードバック</td><td class='ts-t'>45〜60分</td></tr><tr><td class='ts-l'>フィードバックメモ・次回課題の整理</td><td class='ts-t'>約15分</td></tr><tr class='ts-total'><td class='ts-l'>合計対応時間</td><td class='ts-t'>約3〜4時間</td></tr>",
     "tc_time_note": "合計時間には、受講生が同席しない事前分析やメモ作成も含まれます。スクリム観戦は90〜120分、その後のフィードバックは45〜60分が目安です。",
     "tt1_b": "まずは1回から",
     "tt1_h": "1回プラン",
     "tt1_m": "1回 / 1チーム",
-    "tt1_d": "事前リプレイ分析・スクリム観戦・チームフィードバック・次回練習に向けた目標設定を含みます。",
+    "tt1_d": "事前分析とスクリム観戦をもとに、チーム共通の課題を確認。フィードバックと次回練習の目標設定まで含みます。",
     "tt1_list": "<li>事前リプレイ分析</li><li>スクリム観戦</li><li>スクリム後のフィードバック</li><li>次回までの課題設定</li>",
     "tt2_h": "4回プラン",
     "tt2_m": "4回 / 週1回目安",
-    "tt2_d": "毎週のコーチングで継続的に改善したいチームにおすすめ。",
+    "tt2_d": "コール・フォーカス・連携の課題を実戦で試し、次の授業で確認。4回を通じてチームの判断基準と練習方針を整理します。",
     "tt2_list": "<li>毎回：リプレイ分析＋スクリム観戦</li><li>コール・フォーカス・連携改善</li><li>スキル・ULT・構成理解</li><li>総合評価と今後の練習方針</li>",
     "tt3_b": "大会に向けて",
     "tt3_h": "8回集中プラン",
     "tt3_m": "8回 / 週2回目安",
-    "tt3_d": "大会に向けた準備や、短期集中で改善したいチームにおすすめ。",
+    "tt3_d": "役割とコンセプトを整理し、セットアップやULT管理、相手に応じた修正まで継続して確認。大会を想定した実戦と振り返りを重ねます。",
     "tt3_list": "<li>毎回：リプレイ分析＋スクリム観戦</li><li>ポジショニング・セットアップ</li><li>エンゲージとターゲット選択</li><li>試合中の修正・ULT管理</li><li>大会想定の実戦練習と最終評価</li>",
     "tc_note": "※通常のチームプランは5名参加の場合の1名あたりの金額です。お支払いはチーム単位です。通常プランには事前リプレイ分析、スクリム観戦、チームフィードバックが含まれます。30分診断の内容は上記の診断欄をご確認ください。",
     "sticky": "受講申請する",
@@ -1318,7 +1347,7 @@ const I18N = {
     "plan_note": "申込フォーム内で、ご希望のプランを選択してください。",
     "plans_label": "料金・プラン",
     "curriculum_personal": "個人コーチングのカリキュラムを見る",
-    "curriculum_team": "チームコーチングの内容・所要時間を見る",
+    "curriculum_team": "チームプランのカリキュラムを見る",
     "curriculum_role": "ロール別の内容・開講スケジュールを見る",
     "recommended": "おすすめ",
     "rev_more": "全文を読む",
@@ -1371,7 +1400,7 @@ const I18N = {
     "coach_gyomin_role": "現役OWCSコーチ",
     "coach_supreme_role": "FOUNDER / COACH",
     "coach_gyomin_focus": "実戦技術を磨く",
-    "coach_supreme_focus": "考え方と習慣を整える",
+    "coach_supreme_focus": "目標を、練習の指針へ",
     "coach_strength_label": "得意なテーマ",
     "coach_gyomin_strength": "ポジショニング、スキル・ULT判断、リプレイ分析。",
     "coach_supreme_strength": "コンセプトと目標、チームの判断軸、成長・立て直しの習慣。",
@@ -1400,7 +1429,7 @@ const I18N = {
     "diag_minutes20": "20分",
     "diag_personal_cta": "個人診断を申し込む",
     "diag_team_cta": "チーム診断を申し込む",
-    "diag_result": "診断だけの受講も歓迎。課題と次の練習で試すことを持ち帰れます。",
+    "diag_result": "診断で整理するのは、優先する課題・その理由・次の練習で試すこと。診断だけの受講も歓迎です。",
     "diag_credit_short": "診断後30日以内に対象プランへ進むと、診断料5,000円をプラン料金から差し引きます。",
     "diag_personal_h": "個人向け・初回30分診断",
     "diag_team_h": "チーム向け・初回30分診断",
@@ -1417,7 +1446,40 @@ const I18N = {
     "diag_expiry_note": "料金充当の30日間と、受講有効期限の1年間は別の期間です。",
     "diag_refund": "診断後に通常プランを解約する場合は、診断料充当後にそのプランへ実際にお支払いいただく金額を基準に、未消化分を精算します。実施済みの診断料5,000円は別途返金しません。",
     "faq_diag_q": "診断後は必ず継続しなければいけませんか？",
-    "faq_diag_a": "いいえ。30分診断だけの受講もできます。継続をご希望の場合は、診断完了日から30日以内に同じ種類の対象プランをお支払いいただくと、5,000円を充当します。診断は通常プランの回数に含まれません。"
+    "faq_diag_a": "いいえ。30分診断だけの受講もできます。継続をご希望の場合は、診断完了日から30日以内に同じ種類の対象プランをお支払いいただくと、5,000円を充当します。診断は通常プランの回数に含まれません。",
+    "coach_output_label": "授業で具体化すること",
+    "coach_gyomin_output": "その場面での判断理由と、次の試合で試す位置取り・スキルの選択。",
+    "coach_supreme_output": "目指すコンセプトと、今の自分・チームが練習で優先する行動。",
+    "coach_gyomin_proof": "2024 OWCS JP Stage 2 優勝の指導経験",
+    "coach_supreme_proof": "UC Irvine OWチーム 主将・アシスタントコーチ経験",
+    "value_h": "授業の学びを、次の練習へ。",
+    "value_p": "個人・チームコーチングでは、競技経験のあるコーチが課題を整理。理由を理解し、実戦で試し、振り返るための指針をつくります。",
+    "value_1_h": "課題と理由を知る",
+    "value_1_p": "プレーや練習の悩みを整理し、何が判断に影響しているかを確認します。",
+    "value_2_h": "次の行動を決める",
+    "value_2_p": "今の目標に合わせて、優先して試すプレーや練習の取り組み方を具体化します。",
+    "value_3_h": "実践から見直す",
+    "value_3_p": "継続プランでは、試した結果を次の授業で振り返り、残った課題や練習方針を調整します。",
+    "pp1_focus": "課題を深く理解する",
+    "pp2_focus": "試して、振り返り、調整する",
+    "pp3_focus": "自分で改善を続ける土台をつくる",
+    "sample_h": "コーチングで整理する内容の例",
+    "sample_note": "指導内容を説明するための例です。実際の受講生の記録・成果や、配布メモそのものではありません。",
+    "sample_tech_h": "GYOMIN / プレーの判断",
+    "sample_direction_h": "Supreme / 練習の方向性",
+    "sample_scene": "相談する場面",
+    "sample_reason": "確認すること",
+    "sample_action": "次の練習で試すこと",
+    "sample_review": "振り返るポイント",
+    "sample_t1": "味方が合流する前に仕掛け、孤立してしまう。",
+    "sample_t2": "仕掛ける前に、味方の人数・位置・合流までの時間を確認できていたか。",
+    "sample_t3": "味方が参加できる状態か確認し、待つか仕掛けるかを判断する。",
+    "sample_t4": "孤立した場面と合流を待てた場面で、判断に使った情報を比べる。",
+    "sample_s1": "負けるたびに練習方針を変え、何を改善しているか分からなくなる。",
+    "sample_s2": "目指すプレースタイルと今の課題、結果だけで練習を評価していないか。",
+    "sample_s3": "今優先する行動を決め、勝敗と分けて実行できたかを振り返る。",
+    "sample_s4": "実行できた条件・難しかった条件を整理し、次の練習方針につなげる。",
+    "memo_link": "個人の通常プランには、受講内容と改善ポイントを振り返るフィードバックメモが含まれます。内容は課題・担当コーチに応じて調整します。"
   },
   "ko": {
     "rev_name_h": "H 수강생",
@@ -1441,7 +1503,7 @@ const I18N = {
     "hero_eyebrow": "99DIVINE ACADEMY / OVERWATCH COACHING",
     "hero_h1a": "PLAY",
     "hero_h1b": "LIKE PRO.",
-    "hero_lead": "경쟁 무대를 경험한 코치와 다음 단계를 구체화합니다. 실전 기술부터 목표 설정·훈련 습관까지, 플레이와 게임을 대하는 방식 양쪽에서 성장을 돕습니다.",
+    "hero_lead": "현역 OWCS 코치의 실전 지도와 목표를 연습으로 연결하는 코칭. 나의 과제와 그 이유, 다음에 시도할 행동을 구체화합니다.",
     "hero_apply": "30분 진단부터 시작하기",
     "hero_price": "요금 보기",
     "pill_1": "리플레이 분석",
@@ -1540,18 +1602,18 @@ const I18N = {
     "pp1_b": "처음이신 분께 추천",
     "pp1_h": "1회 코칭",
     "pp1_m": "1회 / 60분",
-    "pp1_d": "먼저 자신의 과제를 알고 싶은 분, 특정 고민을 집중적으로 개선하고 싶은 분께.",
+    "pp1_d": "고민되는 플레이와 연습 문제를 깊이 살펴보고, 개선 이유와 다음 연습 과제를 정리합니다. 피드백 메모로 수업 내용을 복습할 수 있습니다.",
     "pp1_list": "<li>리플레이 분석 또는 라이브 코칭</li><li>현재 과제 분석</li><li>개선 포인트 제시</li><li>피드백 메모</li>",
     "pp2_h": "4회 집중 프로그램",
     "pp2_m": "4회 / 회당 60분 (총 240분)",
     "pp2_s": "정가 44,000엔 → <b>4,200엔 할인</b>",
-    "pp2_d": "한 번의 진단으로 끝나지 않고, 코칭과 실전 적용을 반복하며 개선 방향을 점검합니다.",
+    "pp2_d": "배운 내용을 실전에서 시도하고 다음 코칭에서 돌아봅니다. 4회에 걸쳐 실행한 부분과 남은 과제를 확인하며 개선 우선순위를 조정합니다.",
     "pp2_list": "<li>1대1 코칭 × 4회</li><li>리플레이 분석</li><li>라이브 코칭</li><li>개인 과제에 맞춘 지도</li><li>피드백 메모</li>",
     "pp3_b": "진지하게 꾸준히 성장하고 싶은 분께",
     "pp3_h": "12회 지속 프로그램",
     "pp3_m": "12회 / 총 720분",
     "pp3_s": "1회 코칭 × 12회 132,000엔 → <b>22,600엔 할인</b>",
-    "pp3_d": "지속적인 지도를 통해 기초 이해부터 개인 과제 개선, 실전 적응, 자기 분석력까지 장기적인 성장을 목표로 하는 프로그램입니다.",
+    "pp3_d": "기초·개인 과제·실전 판단을 지속적으로 점검합니다. 상황 변화에 맞춰 연습 방향을 조정하고, 스스로 과제를 찾고 개선을 이어가기 위한 판단 기준을 기릅니다.",
     "pp3_list": "<li>1대1 코칭 × 12회</li><li>지속적인 리플레이 분석</li><li>라이브 코칭</li><li>과제에 따른 지도 내용 조정</li><li>성장 단계에 따른 우선순위 설정</li><li>피드백 메모</li>",
     "yen": " 엔",
     "yen2": " 엔",
@@ -1601,22 +1663,22 @@ const I18N = {
     "tt1_team": "팀 요금 <b>33,000엔</b>",
     "tt2_team": "팀 요금 <b>115,000엔</b>",
     "tt3_team": "팀 요금 <b>210,000엔</b>",
-    "tc_time_h": "1회 팀 코칭에 포함되는 예상 시간",
+    "tc_time_h": "정규 팀 플랜: 1회 요금에 포함되는 내용",
     "tc_time_tbl": "<tr class='ts-hd'><th>내용</th><th class='ts-t'>예상 시간</th></tr><tr><td class='ts-l'>사전 리플레이 분석</td><td class='ts-t'>30〜45분</td></tr><tr><td class='ts-l'>스크림 관전</td><td class='ts-t'>90〜120분</td></tr><tr><td class='ts-l'>스크림 종료 후 피드백</td><td class='ts-t'>45〜60분</td></tr><tr><td class='ts-l'>피드백 메모・다음 과제 정리</td><td class='ts-t'>약 15분</td></tr><tr class='ts-total'><td class='ts-l'>총 대응 시간</td><td class='ts-t'>약 3〜4시간</td></tr>",
     "tc_time_note": "총 대응 시간에는 수강생이 함께하지 않는 사전 분석과 메모 작성도 포함됩니다. 스크림 관전은 90~120분, 이후 피드백은 45~60분이 기준입니다.",
     "tt1_b": "우선 1회부터",
     "tt1_h": "1회 플랜",
     "tt1_m": "1회 / 1팀",
-    "tt1_d": "사전 리플레이 분석・스크림 관전・팀 피드백・다음 연습을 위한 목표 설정을 포함합니다.",
+    "tt1_d": "사전 분석과 스크림 관전을 바탕으로 팀 공통 과제를 확인합니다. 피드백과 다음 연습 목표 설정까지 포함합니다.",
     "tt1_list": "<li>사전 리플레이 분석</li><li>스크림 관전</li><li>스크림 후 피드백</li><li>다음까지의 과제 설정</li>",
     "tt2_h": "4회 플랜",
     "tt2_m": "4회 / 주 1회 기준",
-    "tt2_d": "매주 코칭으로 꾸준히 개선하고 싶은 팀에게 추천.",
+    "tt2_d": "콜·포커싱·연계 과제를 실전에서 시도하고 다음 수업에서 확인합니다. 4회에 걸쳐 팀의 판단 기준과 연습 방향을 정리합니다.",
     "tt2_list": "<li>매회: 리플레이 분석＋스크림 관전</li><li>콜·포커스·연계 개선</li><li>스킬·궁극기·조합 이해</li><li>종합 평가와 향후 연습 방침</li>",
     "tt3_b": "대회를 향해",
     "tt3_h": "8회 집중 플랜",
     "tt3_m": "8회 / 주 2회 기준",
-    "tt3_d": "대회 준비나 단기 집중으로 개선하고 싶은 팀에게 추천.",
+    "tt3_d": "역할과 컨셉을 정리하고, 셋업·궁극기 관리·상대에 따른 수정까지 지속적으로 확인합니다. 대회를 가정한 실전과 복기를 이어갑니다.",
     "tt3_list": "<li>매회: 리플레이 분석＋스크림 관전</li><li>포지셔닝·셋업</li><li>인게이지와 타겟 선택</li><li>경기 중 수정·궁극기 관리</li><li>대회 상정 실전 연습과 최종 평가</li>",
     "tc_note": "※ 정규 팀 플랜은 5명 참가 시 1인당 금액이며, 결제는 팀 단위입니다. 정규 플랜에는 사전 리플레이 분석, 스크림 관전, 팀 피드백이 포함됩니다. 30분 진단은 위 진단 안내의 내용으로 진행합니다.",
     "sticky": "수강 신청하기",
@@ -1624,7 +1686,7 @@ const I18N = {
     "plan_note": "신청 폼에서 희망 플랜을 선택해주세요.",
     "plans_label": "요금·플랜",
     "curriculum_personal": "개인 코칭 커리큘럼 보기",
-    "curriculum_team": "팀 코칭 내용·소요시간 보기",
+    "curriculum_team": "팀 플랜 커리큘럼 보기",
     "curriculum_role": "롤별 수업 내용·개강 일정 보기",
     "recommended": "추천",
     "rev_more": "후기 전문 보기",
@@ -1677,7 +1739,7 @@ const I18N = {
     "coach_gyomin_role": "현역 OWCS 코치",
     "coach_supreme_role": "FOUNDER / COACH",
     "coach_gyomin_focus": "실전 기술을 다듬다",
-    "coach_supreme_focus": "생각과 습관을 정리하다",
+    "coach_supreme_focus": "목표를 연습의 기준으로",
     "coach_strength_label": "강점",
     "coach_gyomin_strength": "포지셔닝, 스킬·궁극기 판단, 리플레이 분석.",
     "coach_supreme_strength": "컨셉과 목표, 팀의 판단 기준, 성장·회복을 위한 습관.",
@@ -1706,7 +1768,7 @@ const I18N = {
     "diag_minutes20": "20분",
     "diag_personal_cta": "개인 진단 신청하기",
     "diag_team_cta": "팀 진단 신청하기",
-    "diag_result": "진단만 받아도 좋습니다. 과제와 다음 연습에서 시도할 일을 가져갈 수 있습니다.",
+    "diag_result": "진단에서는 우선할 과제·그 이유·다음 연습에서 시도할 일을 정리합니다. 진단만 받아도 됩니다.",
     "diag_credit_short": "진단 후 30일 이내 대상 플랜으로 이어가면 진단료 5,000엔을 플랜 요금에서 차감합니다.",
     "diag_personal_h": "개인 첫 30분 진단",
     "diag_team_h": "팀 첫 30분 진단",
@@ -1723,7 +1785,40 @@ const I18N = {
     "diag_expiry_note": "진단료 차감 기한 30일과 수강 유효기간 1년은 서로 다른 기간입니다.",
     "diag_refund": "진단 후 정규 플랜을 해지하는 경우, 진단료 차감 후 해당 정규 플랜에 실제로 납부하는 금액을 기준으로 미소진분을 정산합니다. 이미 완료된 진단료 5,000엔은 별도로 환불하지 않습니다.",
     "faq_diag_q": "진단 후 반드시 정규 수업을 신청해야 하나요?",
-    "faq_diag_a": "아니요. 30분 진단만 받아도 됩니다. 이후 같은 유형의 대상 플랜을 진단 완료일부터 30일 이내 결제하면 5,000엔을 차감합니다. 진단은 정규 플랜 회차에 포함되지 않습니다."
+    "faq_diag_a": "아니요. 30분 진단만 받아도 됩니다. 이후 같은 유형의 대상 플랜을 진단 완료일부터 30일 이내 결제하면 5,000엔을 차감합니다. 진단은 정규 플랜 회차에 포함되지 않습니다.",
+    "coach_output_label": "수업에서 구체화할 것",
+    "coach_gyomin_output": "그 장면에서의 판단 이유와 다음 경기에서 시도할 위치 선정·스킬 선택.",
+    "coach_supreme_output": "목표로 삼을 컨셉과 지금 나 또는 팀이 연습에서 우선할 행동.",
+    "coach_gyomin_proof": "2024 OWCS JP Stage 2 우승 지도 경험",
+    "coach_supreme_proof": "UC Irvine OW 팀 주장·보조 코치 경험",
+    "value_h": "수업에서 배운 것을 다음 연습으로.",
+    "value_p": "개인·팀 코칭에서는 경쟁 경험을 갖춘 코치가 과제를 정리합니다. 이유를 이해하고, 실전에서 시도하고, 돌아볼 수 있는 기준을 만듭니다.",
+    "value_1_h": "과제와 이유를 이해하기",
+    "value_1_p": "플레이와 연습에서의 고민을 정리하고, 판단에 무엇이 영향을 주는지 확인합니다.",
+    "value_2_h": "다음 행동 정하기",
+    "value_2_p": "현재 목표에 맞춰 우선 시도할 플레이와 연습 방법을 구체화합니다.",
+    "value_3_h": "실천한 내용을 돌아보기",
+    "value_3_p": "연속 플랜에서는 시도한 결과를 다음 수업에서 돌아보고 남은 과제와 연습 방향을 조정합니다.",
+    "pp1_focus": "과제를 깊이 이해하기",
+    "pp2_focus": "시도하고, 돌아보고, 조정하기",
+    "pp3_focus": "스스로 개선을 이어갈 기반 만들기",
+    "sample_h": "코칭에서 정리하는 내용의 예시",
+    "sample_note": "지도 내용을 설명하기 위한 예시입니다. 실제 수강생의 기록·성과 또는 배포하는 메모 원본이 아닙니다.",
+    "sample_tech_h": "GYOMIN / 플레이 판단",
+    "sample_direction_h": "Supreme / 연습의 방향성",
+    "sample_scene": "상담할 상황",
+    "sample_reason": "확인할 것",
+    "sample_action": "다음 연습에서 시도할 것",
+    "sample_review": "돌아볼 기준",
+    "sample_t1": "아군이 합류하기 전에 교전을 시작해 고립된다.",
+    "sample_t2": "교전 전에 아군의 인원·위치·합류까지 걸리는 시간을 확인했는가.",
+    "sample_t3": "아군이 참여할 수 있는 상태인지 확인하고, 기다릴지 교전을 시작할지 판단한다.",
+    "sample_t4": "고립된 장면과 합류를 기다린 장면에서 판단에 사용한 정보를 비교한다.",
+    "sample_s1": "패배할 때마다 연습 방향을 바꿔 무엇을 개선하고 있는지 모르게 된다.",
+    "sample_s2": "목표 플레이스타일과 현재 과제, 결과만으로 연습을 평가하고 있지는 않은가.",
+    "sample_s3": "지금 우선할 행동을 정하고, 승패와 구분해 실천했는지 돌아본다.",
+    "sample_s4": "실천한 조건과 어려웠던 조건을 정리해 다음 연습 방향으로 연결한다.",
+    "memo_link": "개인 정규 플랜에는 수업 내용과 개선 포인트를 복습할 피드백 메모가 포함됩니다. 내용은 과제와 담당 코치에 맞춰 조정합니다."
   }
 };
 
